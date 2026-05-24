@@ -82,7 +82,7 @@ export default function ContactSection() {
     const isLocalPreview = ['localhost', '127.0.0.1'].includes(window.location.hostname)
 
     try {
-      const response = await fetch('/', {
+      const response = await fetch('/netlify-forms.html', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: encodeForm(form),
