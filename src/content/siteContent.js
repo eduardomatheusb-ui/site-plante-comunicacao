@@ -234,9 +234,7 @@ export const projects = [
     title: 'Salão do Encontro',
     client: 'Salão do Encontro',
     segment: 'Terceiro setor',
-    image: '/brand/ideas/escuta-processo-criativo.jpg',
-    imageClass: 'object-contain bg-grafite',
-    cardImageClass: 'object-cover object-top',
+    image: '/brand/work/cover-salao-encontro.jpg',
     gallery: ['/brand/work/cover-salao-encontro.jpg', '/brand/work/salao-geral.jpg', '/brand/work/salao-parceiros.jpg'],
     challenge:
       'Comunicar uma iniciativa social com linguagem sensível, informação clara e materiais que ajudassem a mobilizar famílias, parceiros e comunidade.',
@@ -439,7 +437,9 @@ export const ideas = [
     category: 'Bastidores',
     date: '24 maio 2026',
     readingTime: '4 min',
-    image: '/brand/work/cover-salao-encontro.jpg',
+    image: '/brand/ideas/escuta-processo-criativo.jpg',
+    imageClass: 'object-contain bg-grafite',
+    cardImageClass: 'object-cover object-top',
     summary:
       'Na Plante, ouvir faz parte do método. Antes de propor caminhos, buscamos entender pessoas, contextos e necessidades.',
     highlight:
