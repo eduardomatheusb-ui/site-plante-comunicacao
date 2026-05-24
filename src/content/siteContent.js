@@ -193,18 +193,18 @@ export const projectCategories = [
 
 export const projects = [
   {
-    slug: 'carne-saude-da-gente',
-    title: 'Carnê Saúde da Gente',
+    slug: 'campanha-confianca-santa-casa',
+    title: 'Campanha Confiança',
     client: 'Santa Casa de Santo Antônio do Amparo',
     segment: 'Saúde',
-    image: '/brand/work/santa-casa-carne-cover.jpg',
-    gallery: ['/brand/work/santa-casa-carne-cover.jpg', '/brand/work/santa-casa-carne-apoio.jpg'],
+    image: '/brand/work/cover-santa-casa-confianca.jpg',
+    gallery: ['/brand/work/cover-santa-casa-confianca.jpg', '/brand/work/santa-casa-carne-apoio.jpg'],
     challenge:
-      'Apresentar o Carnê Saúde da Gente como uma forma simples e próxima de cuidar da família e fortalecer a Santa Casa.',
+      'Fortalecer a relação de confiança entre a Santa Casa e a população, valorizando a história da instituição e sua presença no cuidado com a comunidade.',
     insight:
       'Quando a comunicação fala de saúde, confiança e pertencimento precisam aparecer antes da oferta. A campanha precisava ser direta, acolhedora e fácil de entender.',
     idea:
-      'Criamos uma comunicação com mensagem objetiva, presença humana e reforço visual do benefício, aproximando a campanha da rotina das famílias e dos canais de divulgação da instituição.',
+      'Criamos uma comunicação com presença humana, mensagem afetiva e reforço institucional para aproximar a campanha da rotina das famílias e dos canais de divulgação da Santa Casa.',
     deliveries: ['Campanha institucional', 'Conceito visual', 'Peças digitais', 'Materiais de apoio'],
     result: 'Comunicação mais clara para orientar o público e dar presença à campanha.',
   },
@@ -213,8 +213,8 @@ export const projects = [
     title: 'Roos Group',
     client: 'Roos Group',
     segment: 'Identidade visual',
-    image: '/brand/work/roos-billboard.jpg',
-    gallery: ['/brand/work/roos-billboard.jpg', '/brand/work/roos-cartao.jpg', '/brand/work/roos-envelope.jpg'],
+    image: '/brand/work/cover-roos-group.jpg',
+    gallery: ['/brand/work/cover-roos-group.jpg', '/brand/work/roos-billboard.jpg', '/brand/work/roos-cartao.jpg'],
     challenge:
       'Construir uma identidade visual com presença, clareza e aplicação profissional para uma marca com atuação corporativa.',
     insight:
@@ -229,8 +229,8 @@ export const projects = [
     title: 'Salão do Encontro',
     client: 'Salão do Encontro',
     segment: 'Terceiro setor',
-    image: '/brand/work/salao-geral.jpg',
-    gallery: ['/brand/work/salao-geral.jpg', '/brand/work/salao-parceiros.jpg', '/brand/work/salao-familias.jpg'],
+    image: '/brand/work/cover-salao-encontro.jpg',
+    gallery: ['/brand/work/cover-salao-encontro.jpg', '/brand/work/salao-geral.jpg', '/brand/work/salao-parceiros.jpg'],
     challenge:
       'Comunicar uma iniciativa social com linguagem sensível, informação clara e materiais que ajudassem a mobilizar famílias, parceiros e comunidade.',
     insight:
@@ -261,8 +261,8 @@ export const projects = [
     title: 'Aqui em SAA',
     client: 'Prefeitura de Santo Antônio do Amparo',
     segment: 'Comunicação pública',
-    image: '/brand/work/prefeitura-aqui-saa-temp.jpg',
-    gallery: ['/brand/work/prefeitura-aqui-saa-temp.jpg'],
+    image: '/brand/work/cover-prefeitura-saa.jpg',
+    gallery: ['/brand/work/cover-prefeitura-saa.jpg'],
     challenge:
       'Transformar informações de interesse público em uma comunicação simples, visual e próxima da população.',
     insight:
@@ -271,15 +271,15 @@ export const projects = [
       'Estruturamos uma peça com linguagem objetiva e leitura direta, apoiando a divulgação institucional em formato pronto para circulação.',
     deliveries: ['Comunicação pública', 'Peça institucional', 'Design', 'Direção de informação'],
     result: 'Apoio à divulgação de informações institucionais com mais clareza e organização visual.',
-    note: 'Imagem provisória. Precisamos exportar o PDF Aqui em SAA em JPG ou PNG para substituir pelo material correto.',
   },
   {
     slug: 'circuito-rosa',
     title: 'Circuito Rosa',
     client: 'IUNA Guerreiras',
     segment: 'Projetos sociais',
-    image: '/brand/work/circuito-rosa-camisa.jpg',
+    image: '/brand/work/cover-circuito-rosa.jpg',
     gallery: [
+      '/brand/work/cover-circuito-rosa.jpg',
       '/brand/work/circuito-rosa-camisa.jpg',
       '/brand/work/circuito-rosa-viseira.jpg',
       '/brand/work/circuito-rosa-feed.jpg',
