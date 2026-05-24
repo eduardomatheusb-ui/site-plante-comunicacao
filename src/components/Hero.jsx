@@ -8,7 +8,7 @@ export default function Hero() {
     <section className="relative flex min-h-screen flex-col justify-center overflow-hidden bg-petrol">
       <video
         className="absolute inset-0 h-full w-full object-cover opacity-70"
-        src="/brand/plante-8-anos.mp4"
+        src="/brand/plante-8-anos-web.mp4"
         autoPlay
         muted
         loop
