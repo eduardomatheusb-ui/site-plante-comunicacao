@@ -22,20 +22,22 @@ export default function ConteudoPage({ slug }) {
             Voltar para Ideias em Movimento
           </button>
 
+          {idea.image && (
+            <div className="mb-12 overflow-hidden bg-grafite shadow-[10px_10px_0_#F7FF19]">
+              <img src={idea.image} alt="" className="h-[360px] w-full object-cover md:h-[520px]" />
+            </div>
+          )}
+
           <p className="font-display text-3xl font-bold leading-tight md:text-5xl">
             {idea.highlight}
           </p>
 
           <div className="mt-10 space-y-6 text-lg leading-relaxed text-grafite/68">
-            <p>
-              Na Plante, uma ideia começa quando a gente escuta o contexto. Antes de escolher formato, canal ou linguagem, buscamos entender o que a marca precisa comunicar, qual relação quer construir e que movimento espera provocar.
-            </p>
-            <p>
-              Esse processo ajuda a transformar informação solta em direção. A partir daí, estratégia e criação caminham juntas: uma organiza o pensamento, a outra dá forma, presença e energia para a mensagem circular.
-            </p>
-            <p>
-              O resultado é uma comunicação mais clara, mais consistente e mais conectada com os públicos. Não se trata apenas de produzir peças, mas de construir caminhos para que marcas, instituições e projetos apareçam com mais intenção.
-            </p>
+            {(idea.body || []).map((paragraph) => (
+              <p key={paragraph} className="whitespace-pre-line">
+                {paragraph}
+              </p>
+            ))}
           </div>
         </div>
       </article>
