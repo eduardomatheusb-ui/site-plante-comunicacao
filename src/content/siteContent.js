@@ -171,37 +171,83 @@ export const projectCategories = [
   'Comércio e serviços',
   'Projetos públicos',
   'Campanhas institucionais',
+  'Identidade visual',
   'Audiovisual',
   'Digital',
 ]
 
 export const projects = [
   {
-    title: 'Presença digital para marcas em movimento',
-    segment: 'Gestão de redes sociais',
-    image: '/brand/showcase/plante-posts-showcase.jpg',
+    title: 'Santa Casa de Santo Antônio do Amparo',
+    segment: 'Saúde',
+    image: '/brand/cases/santa-casa-campanha.jpg',
     challenge:
-      'Organizar a comunicação, fortalecer a presença digital e construir uma linguagem mais clara para dialogar com o público.',
-    deliveries: ['Planejamento', 'Conteúdo', 'Design', 'Métricas'],
-    result: 'Construção de narrativa mais clara e consistente.',
+      'Fortalecer a comunicação de uma campanha ligada à saúde, com mensagem clara, visual direto e linguagem próxima da comunidade.',
+    deliveries: ['Campanha institucional', 'Conceito', 'Peças digitais', 'Direção visual'],
+    result: 'Comunicação mais organizada para orientar o público e dar presença à campanha.',
   },
   {
-    title: 'Campanha institucional de interesse público',
-    segment: 'Comunicação institucional',
-    image: '/brand/showcase/plante-cartoes-mockup.jpg',
+    title: 'Prefeitura de Santo Antônio do Amparo',
+    segment: 'Comunicação pública',
+    image: '/brand/cases/prefeitura-autismo.jpg',
     challenge:
-      'Transformar uma mensagem complexa em campanha acessível, humana e visualmente forte.',
-    deliveries: ['Conceito', 'Peças gráficas', 'Roteiros', 'Materiais institucionais'],
-    result: 'Apoio à divulgação de projeto público e fortalecimento da presença institucional.',
+      'Transformar uma pauta de conscientização em comunicação acessível, humana e visualmente consistente para canais digitais.',
+    deliveries: ['Campanha de conscientização', 'Design', 'Redes sociais', 'Comunicação pública'],
+    result: 'Apoio à divulgação de tema de interesse público com linguagem simples e objetiva.',
   },
   {
-    title: 'Identidade e linguagem para novos projetos',
-    segment: 'Branding',
-    image: '/brand/showcase/plante-crachas-mockup.jpg',
+    title: 'Instituto Wani Higino',
+    segment: 'Terceiro setor',
+    image: '/brand/cases/wani-pilates.jpg',
     challenge:
-      'Dar forma a uma ideia inicial, definindo posicionamento, linguagem visual e aplicações de marca.',
-    deliveries: ['Identidade visual', 'Linguagem', 'Aplicações', 'Apresentação'],
-    result: 'Melhoria na percepção de valor e mais consistência nos pontos de contato.',
+      'Comunicar ações, serviços e projetos sociais com presença visual, clareza de informação e cuidado com o público atendido.',
+    deliveries: ['Conteúdo digital', 'Design', 'Materiais institucionais', 'Redes sociais'],
+    result: 'Mais consistência na divulgação de iniciativas e atividades do instituto.',
+  },
+  {
+    title: 'VBO Engenharia',
+    segment: 'Engenharia',
+    image: '/brand/cases/vbo-obras.jpg',
+    challenge:
+      'Levar temas técnicos para uma comunicação digital mais simples, útil e conectada à rotina de obras e projetos.',
+    deliveries: ['Conteúdo técnico', 'Design', 'Redes sociais', 'Comunicação comercial'],
+    result: 'Conteúdos com mais clareza para aproximar a marca de clientes e parceiros.',
+  },
+  {
+    title: 'IUNA Guerreiras',
+    segment: 'Projetos sociais',
+    image: '/brand/cases/iuna-jantar.jpg',
+    challenge:
+      'Dar visibilidade a uma iniciativa social e criar materiais de divulgação com informação clara, apelo visual e senso de comunidade.',
+    deliveries: ['Campanha de evento', 'Peças digitais', 'Redes sociais', 'Materiais de divulgação'],
+    result: 'Apoio à comunicação de uma ação beneficente com identidade e presença.',
+  },
+  {
+    title: 'Instituto Dedete',
+    segment: 'Identidade visual',
+    image: '/brand/cases/dedete-identidade.jpg',
+    challenge:
+      'Construir uma linguagem visual viva e reconhecível para uma instituição com atuação social, educativa e multidisciplinar.',
+    deliveries: ['Identidade visual', 'Aplicações', 'Linguagem gráfica', 'Peças institucionais'],
+    result: 'Marca com mais personalidade, presença e coerência nos pontos de contato.',
+  },
+  {
+    title: 'IMIC',
+    segment: 'Identidade visual',
+    image: '/brand/cases/imic-identidade.jpg',
+    challenge:
+      'Organizar a expressão visual de uma marca industrial com materiais institucionais claros, consistentes e prontos para uso comercial.',
+    deliveries: ['Identidade visual', 'Materiais institucionais', 'Aplicações', 'Sistema visual'],
+    result: 'Comunicação de marca mais consistente para apresentações, documentos e materiais de apoio.',
+  },
+  {
+    title: 'Engler e Barcelos',
+    segment: 'Identidade visual',
+    image: '/brand/cases/engler-barcelos-identidade.jpg',
+    challenge:
+      'Desenvolver uma identidade sóbria, elegante e funcional para uma marca jurídica, com aplicações institucionais bem definidas.',
+    deliveries: ['Identidade visual', 'Papelaria', 'Grafismos', 'Aplicações de marca'],
+    result: 'Sistema visual mais refinado e coerente para comunicação institucional.',
   },
 ]
 

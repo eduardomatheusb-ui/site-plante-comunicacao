@@ -30,8 +30,8 @@ export default function ProjetosPage() {
         <div className="section-padding">
           <SectionTitle
             tag="Cases"
-            title="Uma estrutura pronta para receber projetos reais da Plante."
-            subtitle="Os cards já estão preparados para nome do cliente, segmento, desafio, entregas, resultado e imagem autorizada."
+            title="Projetos reais, organizados por contexto e entrega."
+            subtitle="Selecionamos trabalhos de saúde, comunicação pública, terceiro setor, engenharia e identidade visual para mostrar como a Plante transforma desafios em direção criativa."
           />
           <div className="mt-12">
             <ProjectCards />
