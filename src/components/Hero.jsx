@@ -6,6 +6,19 @@ import { navigateTo } from '../lib/navigation'
 export default function Hero() {
   return (
     <section className="relative flex min-h-screen flex-col justify-center overflow-hidden bg-petrol">
+      <video
+        className="absolute inset-0 h-full w-full object-cover opacity-70"
+        src="/brand/plante-8-anos.mp4"
+        autoPlay
+        muted
+        loop
+        playsInline
+        preload="metadata"
+        aria-hidden="true"
+      />
+      <div className="absolute inset-0 bg-gradient-to-r from-black via-black/72 to-black/24" />
+      <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/60" />
+
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute left-0 right-0 top-[18%] h-px bg-white/8" />
         <div className="absolute bottom-[18%] left-0 right-0 h-px bg-white/8" />
