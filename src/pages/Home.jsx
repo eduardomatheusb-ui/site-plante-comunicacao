@@ -41,7 +41,7 @@ export default function Home() {
           <img
             src="/brand/showcase/plante-equipe-8-anos.jpg"
             alt="Equipe da Plante Comunicação reunida no aniversário de 8 anos da agência."
-            className="h-[360px] w-full object-cover object-top md:h-[520px]"
+            className="h-[300px] w-full object-cover object-center md:h-[420px]"
           />
         </div>
       </section>
