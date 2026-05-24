@@ -30,7 +30,11 @@ export default function ContentCards({ limit }) {
         >
           {idea.image && (
             <div className="h-44 overflow-hidden bg-grafite">
-              <img src={idea.image} alt="" className="h-full w-full object-cover transition duration-700 group-hover:scale-105" />
+              <img
+                src={idea.image}
+                alt=""
+                className={`h-full w-full transition duration-700 group-hover:scale-105 ${idea.cardImageClass || 'object-cover'}`}
+              />
             </div>
           )}
           <div className="flex flex-1 flex-col justify-between p-6">

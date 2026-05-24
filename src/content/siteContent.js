@@ -234,7 +234,9 @@ export const projects = [
     title: 'Salão do Encontro',
     client: 'Salão do Encontro',
     segment: 'Terceiro setor',
-    image: '/brand/work/cover-salao-encontro.jpg',
+    image: '/brand/ideas/escuta-processo-criativo.jpg',
+    imageClass: 'object-contain bg-grafite',
+    cardImageClass: 'object-cover object-top',
     gallery: ['/brand/work/cover-salao-encontro.jpg', '/brand/work/salao-geral.jpg', '/brand/work/salao-parceiros.jpg'],
     challenge:
       'Comunicar uma iniciativa social com linguagem sensível, informação clara e materiais que ajudassem a mobilizar famílias, parceiros e comunidade.',

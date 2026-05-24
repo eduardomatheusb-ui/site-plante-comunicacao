@@ -24,7 +24,7 @@ export default function ConteudoPage({ slug }) {
 
           {idea.image && (
             <div className="mb-12 overflow-hidden bg-grafite shadow-[10px_10px_0_#F7FF19]">
-              <img src={idea.image} alt="" className="h-[360px] w-full object-cover md:h-[520px]" />
+              <img src={idea.image} alt="" className={`h-[360px] w-full md:h-[520px] ${idea.imageClass || 'object-cover'}`} />
             </div>
           )}
 
