@@ -246,20 +246,21 @@ export const projects = [
     result: 'Comunicação mais organizada para ampliar entendimento, participação e presença da iniciativa.',
   },
   {
-    slug: 'bh-escape',
-    title: 'BH Escape',
-    client: 'BH Escape',
-    segment: 'Entretenimento',
-    image: '/brand/work/bh-escape-story-1.jpg',
-    gallery: ['/brand/work/bh-escape-story-1.jpg', '/brand/work/bh-escape-story-2.jpg', '/brand/work/bh-escape-story-3.jpg'],
+    slug: 'passaletti-em-bh',
+    title: 'Passaletti em BH',
+    client: 'Passaletti',
+    segment: 'Audiovisual',
+    image: '/brand/work/cover-passaletti-bh.jpg',
+    video: '/brand/work/passaletti-bh-video.mp4',
+    gallery: ['/brand/work/cover-passaletti-bh.jpg'],
     challenge:
-      'Criar uma comunicação de divulgação com ritmo, curiosidade e apelo visual para uma experiência de entretenimento.',
+      'Registrar a inauguração da Passaletti em Belo Horizonte com uma comunicação visual que apresentasse a chegada da marca à cidade.',
     insight:
-      'Uma experiência imersiva precisa começar antes da visita. A campanha precisava provocar vontade, criar clima e levar o público para dentro da proposta.',
+      'Uma inauguração também é construção de presença. O registro precisava valorizar o ambiente, as pessoas e a experiência da marca no novo endereço.',
     idea:
-      'Trabalhamos peças verticais com impacto visual, chamadas diretas e composição pensada para redes sociais, mantendo o tom de mistério e convite.',
-    deliveries: ['Campanha digital', 'Stories', 'Direção visual', 'Peças de divulgação'],
-    result: 'Materiais com mais força visual para apresentar a experiência e estimular interesse do público.',
+      'Produzimos um vídeo de apresentação com ritmo de lançamento, estética alinhada à marca e recortes pensados para comunicar a novidade nos canais digitais.',
+    deliveries: ['Produção audiovisual', 'Vídeo de inauguração', 'Direção visual', 'Conteúdo para redes sociais'],
+    result: 'Um material audiovisual para marcar a chegada da Passaletti em BH e apoiar a divulgação da inauguração.',
   },
   {
     slug: 'aqui-em-saa',

@@ -79,6 +79,19 @@ export default function ProjetoCasePage({ slug }) {
             </aside>
 
             <div className="space-y-8">
+              {project.video && (
+                <div className="overflow-hidden bg-grafite shadow-[12px_12px_0_#F7FF19]">
+                  <video
+                    src={project.video}
+                    poster={project.image}
+                    className="aspect-video w-full bg-grafite object-cover"
+                    controls
+                    playsInline
+                    preload="metadata"
+                  />
+                </div>
+              )}
+
               <div className="overflow-hidden bg-grafite shadow-[12px_12px_0_#F7FF19]">
                 <img src={project.gallery?.[0] || project.image} alt="" className="h-full w-full object-cover" />
               </div>
