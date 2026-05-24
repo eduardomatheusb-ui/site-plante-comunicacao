@@ -167,7 +167,7 @@ export const clientLogos = [
   { name: 'Instituto Wani Higino', image: '/brand/clients/instituto-wani-higino.png', logoClass: 'max-h-20 max-w-[92%]' },
   { name: 'IUNA', image: '/brand/clients/iuna.png' },
   { name: 'Luziana Lanna Idiomas', image: '/brand/clients/luziana-lanna.png' },
-  { name: 'Passaletti', image: '/brand/clients/passaletti.webp', logoClass: 'max-h-10 max-w-[88%]' },
+  { name: 'Passaletti', image: '/brand/clients/passaletti.png', logoClass: 'max-h-16 max-w-[88%]' },
   { name: 'Plural Ferro e Aço', image: '/brand/clients/plural-ferro-aco.png' },
   { name: 'Prefeitura de Santo Antônio do Amparo', image: '/brand/clients/prefeitura-saa.png', logoClass: 'max-h-20 max-w-[88%]' },
   { name: 'Câmara Municipal de Betim', image: '/brand/clients/camara-betim.png', logoClass: 'max-h-24 max-w-[90%]' },
