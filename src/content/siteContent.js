@@ -249,18 +249,21 @@ export const projects = [
     slug: 'passaletti-em-bh',
     title: 'Passaletti em BH',
     client: 'Passaletti',
-    segment: 'Audiovisual',
+    segment: 'Estratégia de comunicação | Plano de mídia',
     image: '/brand/work/cover-passaletti-bh.jpg',
-    video: '/brand/work/passaletti-bh-video.mp4',
+    videos: [
+      { title: 'Vídeo veiculado', src: '/brand/work/passaletti-bh-video.mp4' },
+      { title: 'Vídeo de apoio', src: '/brand/work/passaletti-bh-midia.mp4', orientation: 'vertical' },
+    ],
     gallery: ['/brand/work/cover-passaletti-bh.jpg'],
     challenge:
-      'Registrar a inauguração da Passaletti em Belo Horizonte com uma comunicação visual que apresentasse a chegada da marca à cidade.',
+      'Planejar a chegada da Passaletti a Belo Horizonte com uma estratégia de comunicação capaz de apresentar a marca ao público da capital e fortalecer sua inauguração no Shopping Del Rey.',
     insight:
-      'Uma inauguração também é construção de presença. O registro precisava valorizar o ambiente, as pessoas e a experiência da marca no novo endereço.',
+      'Uma inauguração também é construção de presença. Para chegar bem a Belo Horizonte, a Passaletti precisava ser vista, lembrada e reconhecida pelo público da capital.',
     idea:
-      'Produzimos um vídeo de apresentação com ritmo de lançamento, estética alinhada à marca e recortes pensados para comunicar a novidade nos canais digitais.',
-    deliveries: ['Produção audiovisual', 'Vídeo de inauguração', 'Direção visual', 'Conteúdo para redes sociais'],
-    result: 'Um material audiovisual para marcar a chegada da Passaletti em BH e apoiar a divulgação da inauguração.',
+      'A Plante desenvolveu o plano de mídia e a estratégia de comunicação para a inauguração da Passaletti no Shopping Del Rey, conectando a marca aos principais veículos de Minas Gerais, como Globo Minas e Rádio Itatiaia, além de parcerias com influenciadores da cidade.',
+    deliveries: ['Plano de mídia', 'Estratégia de comunicação', 'Veiculação regional', 'Parcerias com influenciadores', 'Campanha de inauguração'],
+    result: 'Uma estratégia para ampliar a visibilidade da chegada da Passaletti em BH, combinando mídia regional, influência local e comunicação de inauguração.',
   },
   {
     slug: 'aqui-em-saa',

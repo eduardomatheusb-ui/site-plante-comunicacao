@@ -22,6 +22,8 @@ export default function ProjetoCasePage({ slug }) {
     )
   }
 
+  const videos = project.videos || (project.video ? [{ src: project.video }] : [])
+
   return (
     <article className="bg-[#f1f0e7] text-grafite">
       <section className="bg-grafite px-6 pb-16 pt-28 text-white md:pt-32">
@@ -79,16 +81,25 @@ export default function ProjetoCasePage({ slug }) {
             </aside>
 
             <div className="space-y-8">
-              {project.video && (
-                <div className="overflow-hidden bg-grafite shadow-[12px_12px_0_#F7FF19]">
-                  <video
-                    src={project.video}
-                    poster={project.image}
-                    className="aspect-video w-full bg-grafite object-cover"
-                    controls
-                    playsInline
-                    preload="metadata"
-                  />
+              {videos.length > 0 && (
+                <div className="grid gap-6">
+                  {videos.map((video) => (
+                    <div key={video.src} className="overflow-hidden bg-grafite shadow-[12px_12px_0_#F7FF19]">
+                      {video.title && (
+                        <p className="border-b border-white/10 px-4 py-3 font-display text-xs font-bold uppercase tracking-[0.22em] text-amarelo">
+                          {video.title}
+                        </p>
+                      )}
+                      <video
+                        src={video.src}
+                        poster={project.image}
+                        className={video.orientation === 'vertical' ? 'mx-auto max-h-[720px] w-auto max-w-full bg-grafite object-contain' : 'aspect-video w-full bg-grafite object-cover'}
+                        controls
+                        playsInline
+                        preload="metadata"
+                      />
+                    </div>
+                  ))}
                 </div>
               )}
 
