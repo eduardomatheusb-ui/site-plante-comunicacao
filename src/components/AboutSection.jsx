@@ -70,7 +70,7 @@ export default function AboutSection() {
               Acreditamos que uma boa ideia não nasce pronta. Ela precisa ser escutada, planejada, criada e colocada em movimento. Por isso, nosso trabalho combina repertório, sensibilidade, análise e execução para construir marcas mais presentes, reconhecidas e conectadas com seus públicos.
             </p>
             <p>
-              Atuamos com comunicação de forma completa, desde o diagnóstico e o posicionamento até a criação de campanhas publicitárias, gestão de redes sociais, produção audiovisual, tráfego pago, branding, projetos digitais e comunicação institucional.
+              Atuamos com comunicação de forma completa, desde o diagnóstico e o posicionamento até a criação de campanhas institucionais, gestão de redes sociais, produção audiovisual, tráfego pago, branding, projetos digitais e comunicação institucional.
             </p>
             <p>
               Somos de Minas. A Plante nasce daqui e pensa comunicação para marcas, instituições e projetos que querem crescer com mais clareza, presença e intenção.

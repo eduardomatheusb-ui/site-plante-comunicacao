@@ -33,7 +33,7 @@ const cases = [
     segment: 'Projetos sociais',
     challenge: 'O projeto precisava ampliar alcance e explicar sua proposta para diferentes públicos.',
     solution: 'A Plante criou conceito de campanha, peças digitais, roteiro, vídeo e materiais de apoio para divulgação.',
-    deliveries: ['Campanha publicitária', 'Produção audiovisual', 'Materiais institucionais'],
+    deliveries: ['Campanha institucional', 'Produção audiovisual', 'Materiais institucionais'],
     impact: 'Apoio à divulgação de projeto público e ampliação do alcance nos canais digitais.',
   },
   {

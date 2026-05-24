@@ -14,7 +14,7 @@ const serviceOptions = [
   'Estratégia e Planejamento',
   'Gestão de Redes Sociais',
   'Branding e Identidade Visual',
-  'Campanhas Publicitárias',
+  'Campanhas Institucionais',
   'Produção Audiovisual',
   'Tráfego Pago e Mídia Digital',
   'Comunicação Institucional',

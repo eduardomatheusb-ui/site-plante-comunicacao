@@ -26,7 +26,7 @@ const services = [
   },
   {
     n: '04',
-    title: 'Campanhas publicitárias',
+    title: 'Campanhas institucionais',
     short: 'Campanhas',
     tags: ['Lançamentos', 'Institucional', 'Interesse público'],
     description: 'Criação de campanhas para lançamentos, datas comemorativas, ações institucionais, projetos públicos, comerciais e sociais.',
