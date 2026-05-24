@@ -11,7 +11,7 @@ export default function ClientLogoGrid() {
           <img
             src={client.image}
             alt={client.name}
-            className="max-h-20 max-w-full object-contain opacity-80 transition-opacity duration-300 hover:opacity-100"
+            className={`${client.logoClass || 'max-h-16 max-w-[78%]'} object-contain opacity-80 transition-opacity duration-300 hover:opacity-100`}
             loading="lazy"
           />
         </div>
