@@ -3,10 +3,21 @@ import { ArrowRight } from 'lucide-react'
 import LogoMark from './LogoMark'
 import { navigateTo } from '../lib/navigation'
 
-export default function PageHero({ eyebrow, title, subtitle, ctaLabel, ctaHref }) {
+export default function PageHero({ eyebrow, title, subtitle, ctaLabel, ctaHref, backgroundImage }) {
   return (
     <section className="relative overflow-hidden bg-petrol pt-32 pb-20 md:pt-40 md:pb-28">
       <div className="absolute inset-0 pointer-events-none">
+        {backgroundImage && (
+          <>
+            <img
+              src={backgroundImage}
+              alt=""
+              className="absolute inset-0 h-full w-full object-cover opacity-25"
+              aria-hidden="true"
+            />
+            <div className="absolute inset-0 bg-grafite/70" />
+          </>
+        )}
         <div className="absolute bottom-0 left-0 right-0 h-px bg-white/10" />
       </div>
 

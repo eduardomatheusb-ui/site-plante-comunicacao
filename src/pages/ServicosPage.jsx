@@ -9,6 +9,7 @@ export default function ServicosPage() {
         eyebrow="Serviços"
         title="Comunicação completa, do pensamento à entrega."
         subtitle="A Plante une estratégia, criação, conteúdo, mídia e presença digital para construir soluções de comunicação para marcas, instituições e projetos."
+        backgroundImage="/brand/showcase/servicos-bg.jpg"
       />
 
       <section className="bg-petrol-dark py-24">
