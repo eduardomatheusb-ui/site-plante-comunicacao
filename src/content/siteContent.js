@@ -337,7 +337,9 @@ export const ideas = [
     category: 'Estratégia',
     date: '24 maio 2026',
     readingTime: '5 min',
-    image: '/brand/showcase/plante-posts-showcase.jpg',
+    image: '/brand/ideas/antes-de-um-bom-post.jpg',
+    imageClass: 'object-contain bg-grafite',
+    cardImageClass: 'object-cover object-center',
     summary:
       'Antes da criação, existe escuta, objetivo e direção. Um bom conteúdo começa quando a marca entende o que precisa comunicar.',
     highlight:
