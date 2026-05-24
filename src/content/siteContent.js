@@ -161,6 +161,21 @@ export const segments = [
   'Comunicação para instituições',
 ]
 
+export const clientLogos = [
+  { name: 'COENF Saúde', image: '/brand/clients/coenf-saude.png' },
+  { name: 'Fortfrio', image: '/brand/clients/fortfrio.png' },
+  { name: 'Instituto Wani Higino', image: '/brand/clients/instituto-wani-higino.png' },
+  { name: 'IUNA', image: '/brand/clients/iuna.png' },
+  { name: 'Luziana Lanna Idiomas', image: '/brand/clients/luziana-lanna.png' },
+  { name: 'Madá Gastrobar', image: '/brand/clients/mada-gastrobar.png' },
+  { name: 'Plural Ferro e Aço', image: '/brand/clients/plural-ferro-aco.png' },
+  { name: 'Santa Casa de Santo Antônio do Amparo', image: '/brand/clients/santa-casa-saa.png' },
+  { name: 'Shopping Móveis', image: '/brand/clients/shopping-moveis.png' },
+  { name: 'Tropicália Kombucha', image: '/brand/clients/tropicalia-kombucha.png' },
+  { name: 'Utopia', image: '/brand/clients/utopia.png' },
+  { name: 'VBO Engenharia', image: '/brand/clients/vbo-engenharia.png' },
+]
+
 export const projectCategories = [
   'Marcas',
   'Instituições',

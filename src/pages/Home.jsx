@@ -4,6 +4,7 @@ import SectionTitle from '../components/SectionTitle'
 import ServicesGrid from '../components/ServicesGrid'
 import MethodSteps from '../components/MethodSteps'
 import ProjectShowcase from '../components/ProjectShowcase'
+import ClientLogoGrid from '../components/ClientLogoGrid'
 import ContentCards from '../components/ContentCards'
 import { contact } from '../content/siteContent'
 import { navigateTo } from '../lib/navigation'
@@ -109,6 +110,18 @@ export default function Home() {
             />
           </div>
           <ContentCards limit={3} />
+        </div>
+      </section>
+
+      <section className="bg-petrol-dark py-24">
+        <div className="section-padding">
+          <div className="mb-12 max-w-3xl">
+            <span className="tag mb-5">Clientes</span>
+            <h2 className="font-display text-4xl font-bold leading-tight text-white md:text-6xl">
+              Marcas, instituições e projetos atendidos pela Plante.
+            </h2>
+          </div>
+          <ClientLogoGrid />
         </div>
       </section>
 
