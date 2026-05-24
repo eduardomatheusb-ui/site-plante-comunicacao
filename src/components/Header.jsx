@@ -41,21 +41,12 @@ export default function Header() {
         }`}
       >
         <div className="section-padding py-4 flex items-center justify-between">
-          {/* Logo */}
-          <button
-            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-            className="flex items-center gap-3 group"
-          >
+          <button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="flex items-center gap-3 group">
             <motion.div whileHover={{ scale: 1.03 }} transition={{ type: 'spring', stiffness: 300 }}>
-              <PlanteWordmark
-                variant="light"
-                size={178}
-                className="w-[132px] sm:w-[178px]"
-              />
+              <PlanteWordmark variant="light" size={178} className="w-[132px] sm:w-[178px]" />
             </motion.div>
           </button>
 
-          {/* Desktop nav */}
           <nav className="hidden md:flex items-center gap-7">
             {navLinks.map((link) => (
               <button
@@ -66,26 +57,17 @@ export default function Header() {
                 {link.label}
               </button>
             ))}
-            <button
-              onClick={() => handleNav('#contato')}
-              className="btn-primary text-xs px-5 py-2.5"
-            >
+            <button onClick={() => handleNav('#contato')} className="btn-primary text-xs px-5 py-2.5">
               Fale com a gente
             </button>
           </nav>
 
-          {/* Mobile toggle */}
-          <button
-            onClick={() => setMenuOpen(!menuOpen)}
-            className="md:hidden text-white p-2"
-            aria-label="Menu"
-          >
+          <button onClick={() => setMenuOpen(!menuOpen)} className="md:hidden text-white p-2" aria-label="Menu">
             {menuOpen ? <X size={22} /> : <Menu size={22} />}
           </button>
         </div>
       </motion.header>
 
-      {/* Mobile menu */}
       <AnimatePresence>
         {menuOpen && (
           <motion.div
@@ -109,19 +91,11 @@ export default function Header() {
                 </motion.button>
               ))}
             </nav>
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.4 }}
-              className="pt-8 border-t border-white/10"
-            >
-              <button
-                onClick={() => handleNav('#contato')}
-                className="btn-primary w-full justify-center text-base"
-              >
+            <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.4 }} className="pt-8 border-t border-white/10">
+              <button onClick={() => handleNav('#contato')} className="btn-primary w-full justify-center text-base">
                 Fale com a gente
               </button>
-              <p className="text-white/40 text-sm mt-4 text-center">Betim / MG</p>
+              <p className="text-white/40 text-sm mt-4 text-center">Minas Gerais / Brasil</p>
             </motion.div>
           </motion.div>
         )}

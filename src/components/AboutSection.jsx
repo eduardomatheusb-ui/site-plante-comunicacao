@@ -5,7 +5,14 @@ const pillars = [
   { label: 'Escuta', desc: 'Antes de qualquer criação, existe uma escuta real.' },
   { label: 'Estratégia', desc: 'Planejamento antes do post, da peça, da campanha.' },
   { label: 'Criação', desc: 'Forma, linguagem e conceito com intenção.' },
-  { label: 'Resultado', desc: 'Presença que gera conexão e movimento.' },
+  { label: 'Movimento', desc: 'Presença que gera conexão, reconhecimento e resultado.' },
+]
+
+const stats = [
+  { n: '8', label: 'anos de atuação' },
+  { n: '360°', label: 'visão de comunicação' },
+  { n: 'MG', label: 'identidade mineira' },
+  { n: '+', label: 'estratégia, criação e execução' },
 ]
 
 export default function AboutSection() {
@@ -14,8 +21,6 @@ export default function AboutSection() {
 
   return (
     <section id="sobre" className="bg-grafite-mid">
-
-      {/* Block 1 — big statement, full-width */}
       <div ref={ref} className="section-padding pt-24 pb-16 border-b border-white/6">
         <motion.span
           initial={{ opacity: 0, y: 12 }}
@@ -31,10 +36,10 @@ export default function AboutSection() {
             initial={{ opacity: 0, y: 40 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-            className="font-display font-bold text-4xl md:text-6xl lg:text-7xl text-white leading-[0.95] tracking-tight max-w-3xl"
+            className="font-display font-bold text-4xl md:text-6xl lg:text-7xl text-white leading-[0.95] tracking-tight max-w-4xl"
           >
-            Agência que pensa<br />
-            <span className="text-gradient-yellow">antes de postar.</span>
+            Agência mineira que pensa<br />
+            <span className="text-gradient-yellow">antes de criar.</span>
           </motion.h2>
 
           <motion.div
@@ -43,37 +48,38 @@ export default function AboutSection() {
             transition={{ delay: 0.5 }}
             className="flex flex-col gap-1 text-right hidden lg:flex"
           >
-            <span className="text-white/20 text-xs font-display tracking-widest uppercase">Betim</span>
             <span className="text-white/20 text-xs font-display tracking-widest uppercase">Minas Gerais</span>
             <span className="text-white/20 text-xs font-display tracking-widest uppercase">Brasil</span>
+            <span className="text-white/20 text-xs font-display tracking-widest uppercase">8 anos</span>
           </motion.div>
         </div>
       </div>
 
-      {/* Block 2 — text + numbers */}
       <div ref={ref2} className="grid lg:grid-cols-2">
-
-        {/* Left: copy */}
         <div className="section-padding py-16 border-b lg:border-b-0 lg:border-r border-white/6">
           <motion.div
             initial={{ opacity: 0, y: 24 }}
             animate={inView2 ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.7 }}
-            className="space-y-5 text-white/60 text-base md:text-lg leading-relaxed max-w-lg"
+            className="space-y-5 text-white/65 text-base md:text-lg leading-relaxed max-w-xl"
           >
             <p>
-              A Plante nasceu para criar comunicação com propósito, ritmo e direção.
-              Somos uma agência que escuta antes de propor e transforma ideias em
-              campanhas, marcas, conteúdos e experiências.
+              A Plante Comunicação é uma agência mineira de publicidade que une estratégia, criação, conteúdo e posicionamento para movimentar marcas, instituições e projetos.
             </p>
             <p>
-              Não acreditamos em comunicação solta. Acreditamos em processo,
-              repertório e criação com intenção — para empresas, instituições e
-              projetos que precisam comunicar com clareza.
+              Acreditamos que uma boa ideia não nasce pronta. Ela precisa ser escutada, planejada, criada e colocada em movimento. Por isso, nosso trabalho combina repertório, sensibilidade, análise e execução para construir marcas mais presentes, reconhecidas e conectadas com seus públicos.
+            </p>
+            <p>
+              Atuamos com comunicação de forma completa, desde o diagnóstico e o posicionamento até a criação de campanhas publicitárias, gestão de redes sociais, produção audiovisual, tráfego pago, branding, projetos digitais e comunicação institucional.
+            </p>
+            <p>
+              Somos de Minas. A Plante nasce daqui e pensa comunicação para marcas, instituições e projetos que querem crescer com mais clareza, presença e intenção.
+            </p>
+            <p className="text-white/85 font-medium">
+              Mais do que produzir peças, a Plante cria caminhos de comunicação.
             </p>
           </motion.div>
 
-          {/* Pillars */}
           <div className="mt-12 grid grid-cols-2 gap-px bg-white/6">
             {pillars.map((p, i) => (
               <motion.div
@@ -90,14 +96,8 @@ export default function AboutSection() {
           </div>
         </div>
 
-        {/* Right: big numbers */}
         <div className="grid grid-cols-2 divide-x divide-y divide-white/6">
-          {[
-            { n: '10+', label: 'anos de mercado' },
-            { n: '80+', label: 'projetos entregues' },
-            { n: '30+', label: 'marcas atendidas' },
-            { n: '360°', label: 'visão de comunicação' },
-          ].map((s, i) => (
+          {stats.map((s, i) => (
             <motion.div
               key={s.label}
               initial={{ opacity: 0, scale: 0.92 }}

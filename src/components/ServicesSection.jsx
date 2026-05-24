@@ -5,52 +5,59 @@ import { ArrowRight } from 'lucide-react'
 const services = [
   {
     n: '01',
-    title: 'Estratégia e Planejamento',
+    title: 'Estratégia e planejamento',
     short: 'Estratégia',
-    tags: ['Diagnóstico', 'Posicionamento', 'Calendário editorial'],
-    description: 'Planejamento que organiza o caos e aponta a direção antes de qualquer criação.',
+    tags: ['Diagnóstico', 'Posicionamento', 'Narrativa'],
+    description: 'Diagnóstico de comunicação, posicionamento, campanhas, calendário editorial, planejamento de conteúdo, definição de narrativa e organização das ações de marketing.',
   },
   {
     n: '02',
-    title: 'Branding e Identidade',
-    short: 'Branding',
-    tags: ['Naming', 'Identidade Visual', 'Manifesto'],
-    description: 'Marcas que sabem quem são antes de aparecer.',
+    title: 'Gestão de redes sociais',
+    short: 'Redes',
+    tags: ['Conteúdo', 'Design', 'Métricas'],
+    description: 'Planejamento, criação de conteúdo, redação, design, publicação, acompanhamento de métricas e construção de presença digital para marcas, instituições e projetos.',
   },
   {
     n: '03',
-    title: 'Conteúdo e Redes Sociais',
-    short: 'Conteúdo',
-    tags: ['Social Media', 'Copywriting', 'Reels'],
-    description: 'Presença digital com estratégia editorial, não só postagem.',
+    title: 'Branding e identidade visual',
+    short: 'Branding',
+    tags: ['Marca', 'Linguagem', 'Aplicações'],
+    description: 'Criação, reposicionamento e desenvolvimento de marcas, incluindo identidade visual, linguagem, conceito, aplicações e materiais institucionais.',
   },
   {
     n: '04',
-    title: 'Tráfego Pago e Performance',
-    short: 'Performance',
-    tags: ['Meta Ads', 'Google Ads', 'Relatórios'],
-    description: 'Investimento com retorno mensurável e otimização contínua.',
+    title: 'Campanhas publicitárias',
+    short: 'Campanhas',
+    tags: ['Lançamentos', 'Institucional', 'Interesse público'],
+    description: 'Criação de campanhas para lançamentos, datas comemorativas, ações institucionais, projetos públicos, comerciais e sociais.',
   },
   {
     n: '05',
-    title: 'Audiovisual',
+    title: 'Produção audiovisual',
     short: 'Audiovisual',
-    tags: ['Vídeo institucional', 'Captação', 'Edição'],
-    description: 'Imagem que comunica antes das palavras.',
+    tags: ['Roteiro', 'Captação', 'Edição'],
+    description: 'Roteiros, captação, direção criativa, edição de vídeos, reels, vídeos institucionais, entrevistas, coberturas e conteúdos para redes sociais.',
   },
   {
     n: '06',
-    title: 'Comunicação Institucional',
-    short: 'Institucional',
-    tags: ['Assessoria', 'Releases', 'Imprensa'],
-    description: 'Voz clara para instituições que precisam ser ouvidas.',
+    title: 'Tráfego pago e mídia digital',
+    short: 'Mídia',
+    tags: ['Meta Ads', 'Google Ads', 'Relatórios'],
+    description: 'Planejamento, criação, veiculação e acompanhamento de campanhas pagas em plataformas digitais, com foco em alcance, conversão, relacionamento ou fortalecimento de marca.',
   },
   {
     n: '07',
-    title: 'Projetos Digitais',
+    title: 'Comunicação institucional',
+    short: 'Institucional',
+    tags: ['Releases', 'Apresentações', 'Imagem pública'],
+    description: 'Releases, textos institucionais, apresentações, relatórios, discursos, materiais de divulgação, comunicação interna, campanhas de interesse público e apoio à imagem pública de instituições.',
+  },
+  {
+    n: '08',
+    title: 'Projetos digitais',
     short: 'Digital',
-    tags: ['Websites', 'Landing Pages'],
-    description: 'Do wireframe ao ar, com foco em resultado.',
+    tags: ['Sites', 'Landing pages', 'Formulários'],
+    description: 'Landing pages, sites, páginas de campanha, formulários, interfaces simples e materiais digitais de apoio à comunicação.',
   },
 ]
 
@@ -65,33 +72,27 @@ function ServiceRow({ s, i }) {
       transition={{ duration: 0.55, delay: i * 0.07 }}
       className="group grid grid-cols-[48px_1fr] md:grid-cols-[64px_1fr_auto] items-start md:items-center gap-4 md:gap-8 py-7 border-b border-white/8 hover:border-amarelo/40 transition-colors duration-300 cursor-default"
     >
-      {/* Number */}
       <span className="font-display font-bold text-xs text-amarelo/35 pt-1 group-hover:text-amarelo/70 transition-colors">
         {s.n}
       </span>
 
-      {/* Title + description */}
       <div>
         <h3 className="font-display font-bold text-xl md:text-3xl text-white group-hover:text-amarelo transition-colors duration-300 leading-tight">
           {s.title}
         </h3>
-        <p className="text-white/40 text-sm mt-1.5 leading-relaxed max-w-lg hidden md:block">
+        <p className="text-white/45 text-sm mt-1.5 leading-relaxed max-w-2xl hidden md:block">
           {s.description}
         </p>
         <div className="flex flex-wrap gap-2 mt-3">
           {s.tags.map(t => (
-            <span key={t} className="text-[11px] px-2.5 py-0.5 rounded-full bg-white/5 text-white/35 font-display">
+            <span key={t} className="text-[11px] px-2.5 py-0.5 rounded-full bg-white/5 text-white/40 font-display">
               {t}
             </span>
           ))}
         </div>
       </div>
 
-      {/* Arrow */}
-      <motion.div
-        className="text-white/15 group-hover:text-amarelo transition-colors duration-300 hidden md:block"
-        whileHover={{ x: 4 }}
-      >
+      <motion.div className="text-white/15 group-hover:text-amarelo transition-colors duration-300 hidden md:block" whileHover={{ x: 4 }}>
         <ArrowRight size={22} />
       </motion.div>
     </motion.div>
@@ -103,8 +104,6 @@ export default function ServicesSection() {
 
   return (
     <section id="servicos" className="bg-petrol">
-
-      {/* Header block — amarelo bg, full visual break */}
       <div className="bg-amarelo section-padding py-14">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
           <div>
@@ -115,13 +114,12 @@ export default function ServicesSection() {
               Comunicação<br />do início ao<br />resultado.
             </h2>
           </div>
-          <p className="text-black/55 text-base max-w-xs leading-relaxed">
+          <p className="text-black/55 text-base max-w-sm leading-relaxed">
             Não entregamos serviços isolados. Construímos presença com estratégia, criação e acompanhamento.
           </p>
         </div>
       </div>
 
-      {/* Services list */}
       <div ref={ref} className="section-padding pb-20">
         <div className="border-t border-white/8 mt-0">
           {services.map((s, i) => (
@@ -135,10 +133,7 @@ export default function ServicesSection() {
           transition={{ delay: 0.8 }}
           className="mt-12"
         >
-          <button
-            onClick={() => document.querySelector('#contato')?.scrollIntoView({ behavior: 'smooth' })}
-            className="btn-primary"
-          >
+          <button onClick={() => document.querySelector('#contato')?.scrollIntoView({ behavior: 'smooth' })} className="btn-primary">
             Solicite uma proposta
           </button>
         </motion.div>

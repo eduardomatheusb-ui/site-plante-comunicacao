@@ -1,7 +1,6 @@
 import { motion } from 'framer-motion'
 import { ArrowDown } from 'lucide-react'
 import LogoMark from './LogoMark'
-import PlanteWordmark from './PlanteWordmark'
 import { OrganicCircle, FloatingDot, BulbOutline } from './AnimatedGraphicElement'
 
 export default function Hero() {
@@ -12,19 +11,8 @@ export default function Hero() {
   return (
     <section className="relative min-h-screen bg-petrol overflow-hidden flex flex-col justify-center">
       <div className="absolute inset-0 pointer-events-none">
-        <OrganicCircle
-          size={600}
-          color="#F7FF19"
-          opacity={0.045}
-          className="absolute -top-40 -right-40"
-        />
-        <OrganicCircle
-          size={400}
-          color="#F7FF19"
-          opacity={0.035}
-          className="absolute bottom-0 -left-32"
-          animate={false}
-        />
+        <OrganicCircle size={600} color="#F7FF19" opacity={0.045} className="absolute -top-40 -right-40" />
+        <OrganicCircle size={400} color="#F7FF19" opacity={0.035} className="absolute bottom-0 -left-32" animate={false} />
 
         <img
           src="/brand/plante-bulb-dark-yellow.png"
@@ -47,7 +35,7 @@ export default function Hero() {
         <div className="absolute bottom-[18%] left-0 right-0 h-px bg-white/8" />
 
         <div className="absolute left-6 top-1/2 -translate-y-1/2 writing-vertical text-white/20 text-xs tracking-[0.3em] font-display hidden lg:block">
-          BETIM · MG · BRASIL
+          MINAS GERAIS · BRASIL
         </div>
       </div>
 
@@ -65,7 +53,7 @@ export default function Hero() {
             >
               <LogoMark size={42} />
             </motion.div>
-            <span className="tag">Agência de comunicação</span>
+            <span className="tag">Agência mineira de publicidade</span>
           </motion.div>
 
           <div className="overflow-hidden mb-4">
@@ -107,8 +95,7 @@ export default function Hero() {
             transition={{ duration: 0.7, delay: 0.8 }}
             className="text-white/70 text-lg md:text-xl max-w-xl leading-relaxed mb-10"
           >
-            Somos uma agência de publicidade que une estratégia, criação, conteúdo e performance
-            para transformar ideias em presença, conexão e resultado.
+            Somos uma agência mineira de publicidade que une estratégia, criação, conteúdo e presença digital para transformar ideias em presença, conexão e resultado.
           </motion.p>
 
           <motion.div
@@ -139,7 +126,7 @@ export default function Hero() {
         <div className="marquee-track py-4 text-white/25 text-xs font-display tracking-[0.25em] uppercase select-none">
           {Array(12).fill(null).map((_, i) => (
             <span key={i} className="mx-8 whitespace-nowrap">
-              Estratégia · Criação · Branding · Conteúdo · Performance · Audiovisual · Comunicação
+              Estratégia · Criação · Branding · Conteúdo · Presença digital · Audiovisual · Comunicação institucional
             </span>
           ))}
         </div>
@@ -153,10 +140,7 @@ export default function Hero() {
         className="absolute bottom-24 right-8 md:right-12 flex flex-col items-center gap-2 text-white/35 hover:text-amarelo transition-colors group"
       >
         <span className="text-[10px] font-display tracking-widest uppercase writing-vertical">scroll</span>
-        <motion.div
-          animate={{ y: [0, 6, 0] }}
-          transition={{ duration: 1.5, repeat: Infinity }}
-        >
+        <motion.div animate={{ y: [0, 6, 0] }} transition={{ duration: 1.5, repeat: Infinity }}>
           <ArrowDown size={16} />
         </motion.div>
       </motion.button>

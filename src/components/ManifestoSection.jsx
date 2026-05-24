@@ -14,6 +14,8 @@ const lines = [
   { text: 'Plantar uma ideia é cuidar do terreno,', highlight: false, size: 'small' },
   { text: 'entender o tempo, escolher a linguagem', highlight: false, size: 'small' },
   { text: 'e fazer o movimento acontecer.', highlight: false, size: 'small' },
+  { text: '', size: 'spacer' },
+  { text: 'Somos uma agência mineira. Trazemos no nosso jeito de trabalhar a proximidade, a atenção e a capacidade de construir junto.', highlight: false, size: 'small' },
 ]
 
 const pillars = [
@@ -29,26 +31,12 @@ export default function ManifestoSection() {
   const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 })
 
   return (
-    <section
-      ref={sectionRef}
-      className="relative py-32 bg-amarelo overflow-hidden"
-    >
-      <motion.div
-        style={{ y }}
-        className="absolute inset-0 pointer-events-none flex items-center justify-center"
-      >
-        <PlanteWordmark
-          variant="scriptStone"
-          size={900}
-          className="w-[78vw] min-w-[620px] opacity-25"
-          alt=""
-        />
+    <section ref={sectionRef} className="relative py-32 bg-amarelo overflow-hidden">
+      <motion.div style={{ y }} className="absolute inset-0 pointer-events-none flex items-center justify-center">
+        <PlanteWordmark variant="scriptStone" size={900} className="w-[78vw] min-w-[620px] opacity-25" alt="" />
       </motion.div>
 
-      <motion.div
-        style={{ y: useTransform(scrollYProgress, [0, 1], [30, -30]) }}
-        className="absolute top-12 right-12 md:right-24 opacity-10"
-      >
+      <motion.div style={{ y: useTransform(scrollYProgress, [0, 1], [30, -30]) }} className="absolute top-12 right-12 md:right-24 opacity-10">
         <LogoMark size={120} color="#000000" />
       </motion.div>
 
@@ -63,12 +51,7 @@ export default function ManifestoSection() {
 
       <div className="section-padding relative z-10">
         <div ref={ref} className="max-w-3xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={inView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.5 }}
-            className="mb-8"
-          >
+          <motion.div initial={{ opacity: 0, y: 20 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.5 }} className="mb-8">
             <span className="inline-block px-3 py-1 text-xs font-display font-medium tracking-widest uppercase text-black/55 border border-black/20 rounded-full">
               Manifesto
             </span>
@@ -91,9 +74,7 @@ export default function ManifestoSection() {
                   initial={{ opacity: 0, y: 24 }}
                   animate={inView ? { opacity: 1, y: 0 } : {}}
                   transition={{ duration: 0.6, delay: 0.1 + i * 0.08 }}
-                  className={`font-display leading-tight text-black ${sizeClass} ${
-                    line.highlight ? 'text-black/55' : ''
-                  }`}
+                  className={`font-display leading-tight text-black ${sizeClass} ${line.highlight ? 'text-black/55' : ''}`}
                 >
                   {line.text}
                 </motion.p>

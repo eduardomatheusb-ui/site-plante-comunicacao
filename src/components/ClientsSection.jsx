@@ -2,8 +2,17 @@ import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 
 const segments = [
-  'Poder Público', 'Educação', 'Saúde', 'Engenharia',
-  'Terceiro Setor', 'Comércio & Serviços', 'Política Institucional', 'Projetos Culturais',
+  'Poder público',
+  'Educação',
+  'Saúde',
+  'Engenharia',
+  'Terceiro setor',
+  'Comércio e serviços',
+  'Eventos',
+  'Campanhas institucionais',
+  'Projetos sociais',
+  'Comunicação pública',
+  'Comunicação para instituições',
 ]
 
 export default function ClientsSection() {
@@ -11,8 +20,6 @@ export default function ClientsSection() {
 
   return (
     <section className="bg-petrol border-t border-white/6">
-
-      {/* Full-width statement */}
       <div className="section-padding py-20 border-b border-white/6">
         <div ref={ref} className="grid md:grid-cols-2 gap-12 items-center">
           <motion.h2
@@ -28,15 +35,13 @@ export default function ClientsSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ delay: 0.3 }}
-            className="text-white/50 text-base md:text-lg leading-relaxed"
+            className="text-white/55 text-base md:text-lg leading-relaxed"
           >
-            A Plante atua com marcas, instituições e projetos que precisam comunicar melhor.
-            Cada cliente chega com um desafio único e a gente entra fundo nesse contexto.
+            A Plante atua com marcas, instituições e projetos que precisam comunicar melhor. Somos uma agência mineira com experiência em diferentes áreas, construindo comunicação para empresas, instituições públicas, projetos sociais, iniciativas culturais, campanhas e marcas que precisam se posicionar com mais clareza.
           </motion.p>
         </div>
       </div>
 
-      {/* Segments — horizontal ticker-style */}
       <div className="py-10 border-b border-white/6 overflow-hidden">
         <div className="marquee-track gap-0">
           {[...segments, ...segments].map((seg, i) => (
@@ -50,7 +55,6 @@ export default function ClientsSection() {
         </div>
       </div>
 
-      {/* Segments grid */}
       <div className="section-padding py-16">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-px bg-white/6">
           {segments.map((seg, i) => (
@@ -70,14 +74,13 @@ export default function ClientsSection() {
           ))}
         </div>
 
-        {/* Logos placeholder */}
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           className="mt-8 border border-dashed border-white/10 rounded-xl p-10 text-center"
         >
-          <p className="text-white/20 text-sm font-display">Logos dos clientes serão adicionadas aqui</p>
+          <p className="text-white/20 text-sm font-display">Logos de clientes autorizados serão adicionados aqui</p>
         </motion.div>
       </div>
     </section>

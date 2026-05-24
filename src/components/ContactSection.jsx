@@ -8,13 +8,15 @@ import LogoMark from './LogoMark'
 import PlanteWordmark from './PlanteWordmark'
 
 const formName = 'contato-plante'
+const whatsappUrl = 'https://wa.me/5531985245110?text=Ol%C3%A1%2C%20Plante.%20Vim%20pelo%20site%20e%20gostaria%20de%20conversar%20sobre%20comunica%C3%A7%C3%A3o%20para%20minha%20marca%20ou%20projeto.'
 
 const serviceOptions = [
   'Estratégia e Planejamento',
-  'Branding e Identidade',
-  'Conteúdo e Redes Sociais',
-  'Tráfego Pago e Performance',
-  'Audiovisual',
+  'Gestão de Redes Sociais',
+  'Branding e Identidade Visual',
+  'Campanhas Publicitárias',
+  'Produção Audiovisual',
+  'Tráfego Pago e Mídia Digital',
   'Comunicação Institucional',
   'Projetos Digitais',
   'Não sei ainda',
@@ -24,28 +26,28 @@ const contacts = [
   {
     icon: MessageCircle,
     label: 'WhatsApp',
-    value: '+55 31 9 0000-0000',
-    href: 'https://wa.me/5531900000000',
+    value: '(31) 9 8524-5110',
+    href: whatsappUrl,
     color: '#25D366',
   },
   {
     icon: Instagram,
     label: 'Instagram',
-    value: '@plantecomunicacao',
-    href: 'https://instagram.com/plantecomunicacao',
+    value: '@agenciaplante',
+    href: 'https://instagram.com/agenciaplante',
     color: '#F7FF19',
   },
   {
     icon: Mail,
     label: 'E-mail',
-    value: 'contato@plantecomunicacao.com.br',
-    href: 'mailto:contato@plantecomunicacao.com.br',
+    value: 'contato@agenciaplante.com.br',
+    href: 'mailto:contato@agenciaplante.com.br',
     color: '#F7FF19',
   },
   {
     icon: MapPin,
-    label: 'Localização',
-    value: 'Betim, MG — Brasil',
+    label: 'Endereço',
+    value: 'Av. Governador Valadares, 355 - Sl 301, Centro - Betim/MG',
     href: null,
     color: '#F7FF19',
   },
@@ -120,16 +122,11 @@ export default function ContactSection() {
       <div className="absolute inset-0 pointer-events-none">
         <OrganicCircle size={700} color="#F7FF19" opacity={0.03} className="absolute -bottom-48 -right-48" />
         <OrganicCircle size={400} color="#F7FF19" opacity={0.025} className="absolute -top-24 -left-24" />
-        <img
-          src="/brand/plante-script-stone.png"
-          alt=""
-          className="absolute bottom-8 right-8 hidden w-[420px] opacity-[0.07] lg:block"
-        />
+        <img src="/brand/plante-script-stone.png" alt="" className="absolute bottom-8 right-8 hidden w-[420px] opacity-[0.07] lg:block" />
       </div>
 
       <div className="section-padding relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-24">
-          {/* Left */}
           <div ref={ref}>
             <SectionTitle
               tag="Contato"
@@ -137,13 +134,7 @@ export default function ContactSection() {
               subtitle="Conte para a Plante o que você precisa comunicar. A gente ajuda a transformar essa ideia em estratégia, campanha, conteúdo e presença."
             />
 
-            {/* Contact links */}
-            <motion.div
-              initial={{ opacity: 0, y: 24 }}
-              animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              className="mt-10 space-y-4"
-            >
+            <motion.div initial={{ opacity: 0, y: 24 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6, delay: 0.4 }} className="mt-10 space-y-4">
               {contacts.map((contact, i) => {
                 const Icon = contact.icon
                 const inner = (
@@ -159,13 +150,7 @@ export default function ContactSection() {
                 )
 
                 return contact.href ? (
-                  <a
-                    key={i}
-                    href={contact.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="block hover:opacity-80 transition-opacity"
-                  >
+                  <a key={i} href={contact.href} target="_blank" rel="noopener noreferrer" className="block hover:opacity-80 transition-opacity">
                     {inner}
                   </a>
                 ) : (
@@ -174,32 +159,14 @@ export default function ContactSection() {
               })}
             </motion.div>
 
-            {/* Logo watermark */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={inView ? { opacity: 1 } : {}}
-              transition={{ delay: 0.8 }}
-              className="mt-12 opacity-25"
-            >
+            <motion.div initial={{ opacity: 0 }} animate={inView ? { opacity: 1 } : {}} transition={{ delay: 0.8 }} className="mt-12 opacity-25">
               <PlanteWordmark variant="white" size={210} className="w-[170px]" />
             </motion.div>
           </div>
 
-          {/* Right: Form */}
-          <motion.div
-            initial={{ opacity: 0, x: 40 }}
-            animate={inView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.7, delay: 0.2 }}
-          >
+          <motion.div initial={{ opacity: 0, x: 40 }} animate={inView ? { opacity: 1, x: 0 } : {}} transition={{ duration: 0.7, delay: 0.2 }}>
             {!sent ? (
-              <form
-                name={formName}
-                method="POST"
-                data-netlify="true"
-                netlify-honeypot="botField"
-                onSubmit={handleSubmit}
-                className="space-y-4"
-              >
+              <form name={formName} method="POST" data-netlify="true" netlify-honeypot="botField" onSubmit={handleSubmit} className="space-y-4">
                 <input type="hidden" name="form-name" value={formName} />
                 <p className="hidden">
                   <label>
@@ -210,68 +177,28 @@ export default function ContactSection() {
                 <div className="grid sm:grid-cols-2 gap-4">
                   <div>
                     <label htmlFor="contact-name" className="text-white/40 text-xs font-display mb-1.5 block">Nome *</label>
-                    <input
-                      id="contact-name"
-                      type="text"
-                      name="name"
-                      required
-                      placeholder="Seu nome"
-                      value={form.name}
-                      onChange={handleChange}
-                      className={inputClass}
-                    />
+                    <input id="contact-name" type="text" name="name" required placeholder="Seu nome" value={form.name} onChange={handleChange} className={inputClass} />
                   </div>
                   <div>
                     <label htmlFor="contact-company" className="text-white/40 text-xs font-display mb-1.5 block">Empresa ou instituição</label>
-                    <input
-                      id="contact-company"
-                      type="text"
-                      name="company"
-                      placeholder="Nome da empresa"
-                      value={form.company}
-                      onChange={handleChange}
-                      className={inputClass}
-                    />
+                    <input id="contact-company" type="text" name="company" placeholder="Nome da empresa" value={form.company} onChange={handleChange} className={inputClass} />
                   </div>
                 </div>
 
                 <div className="grid sm:grid-cols-2 gap-4">
                   <div>
                     <label htmlFor="contact-email" className="text-white/40 text-xs font-display mb-1.5 block">E-mail *</label>
-                    <input
-                      id="contact-email"
-                      type="email"
-                      name="email"
-                      required
-                      placeholder="seu@email.com"
-                      value={form.email}
-                      onChange={handleChange}
-                      className={inputClass}
-                    />
+                    <input id="contact-email" type="email" name="email" required placeholder="seu@email.com" value={form.email} onChange={handleChange} className={inputClass} />
                   </div>
                   <div>
-                    <label htmlFor="contact-phone" className="text-white/40 text-xs font-display mb-1.5 block">Telefone / WhatsApp</label>
-                    <input
-                      id="contact-phone"
-                      type="tel"
-                      name="phone"
-                      placeholder="(31) 9 0000-0000"
-                      value={form.phone}
-                      onChange={handleChange}
-                      className={inputClass}
-                    />
+                    <label htmlFor="contact-phone" className="text-white/40 text-xs font-display mb-1.5 block">WhatsApp</label>
+                    <input id="contact-phone" type="tel" name="phone" placeholder="(31) 9 8524-5110" value={form.phone} onChange={handleChange} className={inputClass} />
                   </div>
                 </div>
 
                 <div>
                   <label htmlFor="contact-service" className="text-white/40 text-xs font-display mb-1.5 block">O que você precisa?</label>
-                  <select
-                    id="contact-service"
-                    name="service"
-                    value={form.service}
-                    onChange={handleChange}
-                    className={`${inputClass} cursor-pointer`}
-                  >
+                  <select id="contact-service" name="service" value={form.service} onChange={handleChange} className={`${inputClass} cursor-pointer`}>
                     <option value="" disabled>Selecione um serviço</option>
                     {serviceOptions.map((opt) => (
                       <option key={opt} value={opt} className="bg-petrol text-white">
@@ -283,64 +210,35 @@ export default function ContactSection() {
 
                 <div>
                   <label htmlFor="contact-message" className="text-white/40 text-xs font-display mb-1.5 block">Mensagem</label>
-                  <textarea
-                    id="contact-message"
-                    name="message"
-                    rows={4}
-                    placeholder="Conte um pouco mais sobre o seu projeto ou desafio..."
-                    value={form.message}
-                    onChange={handleChange}
-                    className={`${inputClass} resize-none`}
-                  />
+                  <textarea id="contact-message" name="message" rows={4} placeholder="Conte um pouco mais sobre o seu projeto ou desafio..." value={form.message} onChange={handleChange} className={`${inputClass} resize-none`} />
                 </div>
 
-                <button
-                  type="submit"
-                  disabled={isSubmitting}
-                  className="btn-primary w-full justify-center text-base py-4 mt-2"
-                >
+                <button type="submit" disabled={isSubmitting} className="btn-primary w-full justify-center text-base py-4 mt-2">
                   <Send size={16} />
                   {isSubmitting ? 'Enviando...' : 'Enviar mensagem'}
                 </button>
 
-                {submitError && (
-                  <p className="text-red-300/80 text-xs text-center">
-                    {submitError}
-                  </p>
-                )}
+                {submitError && <p className="text-red-300/80 text-xs text-center">{submitError}</p>}
 
                 <p className="text-white/20 text-xs text-center">
                   Ou fale diretamente pelo{' '}
-                  <a
-                    href="https://wa.me/5531900000000"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-amarelo/60 hover:text-amarelo underline"
-                  >
+                  <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="text-amarelo/60 hover:text-amarelo underline">
                     WhatsApp
                   </a>
                 </p>
               </form>
             ) : (
-              <motion.div
-                initial={{ opacity: 0, scale: 0.95 }}
-                animate={{ opacity: 1, scale: 1 }}
-                className="h-full flex flex-col items-center justify-center text-center py-16 gap-6"
-              >
+              <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} className="h-full flex flex-col items-center justify-center text-center py-16 gap-6">
                 <LogoMark size={64} />
                 <div>
                   <h3 className="font-display font-bold text-2xl text-white mb-3">
-                    Mensagem recebida.
+                    Mensagem enviada com sucesso.
                   </h3>
                   <p className="text-white/50 leading-relaxed">
-                    A Plante vai entrar em contato em breve.<br />
-                    Obrigado pelo interesse.
+                    Em breve, a equipe da Plante entra em contato com você.
                   </p>
                 </div>
-                <button
-                  onClick={() => setSent(false)}
-                  className="btn-outline text-sm"
-                >
+                <button onClick={() => setSent(false)} className="btn-outline text-sm">
                   Enviar outra mensagem
                 </button>
               </motion.div>

@@ -2,6 +2,8 @@ import { motion } from 'framer-motion'
 import { Instagram, Mail, MessageCircle, ArrowUpRight } from 'lucide-react'
 import PlanteWordmark from './PlanteWordmark'
 
+const whatsappUrl = 'https://wa.me/5531985245110?text=Ol%C3%A1%2C%20Plante.%20Vim%20pelo%20site%20e%20gostaria%20de%20conversar%20sobre%20comunica%C3%A7%C3%A3o%20para%20minha%20marca%20ou%20projeto.'
+
 const navGroups = [
   {
     title: 'Plante',
@@ -14,28 +16,28 @@ const navGroups = [
   {
     title: 'Serviços',
     links: [
-      { label: 'Estratégia e Planejamento', href: '#servicos' },
-      { label: 'Branding e Identidade', href: '#servicos' },
-      { label: 'Conteúdo e Redes Sociais', href: '#servicos' },
-      { label: 'Tráfego Pago', href: '#servicos' },
-      { label: 'Audiovisual', href: '#servicos' },
-      { label: 'Projetos Digitais', href: '#servicos' },
+      { label: 'Estratégia e planejamento', href: '#servicos' },
+      { label: 'Gestão de redes sociais', href: '#servicos' },
+      { label: 'Branding e identidade visual', href: '#servicos' },
+      { label: 'Campanhas publicitárias', href: '#servicos' },
+      { label: 'Comunicação institucional', href: '#servicos' },
+      { label: 'Projetos digitais', href: '#servicos' },
     ],
   },
   {
     title: 'Contato',
     links: [
-      { label: '@plantecomunicacao', href: 'https://instagram.com/plantecomunicacao', external: true },
-      { label: 'contato@plantecomunicacao.com.br', href: 'mailto:contato@plantecomunicacao.com.br', external: true },
-      { label: 'WhatsApp', href: 'https://wa.me/5531900000000', external: true },
+      { label: '@agenciaplante', href: 'https://instagram.com/agenciaplante', external: true },
+      { label: 'contato@agenciaplante.com.br', href: 'mailto:contato@agenciaplante.com.br', external: true },
+      { label: 'WhatsApp', href: whatsappUrl, external: true },
     ],
   },
 ]
 
 const socials = [
-  { Icon: Instagram, href: 'https://instagram.com/plantecomunicacao', label: 'Instagram' },
-  { Icon: MessageCircle, href: 'https://wa.me/5531900000000', label: 'WhatsApp' },
-  { Icon: Mail, href: 'mailto:contato@plantecomunicacao.com.br', label: 'E-mail' },
+  { Icon: Instagram, href: 'https://instagram.com/agenciaplante', label: 'Instagram' },
+  { Icon: MessageCircle, href: whatsappUrl, label: 'WhatsApp' },
+  { Icon: Mail, href: 'mailto:contato@agenciaplante.com.br', label: 'E-mail' },
 ]
 
 export default function Footer() {
@@ -53,10 +55,11 @@ export default function Footer() {
             <div className="mb-5">
               <PlanteWordmark variant="light" size={190} className="w-[160px]" />
             </div>
-            <p className="text-white/45 text-sm leading-relaxed max-w-[220px]">
-              Comunicação com intenção, estratégia e criação.
+            <p className="text-white/45 text-sm leading-relaxed max-w-[240px]">
+              Agência mineira de publicidade que une estratégia, criação, conteúdo e posicionamento.
             </p>
-            <p className="text-white/30 text-xs mt-3 font-display">Betim, MG — Brasil</p>
+            <p className="text-white/30 text-xs mt-3 font-display">Av. Governador Valadares, 355 - Sl 301, Centro - Betim/MG</p>
+            <p className="text-white/30 text-xs mt-2 font-display">www.agenciaplante.com.br</p>
 
             <div className="flex gap-3 mt-6">
               {socials.map(({ Icon, href, label }) => (
@@ -84,23 +87,12 @@ export default function Footer() {
                 {group.links.map((link) => (
                   <li key={link.label}>
                     {link.external ? (
-                      <a
-                        href={link.href}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-white/55 hover:text-white text-sm flex items-center gap-1 group transition-colors duration-200"
-                      >
+                      <a href={link.href} target="_blank" rel="noopener noreferrer" className="text-white/55 hover:text-white text-sm flex items-center gap-1 group transition-colors duration-200">
                         {link.label}
-                        <ArrowUpRight
-                          size={10}
-                          className="opacity-0 group-hover:opacity-100 transition-opacity"
-                        />
+                        <ArrowUpRight size={10} className="opacity-0 group-hover:opacity-100 transition-opacity" />
                       </a>
                     ) : (
-                      <button
-                        onClick={() => scrollTo(link.href)}
-                        className="text-white/55 hover:text-white text-sm text-left transition-colors duration-200"
-                      >
+                      <button onClick={() => scrollTo(link.href)} className="text-white/55 hover:text-white text-sm text-left transition-colors duration-200">
                         {link.label}
                       </button>
                     )}
@@ -118,7 +110,7 @@ export default function Footer() {
             © {new Date().getFullYear()} Plante Comunicação. Todos os direitos reservados.
           </p>
           <p className="text-white/20 text-xs">
-            Plantamos ideias. Movimentamos marcas.
+            Ideias que movimentam marcas, pessoas e projetos.
           </p>
         </div>
       </div>

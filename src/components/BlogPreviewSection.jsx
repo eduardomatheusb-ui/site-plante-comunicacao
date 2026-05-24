@@ -5,41 +5,44 @@ import { ArrowUpRight } from 'lucide-react'
 const posts = [
   {
     n: '01',
-    category: 'Branding',
-    title: 'Por que sua marca precisa de uma narrativa antes de um feed bonito',
-    excerpt: 'A estética importa. Mas sem uma direção clara de narrativa, o feed mais bonito do mundo não vai conectar.',
+    category: 'Bastidores da criação',
+    title: 'Como uma ideia vira campanha',
+    excerpt: 'Antes da peça final, existe escuta, recorte, conceito, linguagem e muitas escolhas invisíveis.',
   },
   {
     n: '02',
-    category: 'Redes Sociais',
-    title: 'Estratégia editorial: a diferença entre postar e comunicar',
-    excerpt: 'Toda marca que se comunica bem tem um calendário. Mas o calendário é só a ponta do processo.',
+    category: 'Redes sociais',
+    title: 'O que vem antes de um bom post',
+    excerpt: 'Um bom conteúdo não começa no layout. Começa na pergunta certa sobre público, objetivo e contexto.',
   },
   {
     n: '03',
-    category: 'Comunicação Pública',
-    title: 'Como órgãos públicos podem se comunicar com mais clareza e alcance',
-    excerpt: 'Comunicação governamental não precisa ser burocrática. Veja como prefeituras estão usando estratégia para se aproximar do cidadão.',
+    category: 'Comunicação institucional',
+    title: 'Por que comunicação institucional também precisa de criatividade',
+    excerpt: 'Instituições precisam informar, mas também precisam construir clareza, confiança e relação com seus públicos.',
   },
 ]
 
-const topics = ['Comunicação', 'Marketing Público', 'Branding', 'Redes Sociais', 'Campanhas', 'Bastidores', 'Tendências']
+const topics = [
+  'Bastidores da criação',
+  'Comunicação institucional',
+  'Branding',
+  'Redes sociais',
+  'Campanhas',
+  'Comunicação pública',
+  'Cultura e comportamento',
+  'Processos da Plante',
+]
 
 export default function BlogPreviewSection() {
   const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 })
 
   return (
     <section id="ideias" className="bg-grafite-mid border-t border-white/6">
-
-      {/* Header */}
       <div ref={ref} className="section-padding pt-20 pb-0">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 pb-14 border-b border-white/6">
           <div>
-            <motion.span
-              initial={{ opacity: 0 }}
-              animate={inView ? { opacity: 1 } : {}}
-              className="tag mb-6 inline-block"
-            >
+            <motion.span initial={{ opacity: 0 }} animate={inView ? { opacity: 1 } : {}} className="tag mb-6 inline-block">
               Ideias em movimento
             </motion.span>
             <motion.h2
@@ -48,29 +51,27 @@ export default function BlogPreviewSection() {
               transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
               className="font-display font-bold text-4xl md:text-5xl lg:text-6xl text-white leading-[0.95] tracking-tight"
             >
-              Perspectivas sobre<br />
-              <span className="text-gradient-yellow">comunicação e criação.</span>
+              Bastidores, processos<br />
+              <span className="text-gradient-yellow">e pensamento em comunicação.</span>
             </motion.h2>
           </div>
-          <motion.button
+          <motion.p
             initial={{ opacity: 0 }}
             animate={inView ? { opacity: 1 } : {}}
             transition={{ delay: 0.4 }}
-            className="btn-outline shrink-0"
+            className="text-white/45 text-sm max-w-xs leading-relaxed"
           >
-            Todos os artigos
-          </motion.button>
+            Um espaço editorial para registrar ideias, processos e formas de pensar comunicação. Pode entrar depois da primeira versão, com conteúdos prontos.
+          </motion.p>
         </div>
       </div>
 
-      {/* Posts — editorial list */}
       <div className="section-padding pb-4">
         {posts.map((post, i) => (
           <PostRow key={post.n} post={post} i={i} />
         ))}
       </div>
 
-      {/* Topics strip */}
       <div className="section-padding pb-16 pt-8 border-t border-white/6">
         <div className="flex flex-wrap gap-2">
           <span className="text-white/25 text-xs font-display self-center mr-2">Temas:</span>
@@ -109,10 +110,7 @@ function PostRow({ post, i }) {
         </h3>
         <p className="text-white/40 text-sm leading-relaxed max-w-2xl hidden md:block">{post.excerpt}</p>
       </div>
-      <motion.div
-        className="text-white/20 group-hover:text-amarelo transition-colors duration-300 hidden md:block"
-        whileHover={{ x: 3, y: -3 }}
-      >
+      <motion.div className="text-white/20 group-hover:text-amarelo transition-colors duration-300 hidden md:block" whileHover={{ x: 3, y: -3 }}>
         <ArrowUpRight size={20} />
       </motion.div>
     </motion.div>

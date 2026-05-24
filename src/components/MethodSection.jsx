@@ -2,11 +2,11 @@ import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 
 const steps = [
-  { n: '01', verb: 'Escutar', color: 'text-amarelo', description: 'Entendemos o cenário, o público, a marca e os objetivos. Sem essa etapa, não há planejamento sólido.' },
-  { n: '02', verb: 'Pensar', color: 'text-white', description: 'Organizamos o que ouvimos, identificamos oportunidades e construímos uma direção estratégica.' },
-  { n: '03', verb: 'Criar', color: 'text-amarelo', description: 'Transformamos estratégia em linguagem, conceito, imagem e campanha. A criação na Plante nasce de um porquê.' },
-  { n: '04', verb: 'Movimentar', color: 'text-white', description: 'Publicamos, impulsionamos e acompanhamos. Ajustamos enquanto a comunicação acontece.' },
-  { n: '05', verb: 'Evoluir', color: 'text-amarelo', description: 'Analisamos resultados e melhoramos continuamente. Resultado não é fim, é ponto de partida.' },
+  { n: '01', verb: 'Escutar', color: 'text-amarelo', description: 'Entendemos o cenário, o público, a marca, os problemas, os objetivos e o contexto de cada projeto.' },
+  { n: '02', verb: 'Pensar', color: 'text-white', description: 'Organizamos informações, identificamos oportunidades e construímos uma direção estratégica.' },
+  { n: '03', verb: 'Criar', color: 'text-amarelo', description: 'Transformamos estratégia em linguagem, conceito, imagem, campanha, conteúdo e experiência.' },
+  { n: '04', verb: 'Movimentar', color: 'text-white', description: 'Publicamos, impulsionamos, acompanhamos, ajustamos e fazemos a comunicação circular.' },
+  { n: '05', verb: 'Evoluir', color: 'text-amarelo', description: 'Analisamos resultados, observamos respostas do público e melhoramos continuamente a presença da marca.' },
 ]
 
 export default function MethodSection() {
@@ -14,17 +14,11 @@ export default function MethodSection() {
 
   return (
     <section id="metodo" className="bg-grafite-mid">
-
-      {/* Header — dark full width */}
       <div ref={headerRef} className="section-padding pt-20 pb-16 border-b border-white/6">
         <div className="grid md:grid-cols-2 gap-10 items-end">
           <div>
-            <motion.span
-              initial={{ opacity: 0 }}
-              animate={headerInView ? { opacity: 1 } : {}}
-              className="tag mb-6 inline-block"
-            >
-              Método
+            <motion.span initial={{ opacity: 0 }} animate={headerInView ? { opacity: 1 } : {}} className="tag mb-6 inline-block">
+              Método Plante
             </motion.span>
             <motion.h2
               initial={{ opacity: 0, y: 30 }}
@@ -42,23 +36,22 @@ export default function MethodSection() {
             transition={{ delay: 0.3 }}
             className="text-white/45 text-base leading-relaxed max-w-sm"
           >
-            Cinco etapas. Muita escuta. Um processo que respeita a complexidade de cada marca.
+            Cinco etapas. Muita escuta. Um processo que respeita a complexidade de cada marca e transforma intenção em presença.
           </motion.p>
         </div>
       </div>
 
-      {/* Steps — alternating layout */}
       <div>
         {steps.map((step, i) => {
           const isEven = i % 2 === 0
-          return <StepBlock key={step.n} step={step} i={i} isEven={isEven} />
+          return <StepBlock key={step.n} step={step} isEven={isEven} />
         })}
       </div>
     </section>
   )
 }
 
-function StepBlock({ step, i, isEven }) {
+function StepBlock({ step, isEven }) {
   const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.25 })
 
   return (
@@ -69,7 +62,6 @@ function StepBlock({ step, i, isEven }) {
       transition={{ duration: 0.5 }}
       className={`grid md:grid-cols-2 border-b border-white/6 ${isEven ? 'bg-grafite-mid' : 'bg-petrol'}`}
     >
-      {/* Number block */}
       <div
         className={`section-padding py-14 flex flex-col justify-between border-b md:border-b-0 border-white/6 ${
           isEven ? 'md:border-r' : 'md:order-last md:border-l'
@@ -93,8 +85,7 @@ function StepBlock({ step, i, isEven }) {
         </motion.span>
       </div>
 
-      {/* Description block */}
-      <div className={`section-padding py-14 flex items-center ${isEven ? '' : ''}`}>
+      <div className="section-padding py-14 flex items-center">
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
