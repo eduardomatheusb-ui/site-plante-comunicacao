@@ -68,19 +68,6 @@ export default function Hero() {
             <span className="tag">Agência de comunicação</span>
           </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 18 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.25 }}
-            className="mb-10"
-          >
-            <PlanteWordmark
-              variant="light"
-              size={380}
-              className="w-[240px] sm:w-[320px] md:w-[380px]"
-            />
-          </motion.div>
-
           <div className="overflow-hidden mb-4">
             <motion.h1
               initial={{ y: 100, opacity: 0 }}
