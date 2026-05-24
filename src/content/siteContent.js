@@ -171,7 +171,7 @@ export const clientLogos = [
   { name: 'Plural Ferro e Aço', image: '/brand/clients/plural-ferro-aco.png' },
   { name: 'Prefeitura de Santo Antônio do Amparo', image: '/brand/clients/prefeitura-saa.png', logoClass: 'max-h-20 max-w-[88%]' },
   { name: 'Câmara Municipal de Betim', image: '/brand/clients/camara-betim.png', logoClass: 'max-h-24 max-w-[90%]' },
-  { name: 'Salão do Encontro', image: '/brand/clients/salao-do-encontro.png', logoClass: 'max-h-24 max-w-[90%]' },
+  { name: 'Salão do Encontro', image: '/brand/clients/salao-do-encontro.png', logoClass: 'max-h-28 max-w-[98%]' },
   { name: 'Santa Casa de Santo Antônio do Amparo', image: '/brand/clients/santa-casa-saa.png', logoClass: 'max-h-14 max-w-[86%]' },
   { name: 'Santa Casa de Perdões', image: '/brand/clients/santa-casa-perdoes.png', logoClass: 'max-h-16 max-w-[82%]' },
   { name: 'Shopping Móveis', image: '/brand/clients/shopping-moveis.png' },
