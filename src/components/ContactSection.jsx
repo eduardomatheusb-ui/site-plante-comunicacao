@@ -6,6 +6,8 @@ import SectionTitle from './SectionTitle'
 import { OrganicCircle } from './AnimatedGraphicElement'
 import LogoMark from './LogoMark'
 
+const formName = 'contato-plante'
+
 const serviceOptions = [
   'Estratégia e Planejamento',
   'Branding e Identidade',
@@ -56,18 +58,57 @@ export default function ContactSection() {
     phone: '',
     service: '',
     message: '',
+    botField: '',
   })
   const [sent, setSent] = useState(false)
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitError, setSubmitError] = useState('')
   const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 })
 
   const handleChange = (e) => {
     setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }))
   }
 
-  const handleSubmit = (e) => {
+  const encodeForm = (data) =>
+    new URLSearchParams({
+      'form-name': formName,
+      ...data,
+    }).toString()
+
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    // Placeholder: integrate with email service or WhatsApp redirect
-    setSent(true)
+    setIsSubmitting(true)
+    setSubmitError('')
+    const isLocalPreview = ['localhost', '127.0.0.1'].includes(window.location.hostname)
+
+    try {
+      const response = await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: encodeForm(form),
+      })
+
+      if (!response.ok && !isLocalPreview) throw new Error('Form submission failed')
+
+      setSent(true)
+      setForm({
+        name: '',
+        company: '',
+        email: '',
+        phone: '',
+        service: '',
+        message: '',
+        botField: '',
+      })
+    } catch {
+      if (isLocalPreview) {
+        setSent(true)
+      } else {
+        setSubmitError('Não foi possível enviar agora. Tente novamente ou fale com a gente pelo WhatsApp.')
+      }
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   const inputClass =
@@ -146,11 +187,26 @@ export default function ContactSection() {
             transition={{ duration: 0.7, delay: 0.2 }}
           >
             {!sent ? (
-              <form onSubmit={handleSubmit} className="space-y-4">
+              <form
+                name={formName}
+                method="POST"
+                data-netlify="true"
+                netlify-honeypot="botField"
+                onSubmit={handleSubmit}
+                className="space-y-4"
+              >
+                <input type="hidden" name="form-name" value={formName} />
+                <p className="hidden">
+                  <label>
+                    Não preencha este campo:
+                    <input name="botField" value={form.botField} onChange={handleChange} />
+                  </label>
+                </p>
                 <div className="grid sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="text-white/40 text-xs font-display mb-1.5 block">Nome *</label>
+                    <label htmlFor="contact-name" className="text-white/40 text-xs font-display mb-1.5 block">Nome *</label>
                     <input
+                      id="contact-name"
                       type="text"
                       name="name"
                       required
@@ -161,8 +217,9 @@ export default function ContactSection() {
                     />
                   </div>
                   <div>
-                    <label className="text-white/40 text-xs font-display mb-1.5 block">Empresa ou instituição</label>
+                    <label htmlFor="contact-company" className="text-white/40 text-xs font-display mb-1.5 block">Empresa ou instituição</label>
                     <input
+                      id="contact-company"
                       type="text"
                       name="company"
                       placeholder="Nome da empresa"
@@ -175,8 +232,9 @@ export default function ContactSection() {
 
                 <div className="grid sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="text-white/40 text-xs font-display mb-1.5 block">E-mail *</label>
+                    <label htmlFor="contact-email" className="text-white/40 text-xs font-display mb-1.5 block">E-mail *</label>
                     <input
+                      id="contact-email"
                       type="email"
                       name="email"
                       required
@@ -187,8 +245,9 @@ export default function ContactSection() {
                     />
                   </div>
                   <div>
-                    <label className="text-white/40 text-xs font-display mb-1.5 block">Telefone / WhatsApp</label>
+                    <label htmlFor="contact-phone" className="text-white/40 text-xs font-display mb-1.5 block">Telefone / WhatsApp</label>
                     <input
+                      id="contact-phone"
                       type="tel"
                       name="phone"
                       placeholder="(31) 9 0000-0000"
@@ -200,8 +259,9 @@ export default function ContactSection() {
                 </div>
 
                 <div>
-                  <label className="text-white/40 text-xs font-display mb-1.5 block">O que você precisa?</label>
+                  <label htmlFor="contact-service" className="text-white/40 text-xs font-display mb-1.5 block">O que você precisa?</label>
                   <select
+                    id="contact-service"
                     name="service"
                     value={form.service}
                     onChange={handleChange}
@@ -217,8 +277,9 @@ export default function ContactSection() {
                 </div>
 
                 <div>
-                  <label className="text-white/40 text-xs font-display mb-1.5 block">Mensagem</label>
+                  <label htmlFor="contact-message" className="text-white/40 text-xs font-display mb-1.5 block">Mensagem</label>
                   <textarea
+                    id="contact-message"
                     name="message"
                     rows={4}
                     placeholder="Conte um pouco mais sobre o seu projeto ou desafio..."
@@ -230,11 +291,18 @@ export default function ContactSection() {
 
                 <button
                   type="submit"
+                  disabled={isSubmitting}
                   className="btn-primary w-full justify-center text-base py-4 mt-2"
                 >
                   <Send size={16} />
-                  Enviar mensagem
+                  {isSubmitting ? 'Enviando...' : 'Enviar mensagem'}
                 </button>
+
+                {submitError && (
+                  <p className="text-red-300/80 text-xs text-center">
+                    {submitError}
+                  </p>
+                )}
 
                 <p className="text-white/20 text-xs text-center">
                   Ou fale diretamente pelo{' '}
