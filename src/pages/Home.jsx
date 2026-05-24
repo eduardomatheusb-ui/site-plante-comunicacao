@@ -37,6 +37,13 @@ export default function Home() {
             </button>
           </div>
         </div>
+        <div className="section-padding mt-16">
+          <img
+            src="/brand/showcase/plante-cartoes-mockup.jpg"
+            alt="Aplicação da identidade visual da Plante em cartões institucionais."
+            className="h-[360px] w-full object-cover md:h-[520px]"
+          />
+        </div>
       </section>
 
       <section className="bg-petrol py-24">
@@ -89,16 +96,23 @@ export default function Home() {
 
       <section className="bg-petrol py-24">
         <div className="section-padding">
-          <div className="mb-12 flex flex-col justify-between gap-6 md:flex-row md:items-end">
-            <SectionTitle
-              tag="Ideias em Movimento"
-              title="Antes de uma boa campanha, existe pensamento."
-              subtitle="Reunimos conteúdos, bastidores e reflexões sobre comunicação, marcas, presença digital e processos criativos."
+          <div className="mb-12 grid gap-10 lg:grid-cols-[0.8fr,1.2fr] lg:items-end">
+            <div>
+              <SectionTitle
+                tag="Ideias em Movimento"
+                title="Antes de uma boa campanha, existe pensamento."
+                subtitle="Reunimos conteúdos, bastidores e reflexões sobre comunicação, marcas, presença digital e processos criativos."
+              />
+              <button onClick={() => navigateTo('/ideias-em-movimento')} className="btn-outline mt-8">
+                Ler conteúdos da Plante
+                <ArrowRight size={16} />
+              </button>
+            </div>
+            <img
+              src="/brand/showcase/plante-posts-showcase.jpg"
+              alt="Exemplos visuais da editoria de posts da Plante."
+              className="h-[420px] w-full object-cover"
             />
-            <button onClick={() => navigateTo('/ideias-em-movimento')} className="btn-outline shrink-0">
-              Ler conteúdos da Plante
-              <ArrowRight size={16} />
-            </button>
           </div>
           <ContentCards limit={3} />
         </div>

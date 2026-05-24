@@ -17,13 +17,20 @@ export default function IdeiasEmMovimentoPage() {
           <h2 className="font-display text-4xl font-bold leading-tight md:text-6xl">
             Um espaço editorial para pensar comunicação.
           </h2>
-          <div className="space-y-5 text-lg leading-relaxed text-grafite/65">
-            <p>
-              Aqui reunimos ideias, processos e bastidores sobre como a comunicação pode ajudar marcas, instituições e projetos a se movimentarem com mais clareza, presença e intenção.
-            </p>
-            <p>
-              A Plante acredita que comunicar bem começa antes da criação. Começa na escuta, no olhar para o contexto, na organização das ideias e na construção de caminhos possíveis.
-            </p>
+          <div>
+            <div className="space-y-5 text-lg leading-relaxed text-grafite/65">
+              <p>
+                Aqui reunimos ideias, processos e bastidores sobre como a comunicação pode ajudar marcas, instituições e projetos a se movimentarem com mais clareza, presença e intenção.
+              </p>
+              <p>
+                A Plante acredita que comunicar bem começa antes da criação. Começa na escuta, no olhar para o contexto, na organização das ideias e na construção de caminhos possíveis.
+              </p>
+            </div>
+            <img
+              src="/brand/showcase/plante-posts-showcase.jpg"
+              alt="Aplicações editoriais da Plante em posts digitais."
+              className="mt-10 h-[520px] w-full object-cover"
+            />
           </div>
         </div>
       </section>

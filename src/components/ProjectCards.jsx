@@ -17,11 +17,19 @@ export default function ProjectCards({ limit }) {
           className="group overflow-hidden bg-white text-grafite"
         >
           <div className="relative h-52 overflow-hidden bg-petrol">
-            <img
-              src={index % 2 === 0 ? '/brand/plante-bulb-dark-yellow.png' : '/brand/plante-script-yellow.png'}
-              alt=""
-              className="absolute -right-12 top-8 w-64 opacity-75 transition-transform duration-500 group-hover:scale-105"
-            />
+            {project.image ? (
+              <img
+                src={project.image}
+                alt=""
+                className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+            ) : (
+              <img
+                src={index % 2 === 0 ? '/brand/plante-bulb-dark-yellow.png' : '/brand/plante-script-yellow.png'}
+                alt=""
+                className="absolute -right-12 top-8 w-64 opacity-75 transition-transform duration-500 group-hover:scale-105"
+              />
+            )}
             <div className="absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-grafite/60 to-transparent" />
             <span className="absolute left-5 top-5 rounded-full bg-amarelo px-3 py-1 text-xs font-bold text-grafite">
               {project.segment}

@@ -37,6 +37,11 @@ export default function QuemSomosPage() {
             <p className="font-display text-2xl font-bold text-grafite">
               Mais do que produzir peças, a Plante cria caminhos de comunicação.
             </p>
+            <img
+              src="/brand/showcase/plante-before-after.png"
+              alt="Grafismo da Plante mostrando uma ideia em movimento."
+              className="mt-10 h-44 w-full bg-grafite object-contain p-8"
+            />
           </div>
         </div>
       </section>

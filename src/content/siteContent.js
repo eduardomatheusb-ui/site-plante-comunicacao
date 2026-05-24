@@ -179,6 +179,7 @@ export const projects = [
   {
     title: 'Presença digital para marcas em movimento',
     segment: 'Gestão de redes sociais',
+    image: '/brand/showcase/plante-posts-showcase.jpg',
     challenge:
       'Organizar a comunicação, fortalecer a presença digital e construir uma linguagem mais clara para dialogar com o público.',
     deliveries: ['Planejamento', 'Conteúdo', 'Design', 'Métricas'],
@@ -187,6 +188,7 @@ export const projects = [
   {
     title: 'Campanha institucional de interesse público',
     segment: 'Comunicação institucional',
+    image: '/brand/showcase/plante-cartoes-mockup.jpg',
     challenge:
       'Transformar uma mensagem complexa em campanha acessível, humana e visualmente forte.',
     deliveries: ['Conceito', 'Peças gráficas', 'Roteiros', 'Materiais institucionais'],
@@ -195,6 +197,7 @@ export const projects = [
   {
     title: 'Identidade e linguagem para novos projetos',
     segment: 'Branding',
+    image: '/brand/showcase/plante-crachas-mockup.jpg',
     challenge:
       'Dar forma a uma ideia inicial, definindo posicionamento, linguagem visual e aplicações de marca.',
     deliveries: ['Identidade visual', 'Linguagem', 'Aplicações', 'Apresentação'],
