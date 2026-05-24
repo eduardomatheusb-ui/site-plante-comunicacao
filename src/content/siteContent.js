@@ -193,76 +193,106 @@ export const projectCategories = [
 
 export const projects = [
   {
-    title: 'Santa Casa de Santo Antônio do Amparo',
+    slug: 'carne-saude-da-gente',
+    title: 'Carnê Saúde da Gente',
+    client: 'Santa Casa de Santo Antônio do Amparo',
     segment: 'Saúde',
-    image: '/brand/cases/santa-casa-campanha.jpg',
+    image: '/brand/work/santa-casa-carne-cover.jpg',
+    gallery: ['/brand/work/santa-casa-carne-cover.jpg', '/brand/work/santa-casa-carne-apoio.jpg'],
     challenge:
-      'Fortalecer a comunicação de uma campanha ligada à saúde, com mensagem clara, visual direto e linguagem próxima da comunidade.',
-    deliveries: ['Campanha institucional', 'Conceito', 'Peças digitais', 'Direção visual'],
-    result: 'Comunicação mais organizada para orientar o público e dar presença à campanha.',
+      'Apresentar o Carnê Saúde da Gente como uma forma simples e próxima de cuidar da família e fortalecer a Santa Casa.',
+    insight:
+      'Quando a comunicação fala de saúde, confiança e pertencimento precisam aparecer antes da oferta. A campanha precisava ser direta, acolhedora e fácil de entender.',
+    idea:
+      'Criamos uma comunicação com mensagem objetiva, presença humana e reforço visual do benefício, aproximando a campanha da rotina das famílias e dos canais de divulgação da instituição.',
+    deliveries: ['Campanha institucional', 'Conceito visual', 'Peças digitais', 'Materiais de apoio'],
+    result: 'Comunicação mais clara para orientar o público e dar presença à campanha.',
   },
   {
-    title: 'Prefeitura de Santo Antônio do Amparo',
-    segment: 'Comunicação pública',
-    image: '/brand/cases/prefeitura-autismo.jpg',
+    slug: 'roos-group',
+    title: 'Roos Group',
+    client: 'Roos Group',
+    segment: 'Identidade visual',
+    image: '/brand/work/roos-billboard.jpg',
+    gallery: ['/brand/work/roos-billboard.jpg', '/brand/work/roos-cartao.jpg', '/brand/work/roos-envelope.jpg'],
     challenge:
-      'Transformar uma pauta de conscientização em comunicação acessível, humana e visualmente consistente para canais digitais.',
-    deliveries: ['Campanha de conscientização', 'Design', 'Redes sociais', 'Comunicação pública'],
-    result: 'Apoio à divulgação de tema de interesse público com linguagem simples e objetiva.',
+      'Construir uma identidade visual com presença, clareza e aplicação profissional para uma marca com atuação corporativa.',
+    insight:
+      'Uma identidade forte precisa funcionar tanto como assinatura quanto como sistema. O desafio era criar uma marca que sustentasse materiais institucionais, impressos e pontos de contato digitais.',
+    idea:
+      'Desenvolvemos uma linguagem visual sólida, com aplicações em mockups e materiais de marca para mostrar como a identidade se comporta em diferentes contextos.',
+    deliveries: ['Identidade visual', 'Sistema de marca', 'Papelaria', 'Mockups de aplicação'],
+    result: 'Marca com mais consistência visual e repertório para apresentações, documentos e materiais institucionais.',
   },
   {
-    title: 'Instituto Wani Higino',
+    slug: 'salao-do-encontro',
+    title: 'Salão do Encontro',
+    client: 'Salão do Encontro',
     segment: 'Terceiro setor',
-    image: '/brand/cases/wani-pilates.jpg',
+    image: '/brand/work/salao-geral.jpg',
+    gallery: ['/brand/work/salao-geral.jpg', '/brand/work/salao-parceiros.jpg', '/brand/work/salao-familias.jpg'],
     challenge:
-      'Comunicar ações, serviços e projetos sociais com presença visual, clareza de informação e cuidado com o público atendido.',
-    deliveries: ['Conteúdo digital', 'Design', 'Materiais institucionais', 'Redes sociais'],
-    result: 'Mais consistência na divulgação de iniciativas e atividades do instituto.',
+      'Comunicar uma iniciativa social com linguagem sensível, informação clara e materiais que ajudassem a mobilizar famílias, parceiros e comunidade.',
+    insight:
+      'Projetos sociais precisam comunicar impacto sem perder humanidade. A mensagem precisava valorizar pessoas, vínculos e o papel coletivo da iniciativa.',
+    idea:
+      'Organizamos peças digitais com hierarquia de informação, fotografia, texto direto e presença institucional, criando uma comunicação acessível para diferentes públicos.',
+    deliveries: ['Campanha institucional', 'Peças digitais', 'Comunicação social', 'Direção de mensagem'],
+    result: 'Comunicação mais organizada para ampliar entendimento, participação e presença da iniciativa.',
   },
   {
-    title: 'VBO Engenharia',
-    segment: 'Engenharia',
-    image: '/brand/cases/vbo-obras.jpg',
+    slug: 'bh-escape',
+    title: 'BH Escape',
+    client: 'BH Escape',
+    segment: 'Entretenimento',
+    image: '/brand/work/bh-escape-story-1.jpg',
+    gallery: ['/brand/work/bh-escape-story-1.jpg', '/brand/work/bh-escape-story-2.jpg', '/brand/work/bh-escape-story-3.jpg'],
     challenge:
-      'Levar temas técnicos para uma comunicação digital mais simples, útil e conectada à rotina de obras e projetos.',
-    deliveries: ['Conteúdo técnico', 'Design', 'Redes sociais', 'Comunicação comercial'],
-    result: 'Conteúdos com mais clareza para aproximar a marca de clientes e parceiros.',
+      'Criar uma comunicação de divulgação com ritmo, curiosidade e apelo visual para uma experiência de entretenimento.',
+    insight:
+      'Uma experiência imersiva precisa começar antes da visita. A campanha precisava provocar vontade, criar clima e levar o público para dentro da proposta.',
+    idea:
+      'Trabalhamos peças verticais com impacto visual, chamadas diretas e composição pensada para redes sociais, mantendo o tom de mistério e convite.',
+    deliveries: ['Campanha digital', 'Stories', 'Direção visual', 'Peças de divulgação'],
+    result: 'Materiais com mais força visual para apresentar a experiência e estimular interesse do público.',
   },
   {
-    title: 'IUNA Guerreiras',
+    slug: 'aqui-em-saa',
+    title: 'Aqui em SAA',
+    client: 'Prefeitura de Santo Antônio do Amparo',
+    segment: 'Comunicação pública',
+    image: '/brand/work/prefeitura-aqui-saa-temp.jpg',
+    gallery: ['/brand/work/prefeitura-aqui-saa-temp.jpg'],
+    challenge:
+      'Transformar informações de interesse público em uma comunicação simples, visual e próxima da população.',
+    insight:
+      'Comunicação pública precisa ser acessível. O material deve ajudar a pessoa a entender rapidamente a mensagem, sem perder cuidado visual.',
+    idea:
+      'Estruturamos uma peça com linguagem objetiva e leitura direta, apoiando a divulgação institucional em formato pronto para circulação.',
+    deliveries: ['Comunicação pública', 'Peça institucional', 'Design', 'Direção de informação'],
+    result: 'Apoio à divulgação de informações institucionais com mais clareza e organização visual.',
+    note: 'Imagem provisória. Precisamos exportar o PDF Aqui em SAA em JPG ou PNG para substituir pelo material correto.',
+  },
+  {
+    slug: 'circuito-rosa',
+    title: 'Circuito Rosa',
+    client: 'IUNA Guerreiras',
     segment: 'Projetos sociais',
-    image: '/brand/cases/iuna-jantar.jpg',
+    image: '/brand/work/circuito-rosa-camisa.jpg',
+    gallery: [
+      '/brand/work/circuito-rosa-camisa.jpg',
+      '/brand/work/circuito-rosa-viseira.jpg',
+      '/brand/work/circuito-rosa-feed.jpg',
+      '/brand/work/circuito-rosa-squeeze.jpg',
+    ],
     challenge:
-      'Dar visibilidade a uma iniciativa social e criar materiais de divulgação com informação clara, apelo visual e senso de comunidade.',
-    deliveries: ['Campanha de evento', 'Peças digitais', 'Redes sociais', 'Materiais de divulgação'],
-    result: 'Apoio à comunicação de uma ação beneficente com identidade e presença.',
-  },
-  {
-    title: 'Instituto Dedete',
-    segment: 'Identidade visual',
-    image: '/brand/cases/dedete-identidade.jpg',
-    challenge:
-      'Construir uma linguagem visual viva e reconhecível para uma instituição com atuação social, educativa e multidisciplinar.',
-    deliveries: ['Identidade visual', 'Aplicações', 'Linguagem gráfica', 'Peças institucionais'],
-    result: 'Marca com mais personalidade, presença e coerência nos pontos de contato.',
-  },
-  {
-    title: 'IMIC',
-    segment: 'Identidade visual',
-    image: '/brand/cases/imic-identidade.jpg',
-    challenge:
-      'Organizar a expressão visual de uma marca industrial com materiais institucionais claros, consistentes e prontos para uso comercial.',
-    deliveries: ['Identidade visual', 'Materiais institucionais', 'Aplicações', 'Sistema visual'],
-    result: 'Comunicação de marca mais consistente para apresentações, documentos e materiais de apoio.',
-  },
-  {
-    title: 'Engler e Barcelos',
-    segment: 'Identidade visual',
-    image: '/brand/cases/engler-barcelos-identidade.jpg',
-    challenge:
-      'Desenvolver uma identidade sóbria, elegante e funcional para uma marca jurídica, com aplicações institucionais bem definidas.',
-    deliveries: ['Identidade visual', 'Papelaria', 'Grafismos', 'Aplicações de marca'],
-    result: 'Sistema visual mais refinado e coerente para comunicação institucional.',
+      'Dar unidade visual a uma campanha de mobilização social, conectando divulgação, materiais de evento e presença da marca.',
+    insight:
+      'Uma campanha social ganha força quando todos os pontos de contato parecem parte da mesma ideia. O público precisa reconhecer a ação antes mesmo de ler todos os detalhes.',
+    idea:
+      'Criamos aplicações para materiais físicos e digitais, mantendo uma linguagem vibrante, afetiva e reconhecível para acompanhar a divulgação do Circuito Rosa.',
+    deliveries: ['Campanha de evento', 'Peças digitais', 'Materiais promocionais', 'Aplicações de marca'],
+    result: 'Comunicação visual mais consistente para divulgação, apoio ao evento e reconhecimento da campanha.',
   },
 ]
 

@@ -5,6 +5,7 @@ import Home from './pages/Home'
 import QuemSomosPage from './pages/QuemSomosPage'
 import ServicosPage from './pages/ServicosPage'
 import ProjetosPage from './pages/ProjetosPage'
+import ProjetoCasePage from './pages/ProjetoCasePage'
 import IdeiasEmMovimentoPage from './pages/IdeiasEmMovimentoPage'
 import ConteudoPage from './pages/ConteudoPage'
 import ContatoPage from './pages/ContatoPage'
@@ -52,6 +53,14 @@ function resolveRoute(path) {
       path: normalized,
       page: <ConteudoPage slug={normalized.split('/').pop()} />,
       meta: pageMeta['/ideias-em-movimento'],
+    }
+  }
+
+  if (normalized.startsWith('/projetos/')) {
+    return {
+      path: normalized,
+      page: <ProjetoCasePage slug={normalized.split('/').pop()} />,
+      meta: pageMeta['/projetos'],
     }
   }
 
