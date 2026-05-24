@@ -167,7 +167,7 @@ export const clientLogos = [
   { name: 'Instituto Wani Higino', image: '/brand/clients/instituto-wani-higino.png', logoClass: 'max-h-20 max-w-[92%]' },
   { name: 'IUNA', image: '/brand/clients/iuna.png' },
   { name: 'Luziana Lanna Idiomas', image: '/brand/clients/luziana-lanna.png' },
-  { name: 'Passaletti', image: '/brand/clients/passaletti.png', logoClass: 'max-h-16 max-w-[88%]' },
+  { name: 'VBO Engenharia', image: '/brand/clients/vbo-engenharia.png' },
   { name: 'Plural Ferro e Aço', image: '/brand/clients/plural-ferro-aco.png' },
   { name: 'Prefeitura de Santo Antônio do Amparo', image: '/brand/clients/prefeitura-saa.png', logoClass: 'max-h-20 max-w-[88%]' },
   { name: 'Câmara Municipal de Betim', image: '/brand/clients/camara-betim.png', logoClass: 'max-h-24 max-w-[90%]' },
@@ -178,7 +178,6 @@ export const clientLogos = [
   { name: 'TopTruck', image: '/brand/clients/toptruck.png', logoClass: 'max-h-12 max-w-[88%]' },
   { name: 'Tropicália Kombucha', image: '/brand/clients/tropicalia-kombucha.png', logoClass: 'max-h-24 max-w-[90%]' },
   { name: 'Utopia', image: '/brand/clients/utopia.png' },
-  { name: 'VBO Engenharia', image: '/brand/clients/vbo-engenharia.png' },
 ]
 
 export const projectCategories = [
