@@ -1,6 +1,5 @@
 import PageHero from '../components/PageHero'
-import SectionTitle from '../components/SectionTitle'
-import ProjectCards from '../components/ProjectCards'
+import ProjectShowcase from '../components/ProjectShowcase'
 import { projectCategories, segments } from '../content/siteContent'
 
 export default function ProjetosPage() {
@@ -28,14 +27,7 @@ export default function ProjetosPage() {
 
       <section className="bg-petrol py-24">
         <div className="section-padding">
-          <SectionTitle
-            tag="Cases"
-            title="Projetos reais, organizados por contexto e entrega."
-            subtitle="Selecionamos trabalhos de saúde, comunicação pública, terceiro setor, engenharia e identidade visual para mostrar como a Plante transforma desafios em direção criativa."
-          />
-          <div className="mt-12">
-            <ProjectCards />
-          </div>
+          <ProjectShowcase />
         </div>
       </section>
 

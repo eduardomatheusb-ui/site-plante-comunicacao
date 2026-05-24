@@ -3,7 +3,7 @@ import Hero from '../components/Hero'
 import SectionTitle from '../components/SectionTitle'
 import ServicesGrid from '../components/ServicesGrid'
 import MethodSteps from '../components/MethodSteps'
-import ProjectCards from '../components/ProjectCards'
+import ProjectShowcase from '../components/ProjectShowcase'
 import ContentCards from '../components/ContentCards'
 import { contact } from '../content/siteContent'
 import { navigateTo } from '../lib/navigation'
@@ -78,18 +78,13 @@ export default function Home() {
 
       <section className="bg-petrol-dark py-24">
         <div className="section-padding">
-          <div className="mb-12 flex flex-col justify-between gap-6 md:flex-row md:items-end">
-            <SectionTitle
-              tag="Projetos"
-              title="Projetos que saem do papel e ganham presença."
-              subtitle="Cada projeto tem um contexto, um desafio e uma forma própria de se comunicar. A Plante mergulha nesses cenários para criar soluções com estratégia, linguagem e identidade."
-            />
-            <button onClick={() => navigateTo('/projetos')} className="btn-primary shrink-0">
-              Conheça nossos projetos
+          <ProjectShowcase limit={6} />
+          <div className="mt-10 flex justify-center">
+            <button onClick={() => navigateTo('/projetos')} className="btn-primary">
+              Conheça todos os projetos
               <ArrowRight size={16} />
             </button>
           </div>
-          <ProjectCards limit={3} />
         </div>
       </section>
 
