@@ -125,30 +125,6 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="relative overflow-hidden bg-grafite py-24">
-        <div className="section-padding relative z-10 max-w-5xl">
-          <p className="font-display text-4xl font-bold leading-tight text-white md:text-6xl">
-            Ideia parada não transforma nada.
-          </p>
-          <div className="mt-8 max-w-3xl space-y-5 text-lg leading-relaxed text-white/62">
-            <p>
-              A gente acredita em comunicação que nasce da escuta, ganha forma no planejamento e encontra força na criação.
-            </p>
-            <p>
-              Plantar uma ideia é cuidar do terreno, entender o tempo, escolher a linguagem e fazer o movimento acontecer.
-            </p>
-            <p>
-              Somos uma agência mineira. Trazemos no nosso jeito de trabalhar a proximidade, a atenção e a capacidade de construir junto.
-            </p>
-          </div>
-          <p className="mt-10 font-display text-2xl font-bold leading-tight text-amarelo md:text-4xl">
-            Para transformar intenção em presença.<br />
-            Presença em conexão.<br />
-            Conexão em resultado.
-          </p>
-        </div>
-      </section>
-
       <section className="bg-petrol-dark py-24">
         <div className="section-padding grid gap-10 lg:grid-cols-[1fr,auto] lg:items-center">
           <div>
