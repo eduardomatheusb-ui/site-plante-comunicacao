@@ -1,33 +1,12 @@
 import { motion } from 'framer-motion'
 import { ArrowDown } from 'lucide-react'
 import LogoMark from './LogoMark'
-import { BulbOutline, FloatingDot, OrganicCircle } from './AnimatedGraphicElement'
 import { navigateTo } from '../lib/navigation'
 
 export default function Hero() {
   return (
     <section className="relative flex min-h-screen flex-col justify-center overflow-hidden bg-petrol">
       <div className="absolute inset-0 pointer-events-none">
-        <OrganicCircle size={600} color="#F7FF19" opacity={0.045} className="absolute -right-40 -top-40" />
-        <OrganicCircle size={400} color="#F7FF19" opacity={0.035} className="absolute bottom-0 -left-32" animate={false} />
-
-        <img
-          src="/brand/plante-bulb-dark-yellow.png"
-          alt=""
-          className="absolute right-[-140px] top-1/2 hidden w-[560px] -translate-y-1/2 opacity-[0.14] mix-blend-multiply lg:block"
-        />
-
-        <BulbOutline
-          size={480}
-          className="absolute right-[-60px] top-1/2 hidden -translate-y-1/2 opacity-[0.08] lg:block"
-          color="#F7FF19"
-        />
-
-        <FloatingDot size={6} color="#F7FF19" delay={0} className="absolute left-[15%] top-1/3" />
-        <FloatingDot size={4} color="#F7FF19" delay={1} className="absolute left-[8%] top-1/2" />
-        <FloatingDot size={8} color="#F7FF19" delay={2} className="absolute bottom-1/3 right-[20%] hidden md:block" />
-        <FloatingDot size={5} color="white" delay={1.5} className="absolute right-[30%] top-[20%] hidden opacity-30 md:block" />
-
         <div className="absolute left-0 right-0 top-[18%] h-px bg-white/8" />
         <div className="absolute bottom-[18%] left-0 right-0 h-px bg-white/8" />
 

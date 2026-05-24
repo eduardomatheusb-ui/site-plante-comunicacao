@@ -5,7 +5,6 @@ import ServicesGrid from '../components/ServicesGrid'
 import MethodSteps from '../components/MethodSteps'
 import ProjectCards from '../components/ProjectCards'
 import ContentCards from '../components/ContentCards'
-import { OrganicCircle } from '../components/AnimatedGraphicElement'
 import { contact } from '../content/siteContent'
 import { navigateTo } from '../lib/navigation'
 
@@ -119,7 +118,6 @@ export default function Home() {
       </section>
 
       <section className="relative overflow-hidden bg-grafite py-24">
-        <OrganicCircle size={520} color="#F7FF19" opacity={0.04} className="absolute -bottom-44 -left-24" />
         <div className="section-padding relative z-10 max-w-5xl">
           <p className="font-display text-4xl font-bold leading-tight text-white md:text-6xl">
             Ideia parada não transforma nada.

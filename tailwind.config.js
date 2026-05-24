@@ -8,10 +8,10 @@ export default {
     extend: {
       colors: {
         petrol: {
-          DEFAULT: '#4C6A70',
-          light: '#5B777D',
-          dark: '#22343A',
-          mid: '#3E5960',
+          DEFAULT: '#101010',
+          light: '#1A1A1A',
+          dark: '#050505',
+          mid: '#181818',
         },
         amarelo: {
           DEFAULT: '#F7FF19',

@@ -1,19 +1,12 @@
 import { motion } from 'framer-motion'
 import { ArrowRight } from 'lucide-react'
 import LogoMark from './LogoMark'
-import { OrganicCircle } from './AnimatedGraphicElement'
 import { navigateTo } from '../lib/navigation'
 
 export default function PageHero({ eyebrow, title, subtitle, ctaLabel, ctaHref }) {
   return (
     <section className="relative overflow-hidden bg-petrol pt-32 pb-20 md:pt-40 md:pb-28">
       <div className="absolute inset-0 pointer-events-none">
-        <OrganicCircle size={560} color="#F7FF19" opacity={0.035} className="absolute -right-40 -top-36" />
-        <img
-          src="/brand/plante-bulb-dark-yellow.png"
-          alt=""
-          className="absolute -right-24 bottom-0 hidden w-[420px] opacity-[0.1] mix-blend-multiply lg:block"
-        />
         <div className="absolute bottom-0 left-0 right-0 h-px bg-white/10" />
       </div>
 
