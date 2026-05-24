@@ -106,7 +106,7 @@ export default function Home() {
             <img
               src="/brand/showcase/geraes-open-2025.jpg"
               alt="Equipe em frente ao painel do Geraes Open 2025."
-              className="h-[560px] w-full bg-grafite object-contain object-top md:h-[680px] lg:h-[620px]"
+              className="h-[360px] w-full bg-grafite object-cover object-center md:h-[420px]"
             />
           </div>
           <ContentCards limit={3} />
