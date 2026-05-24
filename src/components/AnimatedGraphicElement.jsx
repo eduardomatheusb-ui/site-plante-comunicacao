@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 
-export function OrganicCircle({ size = 300, color = '#E8FF00', opacity = 0.08, className = '', animate = true }) {
+export function OrganicCircle({ size = 300, color = '#F7FF19', opacity = 0.08, className = '', animate = true }) {
   return (
     <motion.div
       className={`rounded-full ${className}`}
@@ -24,7 +24,7 @@ export function OrganicCircle({ size = 300, color = '#E8FF00', opacity = 0.08, c
   )
 }
 
-export function FloatingDot({ size = 8, color = '#E8FF00', delay = 0, className = '' }) {
+export function FloatingDot({ size = 8, color = '#F7FF19', delay = 0, className = '' }) {
   return (
     <motion.div
       className={`rounded-full ${className}`}
@@ -35,7 +35,7 @@ export function FloatingDot({ size = 8, color = '#E8FF00', delay = 0, className 
   )
 }
 
-export function GrafismLine({ className = '', color = '#E8FF00' }) {
+export function GrafismLine({ className = '', color = '#F7FF19' }) {
   return (
     <motion.svg
       viewBox="0 0 200 20"
@@ -56,7 +56,7 @@ export function GrafismLine({ className = '', color = '#E8FF00' }) {
   )
 }
 
-export function BulbOutline({ size = 200, className = '', color = '#E8FF00' }) {
+export function BulbOutline({ size = 200, className = '', color = '#F7FF19' }) {
   return (
     <motion.svg
       width={size}

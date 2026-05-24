@@ -2,6 +2,7 @@ import { useRef } from 'react'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import LogoMark from './LogoMark'
+import PlanteWordmark from './PlanteWordmark'
 
 const lines = [
   { text: 'Ideia parada não transforma nada.', highlight: false, size: 'large' },
@@ -25,8 +26,6 @@ export default function ManifestoSection() {
   const sectionRef = useRef(null)
   const { scrollYProgress } = useScroll({ target: sectionRef, offset: ['start end', 'end start'] })
   const y = useTransform(scrollYProgress, [0, 1], [-60, 60])
-  const opacity = useTransform(scrollYProgress, [0, 0.2, 0.8, 1], [0, 1, 1, 0])
-
   const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 })
 
   return (
@@ -34,17 +33,18 @@ export default function ManifestoSection() {
       ref={sectionRef}
       className="relative py-32 bg-amarelo overflow-hidden"
     >
-      {/* Parallax background decoration */}
       <motion.div
         style={{ y }}
         className="absolute inset-0 pointer-events-none flex items-center justify-center"
       >
-        <div className="font-display font-bold text-[20vw] text-black/5 leading-none select-none whitespace-nowrap">
-          PLANTE
-        </div>
+        <PlanteWordmark
+          variant="scriptStone"
+          size={900}
+          className="w-[78vw] min-w-[620px] opacity-25"
+          alt=""
+        />
       </motion.div>
 
-      {/* Floating logo mark */}
       <motion.div
         style={{ y: useTransform(scrollYProgress, [0, 1], [30, -30]) }}
         className="absolute top-12 right-12 md:right-24 opacity-10"
@@ -52,8 +52,16 @@ export default function ManifestoSection() {
         <LogoMark size={120} color="#000000" />
       </motion.div>
 
+      <video
+        className="absolute bottom-0 right-0 hidden w-[360px] opacity-20 mix-blend-multiply lg:block"
+        src="/brand/plante-assinatura.mp4"
+        autoPlay
+        muted
+        loop
+        playsInline
+      />
+
       <div className="section-padding relative z-10">
-        {/* Text content */}
         <div ref={ref} className="max-w-3xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -61,7 +69,7 @@ export default function ManifestoSection() {
             transition={{ duration: 0.5 }}
             className="mb-8"
           >
-            <span className="inline-block px-3 py-1 text-xs font-display font-medium tracking-widest uppercase text-black/50 border border-black/20 rounded-full">
+            <span className="inline-block px-3 py-1 text-xs font-display font-medium tracking-widest uppercase text-black/55 border border-black/20 rounded-full">
               Manifesto
             </span>
           </motion.div>
@@ -84,7 +92,7 @@ export default function ManifestoSection() {
                   animate={inView ? { opacity: 1, y: 0 } : {}}
                   transition={{ duration: 0.6, delay: 0.1 + i * 0.08 }}
                   className={`font-display leading-tight text-black ${sizeClass} ${
-                    line.highlight ? 'text-black/50' : ''
+                    line.highlight ? 'text-black/55' : ''
                   }`}
                 >
                   {line.text}
@@ -93,14 +101,13 @@ export default function ManifestoSection() {
             })}
           </div>
 
-          {/* Pillars */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.7, delay: 0.9 }}
             className="mt-16 pt-10 border-t border-black/15"
           >
-            <p className="text-black/50 text-sm font-display font-medium mb-6 tracking-wide">
+            <p className="text-black/55 text-sm font-display font-medium mb-6 tracking-wide">
               É por isso que a Plante existe.
             </p>
             <div className="flex flex-wrap gap-4">

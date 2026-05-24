@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Menu, X } from 'lucide-react'
-import LogoMark from './LogoMark'
+import PlanteWordmark from './PlanteWordmark'
 
 const navLinks = [
   { label: 'Quem somos', href: '#sobre' },
@@ -46,12 +46,13 @@ export default function Header() {
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
             className="flex items-center gap-3 group"
           >
-            <motion.div whileHover={{ rotate: 10 }} transition={{ type: 'spring', stiffness: 300 }}>
-              <LogoMark size={38} />
+            <motion.div whileHover={{ scale: 1.03 }} transition={{ type: 'spring', stiffness: 300 }}>
+              <PlanteWordmark
+                variant="light"
+                size={178}
+                className="w-[132px] sm:w-[178px]"
+              />
             </motion.div>
-            <span className="font-display font-bold text-xl text-white tracking-tight">
-              PLANTE
-            </span>
           </button>
 
           {/* Desktop nav */}

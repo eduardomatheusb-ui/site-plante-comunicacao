@@ -5,6 +5,7 @@ import { Send, MapPin, Instagram, Mail, MessageCircle } from 'lucide-react'
 import SectionTitle from './SectionTitle'
 import { OrganicCircle } from './AnimatedGraphicElement'
 import LogoMark from './LogoMark'
+import PlanteWordmark from './PlanteWordmark'
 
 const formName = 'contato-plante'
 
@@ -32,21 +33,21 @@ const contacts = [
     label: 'Instagram',
     value: '@plantecomunicacao',
     href: 'https://instagram.com/plantecomunicacao',
-    color: '#E8FF00',
+    color: '#F7FF19',
   },
   {
     icon: Mail,
     label: 'E-mail',
     value: 'contato@plantecomunicacao.com.br',
     href: 'mailto:contato@plantecomunicacao.com.br',
-    color: '#E8FF00',
+    color: '#F7FF19',
   },
   {
     icon: MapPin,
     label: 'Localização',
     value: 'Betim, MG — Brasil',
     href: null,
-    color: '#E8FF00',
+    color: '#F7FF19',
   },
 ]
 
@@ -112,13 +113,18 @@ export default function ContactSection() {
   }
 
   const inputClass =
-    'w-full bg-petrol-mid border border-white/10 rounded-xl px-4 py-3.5 text-white text-sm placeholder-white/25 focus:outline-none focus:border-amarelo/50 transition-colors duration-200 font-sans'
+    'w-full bg-petrol-mid border border-white/10 rounded-lg px-4 py-3.5 text-white text-sm placeholder-white/25 focus:outline-none focus:border-amarelo/60 transition-colors duration-200 font-sans'
 
   return (
     <section id="contato" className="relative py-28 bg-petrol-dark overflow-hidden">
       <div className="absolute inset-0 pointer-events-none">
-        <OrganicCircle size={700} color="#E8FF00" opacity={0.025} className="absolute -bottom-48 -right-48" />
-        <OrganicCircle size={400} color="#E8FF00" opacity={0.02} className="absolute -top-24 -left-24" />
+        <OrganicCircle size={700} color="#F7FF19" opacity={0.03} className="absolute -bottom-48 -right-48" />
+        <OrganicCircle size={400} color="#F7FF19" opacity={0.025} className="absolute -top-24 -left-24" />
+        <img
+          src="/brand/plante-script-stone.png"
+          alt=""
+          className="absolute bottom-8 right-8 hidden w-[420px] opacity-[0.07] lg:block"
+        />
       </div>
 
       <div className="section-padding relative z-10">
@@ -142,7 +148,7 @@ export default function ContactSection() {
                 const Icon = contact.icon
                 const inner = (
                   <div className="flex items-center gap-4">
-                    <div className="w-10 h-10 rounded-xl bg-petrol-mid flex items-center justify-center shrink-0">
+                    <div className="w-10 h-10 rounded-lg bg-petrol-mid flex items-center justify-center shrink-0">
                       <Icon size={16} style={{ color: contact.color }} />
                     </div>
                     <div>
@@ -173,10 +179,9 @@ export default function ContactSection() {
               initial={{ opacity: 0 }}
               animate={inView ? { opacity: 1 } : {}}
               transition={{ delay: 0.8 }}
-              className="mt-12 flex items-center gap-3 opacity-20"
+              className="mt-12 opacity-25"
             >
-              <LogoMark size={32} />
-              <span className="font-display font-bold text-white text-sm tracking-wider">PLANTE COMUNICAÇÃO</span>
+              <PlanteWordmark variant="white" size={210} className="w-[170px]" />
             </motion.div>
           </div>
 

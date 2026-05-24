@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
-import LogoMark from './LogoMark'
 import { Instagram, Mail, MessageCircle, ArrowUpRight } from 'lucide-react'
+import PlanteWordmark from './PlanteWordmark'
 
 const navGroups = [
   {
@@ -47,21 +47,17 @@ export default function Footer() {
 
   return (
     <footer className="bg-grafite border-t border-white/5">
-      {/* Main footer */}
       <div className="section-padding py-16">
         <div className="grid lg:grid-cols-[auto,1fr,1fr,1fr] gap-12 lg:gap-16">
-          {/* Brand */}
           <div>
-            <div className="flex items-center gap-3 mb-5">
-              <LogoMark size={36} />
-              <span className="font-display font-bold text-white text-lg tracking-tight">PLANTE</span>
+            <div className="mb-5">
+              <PlanteWordmark variant="light" size={190} className="w-[160px]" />
             </div>
-            <p className="text-white/40 text-sm leading-relaxed max-w-[200px]">
+            <p className="text-white/45 text-sm leading-relaxed max-w-[220px]">
               Comunicação com intenção, estratégia e criação.
             </p>
-            <p className="text-white/25 text-xs mt-3 font-display">Betim, MG — Brasil</p>
+            <p className="text-white/30 text-xs mt-3 font-display">Betim, MG — Brasil</p>
 
-            {/* Socials */}
             <div className="flex gap-3 mt-6">
               {socials.map(({ Icon, href, label }) => (
                 <motion.a
@@ -70,7 +66,7 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   whileHover={{ y: -2 }}
-                  className="w-9 h-9 rounded-lg bg-white/5 border border-white/8 flex items-center justify-center text-white/40 hover:text-amarelo hover:border-amarelo/30 transition-colors duration-200"
+                  className="w-9 h-9 rounded-lg bg-white/5 border border-white/8 flex items-center justify-center text-white/45 hover:text-amarelo hover:border-amarelo/30 transition-colors duration-200"
                   aria-label={label}
                 >
                   <Icon size={15} />
@@ -79,10 +75,9 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Nav groups */}
           {navGroups.map((group) => (
             <div key={group.title}>
-              <p className="text-white/25 text-xs font-display font-medium tracking-widest uppercase mb-4">
+              <p className="text-white/30 text-xs font-display font-medium tracking-widest uppercase mb-4">
                 {group.title}
               </p>
               <ul className="space-y-3">
@@ -93,7 +88,7 @@ export default function Footer() {
                         href={link.href}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-white/50 hover:text-white text-sm flex items-center gap-1 group transition-colors duration-200"
+                        className="text-white/55 hover:text-white text-sm flex items-center gap-1 group transition-colors duration-200"
                       >
                         {link.label}
                         <ArrowUpRight
@@ -104,7 +99,7 @@ export default function Footer() {
                     ) : (
                       <button
                         onClick={() => scrollTo(link.href)}
-                        className="text-white/50 hover:text-white text-sm text-left transition-colors duration-200"
+                        className="text-white/55 hover:text-white text-sm text-left transition-colors duration-200"
                       >
                         {link.label}
                       </button>
@@ -117,13 +112,12 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* Bottom bar */}
       <div className="border-t border-white/5 section-padding py-5">
         <div className="flex flex-col sm:flex-row justify-between items-center gap-3">
-          <p className="text-white/20 text-xs font-display">
+          <p className="text-white/25 text-xs font-display">
             © {new Date().getFullYear()} Plante Comunicação. Todos os direitos reservados.
           </p>
-          <p className="text-white/15 text-xs">
+          <p className="text-white/20 text-xs">
             Plantamos ideias. Movimentamos marcas.
           </p>
         </div>

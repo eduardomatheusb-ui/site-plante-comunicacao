@@ -8,19 +8,23 @@ export default {
     extend: {
       colors: {
         petrol: {
-          DEFAULT: '#1C2B33',
-          light: '#243540',
-          dark: '#111D24',
-          mid: '#2D4049',
+          DEFAULT: '#4C6A70',
+          light: '#5B777D',
+          dark: '#22343A',
+          mid: '#3E5960',
         },
         amarelo: {
-          DEFAULT: '#E8FF00',
-          dark: '#C8DC00',
+          DEFAULT: '#F7FF19',
+          dark: '#DCE600',
+        },
+        pedra: {
+          DEFAULT: '#A79C90',
+          dark: '#83796F',
         },
         grafite: {
-          DEFAULT: '#0D0D0D',
-          mid: '#1A1A1A',
-          light: '#2A2A2A',
+          DEFAULT: '#1A1A1A',
+          mid: '#232323',
+          light: '#333333',
         },
       },
       fontFamily: {

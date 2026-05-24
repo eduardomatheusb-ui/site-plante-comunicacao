@@ -12,7 +12,7 @@
   }
 
   body {
-    background-color: #1C2B33;
+    background-color: #4C6A70;
     color: #ffffff;
     font-family: 'Inter', system-ui, sans-serif;
     -webkit-font-smoothing: antialiased;
@@ -21,8 +21,8 @@
   }
 
   ::selection {
-    background-color: #E8FF00;
-    color: #0D0D0D;
+    background-color: #F7FF19;
+    color: #1A1A1A;
   }
 
   ::-webkit-scrollbar {
@@ -30,11 +30,11 @@
   }
 
   ::-webkit-scrollbar-track {
-    background: #111D24;
+    background: #22343A;
   }
 
   ::-webkit-scrollbar-thumb {
-    background: #E8FF00;
+    background: #F7FF19;
     border-radius: 3px;
   }
 }
@@ -45,7 +45,7 @@
   }
 
   .text-gradient-yellow {
-    background: linear-gradient(135deg, #E8FF00, #C8DC00);
+    background: linear-gradient(135deg, #F7FF19, #DCE600);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -63,6 +63,12 @@
     pointer-events: none;
     opacity: 0.4;
     mix-blend-mode: overlay;
+  }
+
+  .brand-asset {
+    display: block;
+    max-width: 100%;
+    height: auto;
   }
 
   .btn-primary {

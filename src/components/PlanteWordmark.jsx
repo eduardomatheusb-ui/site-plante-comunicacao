@@ -1,28 +1,26 @@
-export default function PlanteWordmark({ className = '', color = '#ffffff', size = 160 }) {
-  const ratio = 908 / 200
-  const height = size / ratio
+const logoMap = {
+  light: '/brand/plante-logo-light-yellow.png',
+  white: '/brand/plante-logo-white.png',
+  dark: '/brand/plante-logo-dark-yellow.png',
+  black: '/brand/plante-logo-dark.png',
+  script: '/brand/plante-script-yellow.png',
+  scriptWhite: '/brand/plante-script-white.png',
+  scriptStone: '/brand/plante-script-stone.png',
+}
 
+export default function PlanteWordmark({
+  className = '',
+  variant = 'light',
+  size = 220,
+  alt = 'Plante - Ideias que movimentam',
+}) {
   return (
-    <svg
+    <img
+      src={logoMap[variant] || logoMap.light}
+      alt={alt}
       width={size}
-      height={height * 3.2}
-      viewBox="0 0 908 300"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      className={className}
-    >
-      <text
-        x="454"
-        y="220"
-        textAnchor="middle"
-        fontFamily="Space Grotesk, Inter, sans-serif"
-        fontWeight="700"
-        fontSize="240"
-        letterSpacing="-8"
-        fill={color}
-      >
-        PLANTE
-      </text>
-    </svg>
+      className={`brand-asset object-contain ${className}`}
+      loading="lazy"
+    />
   )
 }

@@ -1,150 +1,147 @@
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
-import { ArrowUpRight } from 'lucide-react'
-import SectionTitle from './SectionTitle'
-import { OrganicCircle } from './AnimatedGraphicElement'
+import { ArrowRight } from 'lucide-react'
 
 const services = [
   {
-    number: '01',
+    n: '01',
     title: 'Estratégia e Planejamento',
-    description:
-      'Diagnóstico, posicionamento, campanhas, calendário editorial, planejamento de comunicação e definição de narrativa. Antes de qualquer criação, existe uma direção.',
-    tags: ['Diagnóstico', 'Posicionamento', 'Planejamento'],
+    short: 'Estratégia',
+    tags: ['Diagnóstico', 'Posicionamento', 'Calendário editorial'],
+    description: 'Planejamento que organiza o caos e aponta a direção antes de qualquer criação.',
   },
   {
-    number: '02',
+    n: '02',
     title: 'Branding e Identidade',
-    description:
-      'Criação e reposicionamento de marcas, identidade visual, linguagem, manifesto, naming e aplicações. Para marcas que precisam saber quem são antes de aparecer.',
+    short: 'Branding',
     tags: ['Naming', 'Identidade Visual', 'Manifesto'],
+    description: 'Marcas que sabem quem são antes de aparecer.',
   },
   {
-    number: '03',
+    n: '03',
     title: 'Conteúdo e Redes Sociais',
-    description:
-      'Gestão de redes sociais, produção de textos, roteiros, direção criativa, design, reels, cobertura e relacionamento com comunidades. Presença que faz sentido.',
+    short: 'Conteúdo',
     tags: ['Social Media', 'Copywriting', 'Reels'],
+    description: 'Presença digital com estratégia editorial, não só postagem.',
   },
   {
-    number: '04',
+    n: '04',
     title: 'Tráfego Pago e Performance',
-    description:
-      'Planejamento de mídia, anúncios em Meta, Google e LinkedIn, campanhas de conversão, relatórios e otimização contínua. Investimento com retorno mensurável.',
+    short: 'Performance',
     tags: ['Meta Ads', 'Google Ads', 'Relatórios'],
+    description: 'Investimento com retorno mensurável e otimização contínua.',
   },
   {
-    number: '05',
+    n: '05',
     title: 'Audiovisual',
-    description:
-      'Roteiros, captação, edição, vídeos institucionais, campanhas, entrevistas, conteúdos para redes e cobertura de eventos. Imagem que comunica antes das palavras.',
+    short: 'Audiovisual',
     tags: ['Vídeo institucional', 'Captação', 'Edição'],
+    description: 'Imagem que comunica antes das palavras.',
   },
   {
-    number: '06',
+    n: '06',
     title: 'Comunicação Institucional',
-    description:
-      'Releases, assessoria de comunicação, textos institucionais, apresentações, campanhas públicas e relacionamento com imprensa. Voz clara para instituições.',
+    short: 'Institucional',
     tags: ['Assessoria', 'Releases', 'Imprensa'],
+    description: 'Voz clara para instituições que precisam ser ouvidas.',
   },
   {
-    number: '07',
+    n: '07',
     title: 'Projetos Digitais',
-    description:
-      'Landing pages, websites, páginas de campanha, interfaces e materiais digitais de apoio. Do wireframe ao ar, com foco em resultado.',
-    tags: ['Websites', 'Landing Pages', 'UI/UX'],
+    short: 'Digital',
+    tags: ['Websites', 'Landing Pages'],
+    description: 'Do wireframe ao ar, com foco em resultado.',
   },
 ]
 
-function ServiceCard({ service, index }) {
-  const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 })
+function ServiceRow({ s, i }) {
+  const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.15 })
 
   return (
-    <motion.article
+    <motion.div
       ref={ref}
-      initial={{ opacity: 0, y: 40 }}
+      initial={{ opacity: 0, y: 30 }}
       animate={inView ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 0.6, delay: index * 0.08 }}
-      className="group relative border-b border-white/8 py-8 hover:border-amarelo/30 transition-colors duration-300 cursor-default"
+      transition={{ duration: 0.55, delay: i * 0.07 }}
+      className="group grid grid-cols-[48px_1fr] md:grid-cols-[64px_1fr_auto] items-start md:items-center gap-4 md:gap-8 py-7 border-b border-white/8 hover:border-amarelo/40 transition-colors duration-300 cursor-default"
     >
-      <div className="flex items-start gap-6">
-        <span className="font-display font-bold text-sm text-amarelo/40 mt-1 w-8 shrink-0">
-          {service.number}
-        </span>
+      {/* Number */}
+      <span className="font-display font-bold text-xs text-amarelo/35 pt-1 group-hover:text-amarelo/70 transition-colors">
+        {s.n}
+      </span>
 
-        <div className="flex-1">
-          <div className="flex items-start justify-between gap-4">
-            <h3 className="font-display font-bold text-xl md:text-2xl text-white group-hover:text-amarelo transition-colors duration-300">
-              {service.title}
-            </h3>
-            <motion.div
-              className="shrink-0 mt-1 text-white/20 group-hover:text-amarelo transition-colors duration-300"
-              whileHover={{ x: 4, y: -4 }}
-            >
-              <ArrowUpRight size={20} />
-            </motion.div>
-          </div>
-
-          <p className="mt-3 text-white/55 leading-relaxed text-sm md:text-base max-w-2xl">
-            {service.description}
-          </p>
-
-          <div className="mt-4 flex flex-wrap gap-2">
-            {service.tags.map((tag) => (
-              <span
-                key={tag}
-                className="text-xs px-3 py-1 rounded-full bg-white/5 text-white/40 font-display"
-              >
-                {tag}
-              </span>
-            ))}
-          </div>
+      {/* Title + description */}
+      <div>
+        <h3 className="font-display font-bold text-xl md:text-3xl text-white group-hover:text-amarelo transition-colors duration-300 leading-tight">
+          {s.title}
+        </h3>
+        <p className="text-white/40 text-sm mt-1.5 leading-relaxed max-w-lg hidden md:block">
+          {s.description}
+        </p>
+        <div className="flex flex-wrap gap-2 mt-3">
+          {s.tags.map(t => (
+            <span key={t} className="text-[11px] px-2.5 py-0.5 rounded-full bg-white/5 text-white/35 font-display">
+              {t}
+            </span>
+          ))}
         </div>
       </div>
-    </motion.article>
+
+      {/* Arrow */}
+      <motion.div
+        className="text-white/15 group-hover:text-amarelo transition-colors duration-300 hidden md:block"
+        whileHover={{ x: 4 }}
+      >
+        <ArrowRight size={22} />
+      </motion.div>
+    </motion.div>
   )
 }
 
 export default function ServicesSection() {
+  const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 })
+
   return (
-    <section id="servicos" className="relative py-28 bg-petrol-dark overflow-hidden">
-      <div className="absolute inset-0 pointer-events-none">
-        <OrganicCircle size={500} color="#E8FF00" opacity={0.025} className="absolute -top-32 right-0" />
+    <section id="servicos" className="bg-petrol">
+
+      {/* Header block — amarelo bg, full visual break */}
+      <div className="bg-amarelo section-padding py-14">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
+          <div>
+            <span className="inline-block px-3 py-1 text-[11px] font-display font-medium tracking-widest uppercase text-black/50 border border-black/20 rounded-full mb-5">
+              O que fazemos
+            </span>
+            <h2 className="font-display font-bold text-4xl md:text-6xl lg:text-7xl text-black leading-[0.95] tracking-tight">
+              Comunicação<br />do início ao<br />resultado.
+            </h2>
+          </div>
+          <p className="text-black/55 text-base max-w-xs leading-relaxed">
+            Não entregamos serviços isolados. Construímos presença com estratégia, criação e acompanhamento.
+          </p>
+        </div>
       </div>
 
-      <div className="section-padding relative z-10">
-        <div className="grid lg:grid-cols-[1fr,2fr] gap-16 lg:gap-24">
-          {/* Sticky header on desktop */}
-          <div className="lg:sticky lg:top-32 lg:self-start">
-            <SectionTitle
-              tag="O que fazemos"
-              title={<>Comunicação completa,<br />do início ao<br /><span className="text-gradient-yellow">resultado.</span></>}
-              subtitle="Não entregamos serviços isolados. Construímos presença com estratégia, criação e acompanhamento."
-            />
-
-            <motion.div
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.4 }}
-              className="mt-10"
-            >
-              <button
-                onClick={() => document.querySelector('#contato')?.scrollIntoView({ behavior: 'smooth' })}
-                className="btn-primary"
-              >
-                Solicite uma proposta
-              </button>
-            </motion.div>
-          </div>
-
-          {/* Services list */}
-          <div className="border-t border-white/8">
-            {services.map((service, i) => (
-              <ServiceCard key={service.number} service={service} index={i} />
-            ))}
-          </div>
+      {/* Services list */}
+      <div ref={ref} className="section-padding pb-20">
+        <div className="border-t border-white/8 mt-0">
+          {services.map((s, i) => (
+            <ServiceRow key={s.n} s={s} i={i} />
+          ))}
         </div>
+
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={inView ? { opacity: 1 } : {}}
+          transition={{ delay: 0.8 }}
+          className="mt-12"
+        >
+          <button
+            onClick={() => document.querySelector('#contato')?.scrollIntoView({ behavior: 'smooth' })}
+            className="btn-primary"
+          >
+            Solicite uma proposta
+          </button>
+        </motion.div>
       </div>
     </section>
   )
