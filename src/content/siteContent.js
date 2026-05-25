@@ -270,15 +270,31 @@ export const projects = [
     client: 'Prefeitura de Santo Antônio do Amparo',
     segment: 'Comunicação pública',
     image: '/brand/work/cover-prefeitura-saa.jpg',
-    gallery: ['/brand/work/cover-prefeitura-saa.jpg'],
+    gallery: [
+      '/brand/work/saa-campanha-01.jpg',
+      '/brand/work/saa-campanha-02.jpg',
+      '/brand/work/saa-campanha-03.jpg',
+      '/brand/work/saa-campanha-04.jpg',
+      '/brand/work/saa-campanha-05.jpg',
+      '/brand/work/saa-campanha-06.jpg',
+    ],
     challenge:
-      'Transformar informações de interesse público em uma comunicação simples, visual e próxima da população.',
+      'A Prefeitura de Santo Antônio do Amparo precisava comunicar as realizações da administração 2021–2024 de forma clara, próxima e acessível à população — conectando obras, serviços e investimentos à vida real de quem mora na cidade.',
     insight:
-      'Comunicação pública precisa ser acessível. O material deve ajudar a pessoa a entender rapidamente a mensagem, sem perder cuidado visual.',
+      'Comunicação pública funciona quando a população reconhece, na mensagem, algo que afeta diretamente o seu dia a dia. Não basta informar: é preciso fazer a pessoa sentir que a cidade está se movendo por ela.',
     idea:
-      'Estruturamos uma peça com linguagem objetiva e leitura direta, apoiando a divulgação institucional em formato pronto para circulação.',
-    deliveries: ['Comunicação pública', 'Peça institucional', 'Design', 'Direção de informação'],
-    result: 'Apoio à divulgação de informações institucionais com mais clareza e organização visual.',
+      'Criamos a campanha "Quando você cuida da cidade, ela cuida de você" — uma linha de comunicação integrada para divulgar as entregas da gestão nas áreas de educação, infraestrutura e serviços urbanos. A campanha traduziu obras, investimentos e ações em peças visuais objetivas, com linguagem direta e identidade consistente para circulação nas redes sociais e canais institucionais da prefeitura. Cada peça combinava imagem real, mensagem principal e chamada para engajamento da população — como a campanha de renegociação de débitos municipais.',
+    deliveries: [
+      'Conceito e linha de campanha',
+      'Peças digitais para redes sociais',
+      'Comunicação de obras e realizações',
+      'Campanha de renegociação de débitos',
+      'Design e direção de arte',
+      'Linguagem institucional pública',
+    ],
+    result:
+      'Uma campanha com identidade visual sólida e mensagem clara, que deu visibilidade às entregas da administração e aproximou a prefeitura da rotina dos moradores de Santo Antônio do Amparo.',
+    note: 'Campanha "Quando você cuida da cidade, ela cuida de você" — Prefeitura de Santo Antônio do Amparo, Administração 2021–2024.',
   },
   {
     slug: 'circuito-rosa',
