@@ -35,6 +35,14 @@ export default function Home() {
               Saiba mais sobre a Plante
               <ArrowRight size={16} />
             </button>
+
+            <div className="mt-6 flex flex-wrap items-center gap-5 border-t border-grafite/10 pt-6">
+              <p className="text-xs font-bold uppercase tracking-widest text-grafite/40">Certificada e associada</p>
+              <div className="flex flex-wrap items-center gap-5">
+                <img src="/brand/cert-logo-1.png" alt="Certificação" className="h-8 w-auto object-contain opacity-70 grayscale hover:opacity-100 hover:grayscale-0 transition-all" />
+                <img src="/brand/cert-logo-2.png" alt="Associação" className="h-8 w-auto object-contain opacity-70 grayscale hover:opacity-100 hover:grayscale-0 transition-all" />
+              </div>
+            </div>
           </div>
         </div>
         <div className="section-padding mt-16">
