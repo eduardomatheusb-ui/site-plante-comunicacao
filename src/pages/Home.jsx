@@ -36,11 +36,11 @@ export default function Home() {
               <ArrowRight size={16} />
             </button>
 
-            <div className="mt-6 flex flex-wrap items-center gap-6 rounded bg-grafite px-5 py-4">
-              <p className="text-xs font-bold uppercase tracking-widest text-white/40">Certificada e associada</p>
-              <div className="flex flex-wrap items-center gap-6">
-                <img src="/brand/cert-logo-1.png" alt="Certificação" className="h-8 w-auto object-contain opacity-70 transition-opacity hover:opacity-100" />
-                <img src="/brand/cert-logo-2.png" alt="Associação" className="h-8 w-auto object-contain opacity-70 transition-opacity hover:opacity-100" />
+            <div className="mt-6 rounded bg-grafite px-6 py-5">
+              <p className="mb-4 text-xs font-bold uppercase tracking-widest text-white/40">Certificada e associada</p>
+              <div className="flex flex-wrap items-center gap-8">
+                <img src="/brand/cert-logo-1.png" alt="Certificação" className="h-12 w-auto object-contain opacity-80 transition-opacity hover:opacity-100" />
+                <img src="/brand/cert-logo-2.png" alt="CENP" className="h-12 w-auto object-contain opacity-80 transition-opacity hover:opacity-100" />
               </div>
             </div>
           </div>
