@@ -24,9 +24,9 @@ export default function QuemSomosPage() {
 
             <div className="bg-grafite p-8 shadow-[10px_10px_0_#F7FF19]">
               <p className="mb-6 text-xs font-bold uppercase tracking-widest text-amarelo">Certificada e associada</p>
-              <div className="flex flex-col gap-8">
-                <img src="/brand/cert-logo-1.png" alt="ABAP" className="h-32 w-full object-contain object-left opacity-100" />
-                <img src="/brand/cert-logo-2.png" alt="CENP" className="h-20 w-full object-contain object-left opacity-100" />
+              <div className="flex flex-nowrap items-center gap-8">
+                <img src="/brand/cert-logo-1.png" alt="ABAP" className="h-20 shrink-0 object-contain opacity-100 md:h-24" />
+                <img src="/brand/cert-logo-2.png" alt="CENP" className="h-20 min-w-0 max-w-[72%] object-contain object-left opacity-100 md:h-24" />
               </div>
             </div>
 
