@@ -103,9 +103,11 @@ export default function ProjetoCasePage({ slug }) {
                 </div>
               )}
 
-              <div className="overflow-hidden bg-grafite shadow-[12px_12px_0_#F7FF19]">
-                <img src={project.gallery?.[0] || project.image} alt="" className="h-full w-full object-cover" />
-              </div>
+              {videos.length === 0 && (
+                <div className="overflow-hidden bg-grafite shadow-[12px_12px_0_#F7FF19]">
+                  <img src={project.gallery?.[0] || project.image} alt="" className="h-full w-full object-cover" />
+                </div>
+              )}
 
               <div>
                 <p className="mb-2 font-display text-sm font-bold text-grafite">O que foi construído</p>
