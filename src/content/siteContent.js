@@ -22,67 +22,107 @@ export const navLinks = [
 export const services = [
   {
     n: '01',
-    title: 'Estratégia e planejamento',
-    short: 'Estratégia',
-    tags: ['Diagnóstico', 'Posicionamento', 'Narrativa'],
+    title: 'Gestão de Marketing',
+    short: 'Marketing',
+    tags: ['Planejamento', 'Campanhas', 'Resultados'],
     description:
-      'Diagnóstico de comunicação, posicionamento, campanhas, calendário editorial, planejamento de conteúdo, definição de narrativa e organização das ações de marketing.',
+      'Planejamento, organização e acompanhamento das ações de marketing da marca, conectando estratégia, conteúdo, campanhas, mídia e análise de resultados. Ajudamos marcas e instituições a entenderem o que comunicar, para quem comunicar, quando comunicar e como transformar cada ação em parte de um posicionamento mais consistente.',
   },
   {
     n: '02',
-    title: 'Gestão de redes sociais',
-    short: 'Redes',
-    tags: ['Conteúdo', 'Design', 'Métricas'],
+    title: 'Campanhas Publicitárias',
+    short: 'Campanhas',
+    tags: ['Conceito', 'Divulgação', 'Interesse público'],
     description:
-      'Planejamento, criação de conteúdo, redação, design, publicação, acompanhamento de métricas e construção de presença digital para marcas, instituições e projetos.',
+      'Criação de campanhas para marcas, instituições, lançamentos, datas estratégicas, projetos comerciais, ações institucionais e comunicação de interesse público.',
   },
   {
     n: '03',
-    title: 'Branding e identidade visual',
+    title: 'Posicionamento de Negócio',
+    short: 'Posicionamento',
+    tags: ['Narrativa', 'Diferenciais', 'Direção'],
+    description:
+      'Construção de narrativa, diferenciais, linguagem e direção estratégica para marcas que precisam se apresentar melhor ao mercado e se comunicar com mais clareza. O posicionamento conecta comunicação, público, oferta e imagem para mostrar por que a marca existe e como deseja ser percebida.',
+  },
+  {
+    n: '04',
+    title: 'Branding e Identidade Visual',
     short: 'Branding',
     tags: ['Marca', 'Linguagem', 'Aplicações'],
     description:
       'Criação, reposicionamento e desenvolvimento de marcas, incluindo identidade visual, linguagem, conceito, aplicações e materiais institucionais.',
   },
   {
-    n: '04',
-    title: 'Campanhas institucionais',
-    short: 'Campanhas',
-    tags: ['Lançamentos', 'Interesse público', 'Imagem institucional'],
-    description:
-      'Criação de campanhas para lançamentos, datas comemorativas, ações públicas, projetos sociais, ações comerciais, comunicação interna e fortalecimento de imagem institucional.',
-  },
-  {
     n: '05',
-    title: 'Produção audiovisual',
-    short: 'Audiovisual',
-    tags: ['Roteiro', 'Captação', 'Edição'],
+    title: 'Posicionamento de Mercado',
+    short: 'Mercado',
+    tags: ['Público', 'Valor', 'Diferenciação'],
     description:
-      'Roteiros, captação, direção criativa, edição de vídeos, reels, vídeos institucionais, entrevistas, coberturas e conteúdos para redes sociais.',
+      'Análise de marca, estudo de público, definição de diferenciais, narrativa de posicionamento, tom de voz, mensagens-chave e organização da proposta de valor.',
   },
   {
     n: '06',
-    title: 'Tráfego pago e mídia digital',
-    short: 'Mídia',
-    tags: ['Alcance', 'Conversão', 'Relatórios'],
+    title: 'Lançamento de Negócios',
+    short: 'Lançamento',
+    tags: ['Conceito', 'Divulgação', 'Chegada ao mercado'],
     description:
-      'Planejamento, criação, veiculação e acompanhamento de campanhas pagas em plataformas digitais, com foco em alcance, conversão, relacionamento ou fortalecimento de marca.',
+      'Estratégias de comunicação para negócios, produtos, serviços, unidades ou projetos que estão chegando ao mercado, do conceito à divulgação. Inclui campanha de lançamento, materiais comerciais, landing pages, mídia digital e apoio à comunicação com imprensa ou parceiros, quando necessário.',
   },
   {
     n: '07',
-    title: 'Comunicação institucional',
-    short: 'Institucional',
-    tags: ['Releases', 'Apresentações', 'Imagem pública'],
+    title: 'Veiculação em Grandes Veículos de Comunicação',
+    short: 'Veiculação',
+    tags: ['TV', 'Rádio', 'Mídia regional'],
     description:
-      'Releases, textos institucionais, apresentações, relatórios, discursos, materiais de divulgação, comunicação interna, campanhas de interesse público e apoio à imagem pública de instituições.',
+      'Planejamento e acompanhamento de estratégias de mídia para ampliar alcance, gerar reconhecimento e ocupar espaços relevantes de comunicação. Pode envolver TV, rádio, portais de notícia, mídia digital, mídia exterior, veículos regionais e projetos especiais.',
   },
   {
     n: '08',
-    title: 'Projetos digitais',
-    short: 'Digital',
-    tags: ['Sites', 'Landing pages', 'Formulários'],
+    title: 'Gestão de Redes Sociais',
+    short: 'Redes',
+    tags: ['Conteúdo', 'Calendário', 'Métricas'],
     description:
-      'Landing pages, sites, páginas de campanha, formulários, interfaces simples e materiais digitais de apoio à comunicação.',
+      'Planejamento editorial, criação de conteúdo, redação, direção de arte, roteiros, calendário de publicações, métricas e relatórios de desempenho. As redes sociais são tratadas como parte do posicionamento de negócio, e não como publicações isoladas.',
+  },
+  {
+    n: '09',
+    title: 'Produção Audiovisual',
+    short: 'Audiovisual',
+    tags: ['Roteiro', 'Captação', 'Edição'],
+    description:
+      'Vídeos e conteúdos audiovisuais para campanhas, redes sociais, instituições, marcas, lançamentos e projetos especiais, sempre com roteiro, estética e função estratégica.',
+  },
+  {
+    n: '10',
+    title: 'Tráfego Pago e Mídia Digital',
+    short: 'Mídia',
+    tags: ['Meta Ads', 'Google Ads', 'Otimização'],
+    description:
+      'Campanhas pagas em plataformas digitais para ampliar alcance, gerar relacionamento, fortalecer marcas ou apoiar objetivos comerciais. Inclui planejamento, criação de anúncios, segmentação, acompanhamento, relatórios e otimização.',
+  },
+  {
+    n: '11',
+    title: 'Comunicação Institucional',
+    short: 'Institucional',
+    tags: ['Releases', 'Apresentações', 'Reputação'],
+    description:
+      'Materiais e estratégias para instituições, projetos públicos, organizações, entidades e empresas que precisam informar com clareza, fortalecer reputação e se aproximar de seus públicos.',
+  },
+  {
+    n: '12',
+    title: 'Desenvolvimento de Websites',
+    short: 'Websites',
+    tags: ['Sites', 'Landing pages', 'SEO básico'],
+    description:
+      'Websites institucionais, landing pages e páginas estratégicas pensados como ferramenta de posicionamento de negócio, com textos, direção visual, formulários e responsividade.',
+  },
+  {
+    n: '13',
+    title: 'Projetos Digitais',
+    short: 'Digital',
+    tags: ['Hotsites', 'Formulários', 'Experiências digitais'],
+    description:
+      'Soluções digitais de apoio à comunicação, organização de informações e relacionamento com públicos, incluindo formulários, hotsites, páginas de inscrição, materiais digitais, apresentações digitais e interfaces simples.',
   },
 ]
 
@@ -90,7 +130,7 @@ export const methodSteps = [
   {
     title: 'Escutar',
     description:
-      'Entendemos o cenário, o público, a marca, os problemas e os objetivos de cada projeto.',
+      'Entendemos o cenário, o público, o negócio, os desafios e os objetivos.',
   },
   {
     title: 'Pensar',
@@ -98,19 +138,24 @@ export const methodSteps = [
       'Organizamos informações, identificamos oportunidades e construímos uma direção estratégica.',
   },
   {
+    title: 'Posicionar',
+    description:
+      'Definimos narrativa, diferenciais, linguagem e caminhos para fortalecer a marca no mercado.',
+  },
+  {
     title: 'Criar',
     description:
-      'Transformamos estratégia em linguagem, conceito, imagem, campanha, conteúdo e experiência.',
+      'Transformamos estratégia em campanhas, conteúdos, websites, peças, vídeos e materiais de comunicação.',
   },
   {
     title: 'Movimentar',
     description:
-      'Publicamos, impulsionamos, acompanhamos, ajustamos e fazemos a comunicação circular.',
+      'Veiculamos, publicamos, acompanhamos, ajustamos e fazemos a comunicação circular nos canais certos.',
   },
   {
     title: 'Evoluir',
     description:
-      'Analisamos resultados, observamos respostas do público e melhoramos continuamente a presença da marca.',
+      'Analisamos resultados, observamos respostas e melhoramos continuamente a estratégia de marketing.',
   },
 ]
 
@@ -339,7 +384,7 @@ export const ideaCategories = [
   },
   {
     title: 'Digital',
-    description: 'Redes sociais, conteúdo, tráfego pago, sites, landing pages e presença online.',
+    description: 'Redes sociais, conteúdo, tráfego pago, sites, landing pages e estratégia digital conectada ao posicionamento.',
   },
   {
     title: 'Bastidores',
@@ -480,27 +525,27 @@ export const ideas = [
   },
   {
     slug: 'presenca-digital-nao-e-so-frequencia',
-    title: 'Presença digital não é só frequência',
+    title: 'Publicar muito não é o mesmo que se posicionar bem',
     category: 'Digital',
     date: '24 maio 2026',
     readingTime: '5 min',
     image: '/brand/work/salao-geral.jpg',
     summary:
-      'Estar presente não é apenas publicar muito. É construir consistência, narrativa e relação com o público.',
+      'Estar nos canais digitais não é apenas publicar muito. É construir consistência, narrativa, clareza e relação com o público.',
     highlight:
-      'Muita gente confunde presença digital com volume de publicação.',
+      'O digital funciona melhor quando ajuda a marca a ser compreendida, lembrada e escolhida.',
     body: [
-      'Publicar todos os dias pode até ajudar uma marca a aparecer mais, mas frequência sozinha não sustenta uma boa comunicação. Estar presente não é apenas ocupar espaço no feed. É construir uma presença que faça sentido para o público e para a marca.',
+      'Publicar todos os dias pode até ajudar uma marca a aparecer mais, mas frequência sozinha não sustenta uma boa comunicação. Estar nos canais digitais não é apenas ocupar espaço no feed. É construir uma estratégia que faça sentido para o público e para a marca.',
       'Uma marca pode publicar muito e ainda assim não ser lembrada. Pode ter movimento nas redes e não ter posicionamento. Pode seguir tendências e continuar sem uma narrativa própria.',
-      'Presença digital exige consistência.',
+      'Posicionamento digital exige consistência.',
       'Consistência não significa repetir sempre a mesma coisa. Significa manter coerência entre o que a marca é, o que ela fala, como ela se apresenta e o que entrega ao público.',
-      'Uma boa presença digital combina planejamento, estética, texto, vídeo, ritmo, escuta e análise. Ela entende que cada conteúdo tem uma função. Alguns posts fortalecem autoridade. Outros aproximam. Outros explicam. Outros vendem. Outros registram momentos importantes.',
+      'Uma boa estratégia digital combina planejamento, estética, texto, vídeo, ritmo, escuta e análise. Ela entende que cada conteúdo tem uma função. Alguns posts fortalecem autoridade. Outros aproximam. Outros explicam. Outros vendem. Outros registram momentos importantes.',
       'Quando tudo isso é pensado em conjunto, as redes sociais deixam de ser apenas uma vitrine e passam a ser um espaço de construção de marca.',
-      'Também é importante entender que presença digital não acontece só no Instagram. Ela envolve site, buscas, anúncios, conteúdos compartilháveis, materiais institucionais, atendimento, reputação e todos os pontos em que a marca é encontrada.',
-      'Por isso, antes de perguntar “quantos posts vamos fazer?”, talvez a pergunta mais importante seja:\n\nQue presença queremos construir?',
+      'Também é importante entender que o digital não acontece só no Instagram. Ele envolve site, buscas, anúncios, conteúdos compartilháveis, materiais institucionais, atendimento, reputação e todos os pontos em que a marca é encontrada.',
+      'Por isso, antes de perguntar “quantos posts vamos fazer?”, talvez a pergunta mais importante seja:\n\nQue posicionamento queremos construir?',
       'A resposta muda tudo.',
       'Muda o tipo de conteúdo.\nMuda o tom da marca.\nMuda a escolha dos formatos.\nMuda a forma de medir resultado.',
-      'Na Plante, a presença digital é pensada como parte de um caminho maior. Não é só publicação. É comunicação com direção.',
+      'Na Plante, os canais digitais são pensados como parte de um caminho maior. Não é só publicação. É comunicação com direção.',
       'Porque aparecer é importante.',
       'Mas ser reconhecido, lembrado e compreendido é ainda mais.',
     ],
@@ -508,7 +553,7 @@ export const ideas = [
 ]
 
 export const meta = {
-  defaultTitle: 'Plante Comunicação | Agência mineira de publicidade',
+  defaultTitle: 'Plante Comunicação | Agência mineira de publicidade e marketing',
   defaultDescription:
-    'A Plante Comunicação é uma agência mineira de publicidade que une estratégia, criação, conteúdo, branding, audiovisual, tráfego pago e comunicação institucional para movimentar marcas, instituições e projetos.',
+    'A Plante Comunicação é uma agência mineira de publicidade e marketing que une estratégia, criação, gestão de marketing, campanhas publicitárias, mídia, branding, websites, audiovisual e comunicação institucional para movimentar marcas, instituições e projetos.',
 }

@@ -59,7 +59,7 @@ export default function ConteudoPage({ slug }) {
               Sua marca também precisa se movimentar?
             </h2>
             <p className="mt-5 max-w-2xl text-lg leading-relaxed text-grafite/68">
-              A Plante ajuda marcas, instituições e projetos a transformarem ideias em estratégia, conteúdo, campanha e presença.
+              A Plante ajuda marcas, instituições e projetos a transformarem ideias em estratégia, conteúdo, campanha e posicionamento.
             </p>
           </div>
           <button onClick={() => navigateTo('/contato')} className="btn-primary bg-grafite text-white hover:bg-grafite-light">

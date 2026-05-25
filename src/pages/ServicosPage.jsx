@@ -8,7 +8,7 @@ export default function ServicosPage() {
       <PageHero
         eyebrow="Serviços"
         title="Comunicação completa, do pensamento à entrega."
-        subtitle="A Plante une estratégia, criação, conteúdo, mídia e presença digital para construir soluções de comunicação para marcas, instituições e projetos."
+        subtitle="A Plante une estratégia, criação, gestão de marketing, campanhas, mídia, branding e projetos digitais para fortalecer marcas, instituições e projetos em diferentes momentos de crescimento."
         backgroundImage="/brand/showcase/servicos-bg.jpg"
       />
 

@@ -5,7 +5,7 @@ const pillars = [
   { label: 'Escuta', desc: 'Antes de qualquer criação, existe uma escuta real.' },
   { label: 'Estratégia', desc: 'Planejamento antes do post, da peça, da campanha.' },
   { label: 'Criação', desc: 'Forma, linguagem e conceito com intenção.' },
-  { label: 'Movimento', desc: 'Presença que gera conexão, reconhecimento e resultado.' },
+  { label: 'Movimento', desc: 'Posicionamento que gera conexão, reconhecimento e resultado.' },
 ]
 
 const stats = [
@@ -64,19 +64,19 @@ export default function AboutSection() {
             className="space-y-5 text-white/65 text-base md:text-lg leading-relaxed max-w-xl"
           >
             <p>
-              A Plante Comunicação é uma agência mineira de publicidade que une estratégia, criação, conteúdo e posicionamento para movimentar marcas, instituições e projetos.
+              A Plante Comunicação é uma agência mineira de publicidade e marketing que une estratégia, criação, gestão de marketing e posicionamento de negócio para movimentar marcas, instituições e projetos.
             </p>
             <p>
-              Acreditamos que uma boa ideia não nasce pronta. Ela precisa ser escutada, planejada, criada e colocada em movimento. Por isso, nosso trabalho combina repertório, sensibilidade, análise e execução para construir marcas mais presentes, reconhecidas e conectadas com seus públicos.
+              Acreditamos que uma boa ideia não nasce pronta. Ela precisa ser escutada, planejada, criada e colocada em movimento. Por isso, nosso trabalho combina repertório, sensibilidade, análise e execução para construir marcas mais claras, reconhecidas e conectadas com seus públicos.
             </p>
             <p>
-              Atuamos com comunicação de forma completa, desde o diagnóstico e o posicionamento até a criação de campanhas institucionais, gestão de redes sociais, produção audiovisual, tráfego pago, branding, projetos digitais e comunicação institucional.
+              Atuamos com comunicação de forma completa, desde o diagnóstico e o posicionamento de mercado até a gestão de marketing, criação de campanhas publicitárias, produção audiovisual, tráfego pago, branding, desenvolvimento de websites, projetos digitais e comunicação institucional.
             </p>
             <p>
-              Somos de Minas. A Plante nasce daqui e pensa comunicação para marcas, instituições e projetos que querem crescer com mais clareza, presença e intenção.
+              Somos de Minas. A Plante nasce daqui e pensa comunicação para marcas, instituições e projetos que querem crescer com mais clareza, consistência e intenção.
             </p>
             <p className="text-white/85 font-medium">
-              Mais do que produzir peças, a Plante cria caminhos de comunicação.
+              Mais do que produzir peças, a Plante cria caminhos de comunicação para negócios em movimento.
             </p>
           </motion.div>
 

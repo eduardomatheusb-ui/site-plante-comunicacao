@@ -20,7 +20,7 @@ export default function Footer() {
               <PlanteWordmark variant="light" size={190} className="w-[160px]" />
             </div>
             <p className="max-w-[250px] text-sm leading-relaxed text-white/45">
-              Agência mineira de publicidade.
+              Agência mineira de publicidade e marketing.
               <br />
               Ideias que movimentam marcas.
             </p>

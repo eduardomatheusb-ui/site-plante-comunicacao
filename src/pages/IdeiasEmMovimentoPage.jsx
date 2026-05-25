@@ -9,7 +9,7 @@ export default function IdeiasEmMovimentoPage() {
       <PageHero
         eyebrow="Ideias em Movimento"
         title="Antes de uma boa campanha, existe pensamento."
-        subtitle="Conteúdos, bastidores e reflexões sobre comunicação, marcas, presença digital, campanhas institucionais e processos criativos."
+        subtitle="Conteúdos, bastidores e reflexões sobre comunicação, marcas, estratégia digital, campanhas institucionais e processos criativos."
       />
 
       <section className="bg-white py-24 text-grafite">
@@ -20,7 +20,7 @@ export default function IdeiasEmMovimentoPage() {
           <div>
             <div className="space-y-5 text-lg leading-relaxed text-grafite/65">
               <p>
-                Aqui reunimos ideias, processos e bastidores sobre como a comunicação pode ajudar marcas, instituições e projetos a se movimentarem com mais clareza, presença e intenção.
+                Aqui reunimos ideias, processos e bastidores sobre como a comunicação pode ajudar marcas, instituições e projetos a se movimentarem com mais clareza, posicionamento e intenção.
               </p>
               <p>
                 A Plante acredita que comunicar bem começa antes da criação. Começa na escuta, no olhar para o contexto, na organização das ideias e na construção de caminhos possíveis.

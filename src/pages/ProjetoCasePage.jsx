@@ -139,7 +139,7 @@ export default function ProjetoCasePage({ slug }) {
           <div>
             <p className="font-display text-3xl font-bold">Sua marca também precisa se movimentar?</p>
             <p className="mt-3 max-w-2xl text-white/64">
-              A Plante ajuda marcas, instituições e projetos a transformar ideias em estratégia, campanha, conteúdo e presença.
+              A Plante ajuda marcas, instituições e projetos a transformar ideias em estratégia, campanha, conteúdo e posicionamento.
             </p>
           </div>
           <a href={contact.whatsappHref} className="btn-primary inline-flex items-center gap-2">

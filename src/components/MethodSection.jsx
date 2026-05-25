@@ -6,7 +6,7 @@ const steps = [
   { n: '02', verb: 'Pensar', color: 'text-white', description: 'Organizamos informações, identificamos oportunidades e construímos uma direção estratégica.' },
   { n: '03', verb: 'Criar', color: 'text-amarelo', description: 'Transformamos estratégia em linguagem, conceito, imagem, campanha, conteúdo e experiência.' },
   { n: '04', verb: 'Movimentar', color: 'text-white', description: 'Publicamos, impulsionamos, acompanhamos, ajustamos e fazemos a comunicação circular.' },
-  { n: '05', verb: 'Evoluir', color: 'text-amarelo', description: 'Analisamos resultados, observamos respostas do público e melhoramos continuamente a presença da marca.' },
+  { n: '05', verb: 'Evoluir', color: 'text-amarelo', description: 'Analisamos resultados, observamos respostas do público e melhoramos continuamente a estratégia de marketing.' },
 ]
 
 export default function MethodSection() {
@@ -36,7 +36,7 @@ export default function MethodSection() {
             transition={{ delay: 0.3 }}
             className="text-white/45 text-base leading-relaxed max-w-sm"
           >
-            Cinco etapas. Muita escuta. Um processo que respeita a complexidade de cada marca e transforma intenção em presença.
+            Cinco etapas. Muita escuta. Um processo que respeita a complexidade de cada marca e transforma intenção em posicionamento.
           </motion.p>
         </div>
       </div>

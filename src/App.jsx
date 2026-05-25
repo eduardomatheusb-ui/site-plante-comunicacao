@@ -14,19 +14,19 @@ import { applySeo } from './lib/seo'
 
 const pageMeta = {
   '/': {
-    title: 'Plante Comunicação | Agência mineira de publicidade',
+    title: 'Plante Comunicação | Agência mineira de publicidade e marketing',
     description:
-      'Agência mineira de publicidade que une estratégia, criação, conteúdo e presença digital para movimentar marcas.',
+      'Agência mineira de publicidade e marketing que une estratégia, criação, gestão de marketing e posicionamento de negócio para movimentar marcas.',
   },
   '/quem-somos': {
     title: 'Quem somos | Plante Comunicação',
     description:
-      'Conheça a Plante Comunicação, agência mineira de publicidade com 8 anos de atuação, escuta próxima e criação com direção.',
+      'Conheça a Plante Comunicação, agência mineira de publicidade e marketing com 8 anos de atuação, escuta próxima e criação com direção.',
   },
   '/servicos': {
     title: 'Serviços | Plante Comunicação',
     description:
-      'Estratégia, redes sociais, branding, campanhas institucionais, audiovisual, tráfego pago, comunicação institucional e projetos digitais.',
+      'Gestão de marketing, posicionamento de negócio, campanhas publicitárias, branding, mídia, websites, audiovisual e comunicação institucional.',
   },
   '/projetos': {
     title: 'Projetos | Plante Comunicação',
@@ -36,12 +36,12 @@ const pageMeta = {
   '/ideias-em-movimento': {
     title: 'Ideias em Movimento | Plante Comunicação',
     description:
-      'Conteúdos, bastidores e reflexões da Plante Comunicação sobre estratégia, criação, marcas, presença digital e comunicação institucional.',
+      'Conteúdos, bastidores e reflexões da Plante Comunicação sobre estratégia, criação, marcas, posicionamento de negócio e comunicação institucional.',
   },
   '/contato': {
     title: 'Contato | Plante Comunicação',
     description:
-      'Fale com a Plante Comunicação para transformar sua ideia em estratégia, campanha, conteúdo e presença.',
+      'Fale com a Plante Comunicação para transformar sua ideia em estratégia, campanha, conteúdo e posicionamento.',
   },
 }
 

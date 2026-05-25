@@ -35,7 +35,7 @@ export default function ContatoPage() {
       <PageHero
         eyebrow="Contato"
         title="Vamos movimentar sua marca?"
-        subtitle="Conte para a Plante o que você precisa comunicar. A gente ajuda a transformar essa ideia em estratégia, campanha, conteúdo e presença."
+        subtitle="Conte para a Plante o que você precisa comunicar. A gente ajuda a transformar essa ideia em estratégia, campanha, conteúdo e posicionamento."
       />
 
       <section className="bg-petrol-dark py-24">

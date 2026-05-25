@@ -26,10 +26,10 @@ export default function Home() {
           </div>
           <div className="space-y-5 text-lg leading-relaxed text-grafite/65">
             <p>
-              A Plante é uma agência de publicidade de Minas Gerais que acredita em comunicação feita com intenção. Antes de criar, buscamos entender o cenário, o público, o momento da marca e o objetivo de cada ação.
+              A Plante é uma agência mineira de publicidade e marketing que acredita em comunicação feita com intenção. Antes de criar, buscamos entender o cenário, o público, o negócio e o objetivo de cada ação.
             </p>
             <p>
-              Unimos planejamento, conteúdo, design, audiovisual, mídia e presença digital para construir campanhas, marcas e projetos com mais clareza, consistência e resultado.
+              Unimos gestão de marketing, posicionamento de negócio, conteúdo, design, audiovisual e mídia para construir campanhas, marcas e projetos com mais clareza, consistência e resultado.
             </p>
             <button onClick={() => navigateTo('/quem-somos')} className="btn-primary mt-2">
               Saiba mais sobre a Plante
@@ -58,9 +58,9 @@ export default function Home() {
         <div className="section-padding">
           <div className="mb-12 flex flex-col justify-between gap-6 md:flex-row md:items-end">
             <SectionTitle
-              tag="O que a Plante faz"
-              title="Da estratégia à execução."
-              subtitle="A Plante constrói caminhos de comunicação para marcas, instituições e projetos que precisam se posicionar melhor."
+              tag="Serviços"
+              title="O que a Plante faz"
+              subtitle="A Plante constrói estratégias de comunicação para marcas, instituições e projetos que precisam se posicionar melhor, fortalecer sua imagem, lançar ideias e se conectar com seus públicos. Da gestão de marketing ao branding, das campanhas publicitárias ao posicionamento de negócio, organizamos caminhos para transformar comunicação em movimento."
             />
             <button onClick={() => navigateTo('/servicos')} className="btn-outline shrink-0">
               Ver todos os serviços
@@ -141,7 +141,7 @@ export default function Home() {
               Vamos movimentar sua marca?
             </h2>
             <p className="mt-5 max-w-2xl text-lg leading-relaxed text-white/60">
-              Conte para a Plante o que você precisa comunicar. A gente ajuda a transformar essa ideia em estratégia, campanha, conteúdo e presença.
+              Conte para a Plante o que você precisa comunicar. A gente ajuda a transformar essa ideia em estratégia, campanha, conteúdo e posicionamento.
             </p>
           </div>
           <div className="flex flex-wrap gap-4">

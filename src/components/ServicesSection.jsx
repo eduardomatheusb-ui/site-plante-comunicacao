@@ -5,17 +5,17 @@ import { ArrowRight } from 'lucide-react'
 const services = [
   {
     n: '01',
-    title: 'Estratégia e planejamento',
-    short: 'Estratégia',
-    tags: ['Diagnóstico', 'Posicionamento', 'Narrativa'],
-    description: 'Diagnóstico de comunicação, posicionamento, campanhas, calendário editorial, planejamento de conteúdo, definição de narrativa e organização das ações de marketing.',
+    title: 'Gestão de Marketing',
+    short: 'Marketing',
+    tags: ['Planejamento', 'Campanhas', 'Resultados'],
+    description: 'Planejamento, organização e acompanhamento das ações de marketing da marca, conectando estratégia, conteúdo, campanhas, mídia e análise de resultados.',
   },
   {
     n: '02',
     title: 'Gestão de redes sociais',
     short: 'Redes',
     tags: ['Conteúdo', 'Design', 'Métricas'],
-    description: 'Planejamento, criação de conteúdo, redação, design, publicação, acompanhamento de métricas e construção de presença digital para marcas, instituições e projetos.',
+    description: 'Planejamento, criação de conteúdo, redação, design, publicação, acompanhamento de métricas e construção de estratégia digital para marcas, instituições e projetos.',
   },
   {
     n: '03',
@@ -26,7 +26,7 @@ const services = [
   },
   {
     n: '04',
-    title: 'Campanhas institucionais',
+    title: 'Campanhas Publicitárias',
     short: 'Campanhas',
     tags: ['Lançamentos', 'Institucional', 'Interesse público'],
     description: 'Criação de campanhas para lançamentos, datas comemorativas, ações institucionais, projetos públicos, comerciais e sociais.',
@@ -115,7 +115,7 @@ export default function ServicesSection() {
             </h2>
           </div>
           <p className="text-black/55 text-base max-w-sm leading-relaxed">
-            Não entregamos serviços isolados. Construímos presença com estratégia, criação e acompanhamento.
+            Não entregamos serviços isolados. Construímos posicionamento com estratégia, criação e acompanhamento.
           </p>
         </div>
       </div>

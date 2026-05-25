@@ -11,13 +11,17 @@ const formName = 'contato-plante'
 const whatsappUrl = 'https://wa.me/5531985245110?text=Ol%C3%A1%2C%20Plante.%20Vim%20pelo%20site%20e%20gostaria%20de%20conversar%20sobre%20comunica%C3%A7%C3%A3o%20para%20minha%20marca%20ou%20projeto.'
 
 const serviceOptions = [
-  'Estratégia e Planejamento',
-  'Gestão de Redes Sociais',
+  'Gestão de Marketing',
+  'Campanhas Publicitárias',
+  'Posicionamento de Negócio',
   'Branding e Identidade Visual',
-  'Campanhas Institucionais',
+  'Lançamento de Negócios',
+  'Veiculação em Grandes Veículos de Comunicação',
+  'Gestão de Redes Sociais',
   'Produção Audiovisual',
   'Tráfego Pago e Mídia Digital',
   'Comunicação Institucional',
+  'Desenvolvimento de Websites',
   'Projetos Digitais',
   'Não sei ainda',
 ]
@@ -131,7 +135,7 @@ export default function ContactSection() {
             <SectionTitle
               tag="Contato"
               title={<>Vamos movimentar<br /><span className="text-gradient-yellow">sua marca?</span></>}
-              subtitle="Conte para a Plante o que você precisa comunicar. A gente ajuda a transformar essa ideia em estratégia, campanha, conteúdo e presença."
+              subtitle="Conte para a Plante o que você precisa comunicar. A gente ajuda a transformar essa ideia em estratégia, campanha, conteúdo e posicionamento."
             />
 
             <motion.div initial={{ opacity: 0, y: 24 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6, delay: 0.4 }} className="mt-10 space-y-4">

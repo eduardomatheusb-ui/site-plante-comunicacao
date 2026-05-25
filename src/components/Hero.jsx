@@ -39,7 +39,7 @@ export default function Hero() {
             <motion.div animate={{ rotate: [0, 10, 0] }} transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}>
               <LogoMark size={42} />
             </motion.div>
-            <span className="tag">Agência mineira de publicidade</span>
+            <span className="tag">Agência mineira de publicidade e marketing</span>
           </motion.div>
 
           <div className="mb-4 overflow-hidden">
@@ -81,7 +81,7 @@ export default function Hero() {
             transition={{ duration: 0.7, delay: 0.8 }}
             className="mb-10 max-w-xl text-lg leading-relaxed text-white/70 md:text-xl"
           >
-            Somos uma agência mineira de publicidade que une estratégia, criação, conteúdo e presença digital para transformar ideias em presença, conexão e resultado.
+            Somos uma agência mineira de publicidade e marketing que une estratégia, criação, gestão de marketing e posicionamento de negócio para transformar ideias em marcas mais fortes, reconhecidas e preparadas para crescer.
           </motion.p>
 
           <motion.div
@@ -109,7 +109,7 @@ export default function Hero() {
         <div className="marquee-track select-none py-4 font-display text-xs uppercase tracking-[0.25em] text-white/25">
           {Array(12).fill(null).map((_, index) => (
             <span key={index} className="mx-8 whitespace-nowrap">
-              Estratégia · Criação · Branding · Conteúdo · Presença digital · Audiovisual · Comunicação institucional
+              Estratégia · Marketing · Branding · Campanhas · Posicionamento de negócio · Audiovisual · Comunicação institucional
             </span>
           ))}
         </div>

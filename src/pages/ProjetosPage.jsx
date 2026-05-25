@@ -8,7 +8,7 @@ export default function ProjetosPage() {
     <>
       <PageHero
         eyebrow="Projetos"
-        title="Projetos que ganharam forma, presença e movimento."
+        title="Projetos que ganharam forma, posicionamento e movimento."
         subtitle="Cada projeto começa com um desafio. A Plante transforma esse desafio em estratégia, linguagem, campanha, conteúdo e entrega."
         ctaLabel="Falar sobre um projeto"
         ctaHref="/contato"

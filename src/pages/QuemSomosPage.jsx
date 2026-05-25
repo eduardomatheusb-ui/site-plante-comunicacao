@@ -7,8 +7,8 @@ export default function QuemSomosPage() {
     <>
       <PageHero
         eyebrow="Quem somos"
-        title="Somos uma agência mineira de publicidade."
-        subtitle="Criamos comunicação com escuta, estratégia e direção para marcas, instituições e projetos que precisam se movimentar com mais clareza."
+        title="Somos uma agência mineira de publicidade e marketing."
+        subtitle="Criamos comunicação com escuta, estratégia e direção para marcas, instituições e projetos que precisam crescer com mais clareza."
         ctaLabel="Conversar com a Plante"
         ctaHref="/contato"
       />
@@ -38,19 +38,19 @@ export default function QuemSomosPage() {
           </div>
           <div className="space-y-5 text-lg leading-relaxed text-grafite/68">
             <p>
-              A Plante Comunicação é uma agência mineira de publicidade que une estratégia, criação, conteúdo e presença digital para movimentar marcas, instituições e projetos.
+              A Plante Comunicação é uma agência mineira de publicidade e marketing que une estratégia, criação, gestão de marketing e posicionamento de negócio para movimentar marcas, instituições e projetos.
             </p>
             <p>
-              Acreditamos que uma boa ideia não nasce pronta. Ela precisa ser escutada, planejada, criada e colocada em movimento. Por isso, nosso trabalho combina repertório, sensibilidade, análise e execução para construir marcas mais presentes, reconhecidas e conectadas com seus públicos.
+              Acreditamos que uma boa ideia não nasce pronta. Ela precisa ser escutada, planejada, criada e colocada em movimento. Por isso, nosso trabalho combina repertório, sensibilidade, análise e execução para construir marcas mais claras, reconhecidas e conectadas com seus públicos.
             </p>
             <p>
-              Atuamos com comunicação de forma completa, desde o diagnóstico e o posicionamento até a criação de campanhas institucionais, gestão de redes sociais, produção audiovisual, tráfego pago, branding, projetos digitais e comunicação institucional.
+              Atuamos de forma completa, desde o diagnóstico e o posicionamento de mercado até a gestão de marketing, criação de campanhas publicitárias, produção audiovisual, tráfego pago, branding, desenvolvimento de websites, projetos digitais e comunicação institucional.
             </p>
             <p>
-              Somos de Minas Gerais. Carregamos no nosso jeito de trabalhar a escuta, a proximidade e a atenção aos detalhes, mas sem limitar nossa atuação a uma cidade. A Plante nasce daqui e pensa comunicação para marcas, instituições e projetos que querem crescer com mais clareza, presença e intenção.
+              Somos de Minas Gerais. Carregamos no nosso jeito de trabalhar a escuta, a proximidade e a atenção aos detalhes, mas sem limitar nossa atuação a uma cidade. A Plante nasce daqui e pensa comunicação para marcas, instituições e projetos que querem crescer com mais clareza, consistência e intenção.
             </p>
             <p className="font-display text-2xl font-bold text-grafite">
-              Mais do que produzir peças, a Plante cria caminhos de comunicação.
+              Mais do que produzir peças, a Plante cria caminhos de comunicação para negócios em movimento.
             </p>
             <div className="mt-10 overflow-hidden bg-grafite">
               <video
@@ -70,8 +70,8 @@ export default function QuemSomosPage() {
         <div className="section-padding">
           <SectionTitle
             tag="Diferenciais"
-            title="Um jeito de trabalhar com escuta, direção e presença."
-            subtitle="A Plante une proximidade, estratégia e repertório para construir comunicação com sentido."
+            title="Um jeito de trabalhar com escuta, direção e estratégia."
+            subtitle="A Plante une proximidade, estratégia e repertório para construir marketing e comunicação com sentido."
           />
           <div className="mt-12 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
             {differentials.map((item, index) => (
