@@ -15,11 +15,18 @@ export default function QuemSomosPage() {
 
       <section className="bg-white py-24 text-grafite">
         <div className="section-padding grid gap-12 lg:grid-cols-[0.8fr,1.2fr]">
-          <div>
-            <p className="font-display text-6xl font-bold text-grafite">8</p>
-            <p className="mt-2 max-w-xs font-display text-2xl font-bold leading-tight">
-              anos colocando ideias em movimento.
-            </p>
+          <div className="space-y-8">
+            <div>
+              <p className="font-display text-6xl font-bold text-grafite">8</p>
+              <p className="mt-2 max-w-xs font-display text-2xl font-bold leading-tight">
+                anos colocando ideias em movimento.
+              </p>
+            </div>
+            <img
+              src="/brand/showcase/portfolio-showcase.jpg"
+              alt="Portfolio da Plante Comunicação — projetos de branding e identidade visual."
+              className="w-full object-cover"
+            />
           </div>
           <div className="space-y-5 text-lg leading-relaxed text-grafite/68">
             <p>
@@ -37,11 +44,13 @@ export default function QuemSomosPage() {
             <p className="font-display text-2xl font-bold text-grafite">
               Mais do que produzir peças, a Plante cria caminhos de comunicação.
             </p>
-            <img
-              src="/brand/showcase/plante-before-after.png"
-              alt="Grafismo da Plante mostrando uma ideia em movimento."
-              className="mt-10 h-44 w-full bg-grafite object-contain p-8"
-            />
+            <div className="mt-10 rounded bg-grafite px-6 py-5">
+              <p className="mb-4 text-xs font-bold uppercase tracking-widest text-white/40">Certificada e associada</p>
+              <div className="flex flex-wrap items-center gap-8">
+                <img src="/brand/cert-logo-1.png" alt="ABAP" className="h-12 w-auto object-contain opacity-80 transition-opacity hover:opacity-100" />
+                <img src="/brand/cert-logo-2.png" alt="CENP" className="h-12 w-auto object-contain opacity-80 transition-opacity hover:opacity-100" />
+              </div>
+            </div>
           </div>
         </div>
       </section>
