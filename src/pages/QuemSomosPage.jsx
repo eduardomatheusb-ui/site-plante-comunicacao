@@ -44,7 +44,17 @@ export default function QuemSomosPage() {
             <p className="font-display text-2xl font-bold text-grafite">
               Mais do que produzir peças, a Plante cria caminhos de comunicação.
             </p>
-            <div className="mt-10 rounded bg-grafite px-6 py-5">
+            <div className="mt-10 overflow-hidden bg-grafite">
+              <video
+                src="/brand/plante-8-anos-web.mp4"
+                className="aspect-video w-full object-cover"
+                controls
+                playsInline
+                preload="metadata"
+              />
+            </div>
+
+            <div className="mt-4 rounded bg-grafite px-6 py-5">
               <p className="mb-4 text-xs font-bold uppercase tracking-widest text-white/40">Certificada e associada</p>
               <div className="flex flex-wrap items-center gap-8">
                 <img src="/brand/cert-logo-1.png" alt="ABAP" className="h-12 w-auto object-contain opacity-80 transition-opacity hover:opacity-100" />
