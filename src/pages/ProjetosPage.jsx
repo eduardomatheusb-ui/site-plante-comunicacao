@@ -35,7 +35,7 @@ export default function ProjetosPage() {
       <section className="bg-grafite py-24 text-white">
         <div className="section-padding">
           <div className="mb-12 grid gap-10 lg:grid-cols-[0.8fr,1.2fr]">
-            <div>
+            <div className="lg:pt-16 xl:pt-20">
               <span className="mb-5 inline-block rounded-full border border-white/15 px-3 py-1 font-display text-xs font-medium uppercase tracking-widest text-white/45">
                 Clientes
               </span>

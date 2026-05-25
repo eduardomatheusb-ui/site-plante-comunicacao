@@ -15,7 +15,7 @@ export default function Home() {
       <Hero />
 
       <section className="bg-white py-24 text-grafite">
-        <div className="section-padding grid gap-12 lg:grid-cols-[0.9fr,1.1fr] lg:items-end">
+        <div className="section-padding grid gap-12 lg:grid-cols-[0.9fr,1.1fr] lg:items-start">
           <div>
             <span className="mb-5 inline-block rounded-full border border-grafite/15 px-3 py-1 font-display text-xs font-medium uppercase tracking-widest text-grafite/45">
               Plante Comunicação
@@ -24,7 +24,7 @@ export default function Home() {
               Comunicação que nasce da escuta e ganha movimento na criação.
             </h2>
           </div>
-          <div className="space-y-5 text-lg leading-relaxed text-grafite/65">
+          <div className="space-y-5 text-lg leading-relaxed text-grafite/65 lg:pt-16 xl:pt-20">
             <p>
               A Plante é uma agência mineira de publicidade e marketing que acredita em comunicação feita com intenção. Antes de criar, buscamos entender o cenário, o público, o negócio e o objetivo de cada ação.
             </p>
