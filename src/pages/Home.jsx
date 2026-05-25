@@ -21,7 +21,7 @@ export default function Home() {
               Plante Comunicação
             </span>
             <h2 className="font-display text-4xl font-bold leading-tight md:text-6xl">
-              Comunicação que nasce da escuta e ganha movimento na criação.
+              Comunicação que nasce da escuta atenciosa e da parceria de quem joga junto.
             </h2>
           </div>
           <div className="space-y-5 text-lg leading-relaxed text-grafite/65 lg:pt-16 xl:pt-20">
