@@ -17,9 +17,8 @@ export default function QuemSomosPage() {
         <div className="section-padding grid gap-12 lg:grid-cols-[0.8fr,1.2fr]">
           <div className="space-y-8">
             <div>
-              <p className="font-display text-6xl font-bold text-grafite">8</p>
-              <p className="mt-2 max-w-xs font-display text-2xl font-bold leading-tight">
-                anos colocando ideias em movimento.
+              <p className="max-w-xs font-display text-4xl font-bold leading-tight text-grafite">
+                Mais sobre nós.
               </p>
             </div>
 
