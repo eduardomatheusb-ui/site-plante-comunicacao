@@ -22,6 +22,15 @@ export default function QuemSomosPage() {
                 anos colocando ideias em movimento.
               </p>
             </div>
+
+            <div className="bg-grafite p-6">
+              <p className="mb-5 text-xs font-bold uppercase tracking-widest text-white/40">Certificada e associada</p>
+              <div className="flex flex-col gap-5">
+                <img src="/brand/cert-logo-1.png" alt="ABAP" className="h-14 w-auto object-contain object-left opacity-90 transition-opacity hover:opacity-100" />
+                <img src="/brand/cert-logo-2.png" alt="CENP" className="h-14 w-auto object-contain object-left opacity-90 transition-opacity hover:opacity-100" />
+              </div>
+            </div>
+
             <img
               src="/brand/showcase/portfolio-showcase.jpg"
               alt="Portfolio da Plante Comunicação — projetos de branding e identidade visual."
@@ -54,13 +63,6 @@ export default function QuemSomosPage() {
               />
             </div>
 
-            <div className="mt-4 rounded bg-grafite px-6 py-5">
-              <p className="mb-4 text-xs font-bold uppercase tracking-widest text-white/40">Certificada e associada</p>
-              <div className="flex flex-wrap items-center gap-8">
-                <img src="/brand/cert-logo-1.png" alt="ABAP" className="h-12 w-auto object-contain opacity-80 transition-opacity hover:opacity-100" />
-                <img src="/brand/cert-logo-2.png" alt="CENP" className="h-12 w-auto object-contain opacity-80 transition-opacity hover:opacity-100" />
-              </div>
-            </div>
           </div>
         </div>
       </section>
