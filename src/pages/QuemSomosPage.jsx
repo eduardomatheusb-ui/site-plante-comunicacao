@@ -23,11 +23,11 @@ export default function QuemSomosPage() {
               </p>
             </div>
 
-            <div className="bg-grafite p-6">
-              <p className="mb-5 text-xs font-bold uppercase tracking-widest text-white/40">Certificada e associada</p>
-              <div className="flex flex-col gap-5">
-                <img src="/brand/cert-logo-1.png" alt="ABAP" className="h-14 w-auto object-contain object-left opacity-90 transition-opacity hover:opacity-100" />
-                <img src="/brand/cert-logo-2.png" alt="CENP" className="h-14 w-auto object-contain object-left opacity-90 transition-opacity hover:opacity-100" />
+            <div className="bg-grafite p-8 shadow-[10px_10px_0_#F7FF19]">
+              <p className="mb-6 text-xs font-bold uppercase tracking-widest text-amarelo">Certificada e associada</p>
+              <div className="flex flex-col gap-8">
+                <img src="/brand/cert-logo-1.png" alt="ABAP" className="h-32 w-full object-contain object-left opacity-100" />
+                <img src="/brand/cert-logo-2.png" alt="CENP" className="h-20 w-full object-contain object-left opacity-100" />
               </div>
             </div>
 
