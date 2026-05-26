@@ -42,23 +42,23 @@ export default function Hero() {
             <span className="tag">Agência mineira de publicidade e marketing</span>
           </motion.div>
 
-          <div className="mb-4 overflow-hidden">
+          <div className="mb-1 overflow-hidden">
             <motion.h1
               initial={{ y: 100, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-              className="font-display text-5xl font-bold leading-[0.92] text-white sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl"
+              className="font-display text-5xl font-bold leading-[0.86] text-white sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl"
             >
               Ideias que
             </motion.h1>
           </div>
 
-          <div className="mb-8 overflow-hidden">
+          <div className="mb-2 overflow-hidden">
             <motion.div
               initial={{ y: 100, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.45, ease: [0.16, 1, 0.3, 1] }}
-              className="font-display text-5xl font-bold leading-[0.92] sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl"
+              className="font-display text-5xl font-bold leading-[0.86] sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl"
             >
               <span className="text-gradient-yellow">movimentam</span>
             </motion.div>
@@ -69,7 +69,7 @@ export default function Hero() {
               initial={{ y: 100, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.6, ease: [0.16, 1, 0.3, 1] }}
-              className="font-display text-5xl font-bold leading-[0.92] text-white sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl"
+              className="font-display text-5xl font-bold leading-[0.86] text-white sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl"
             >
               marcas.
             </motion.h1>

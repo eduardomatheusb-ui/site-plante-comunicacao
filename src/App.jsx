@@ -9,6 +9,7 @@ import ProjetoCasePage from './pages/ProjetoCasePage'
 import IdeiasEmMovimentoPage from './pages/IdeiasEmMovimentoPage'
 import ConteudoPage from './pages/ConteudoPage'
 import ContatoPage from './pages/ContatoPage'
+import BioLinksPage from './pages/BioLinksPage'
 import { normalizePath } from './lib/navigation'
 import { applySeo } from './lib/seo'
 
@@ -43,6 +44,11 @@ const pageMeta = {
     description:
       'Fale com a Plante Comunicação para transformar sua ideia em estratégia, campanha, conteúdo e posicionamento.',
   },
+  '/links': {
+    title: 'Links | Plante Comunicação',
+    description:
+      'Acesse os principais links da Plante Comunicação: site, WhatsApp, projetos, conteúdos e Instagram.',
+  },
 }
 
 function resolveRoute(path) {
@@ -71,6 +77,7 @@ function resolveRoute(path) {
     '/projetos': <ProjetosPage />,
     '/ideias-em-movimento': <IdeiasEmMovimentoPage />,
     '/contato': <ContatoPage />,
+    '/links': <BioLinksPage />,
   }
 
   return {
@@ -103,9 +110,9 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-petrol">
-      <Header currentPath={route.path} />
+      {route.path !== '/links' && <Header currentPath={route.path} />}
       <main>{route.page}</main>
-      <Footer />
+      {route.path !== '/links' && <Footer />}
     </div>
   )
 }
