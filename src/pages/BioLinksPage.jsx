@@ -36,13 +36,6 @@ const links = [
   },
 ]
 
-const futureLinks = [
-  {
-    label: 'Landing page especial',
-    description: 'Espaço reservado para uma campanha futura',
-  },
-]
-
 export default function BioLinksPage() {
   return (
     <section className="min-h-screen bg-grafite px-5 py-8 text-white">
@@ -57,24 +50,6 @@ export default function BioLinksPage() {
           </div>
 
           <div className="mt-10 space-y-3">
-            {futureLinks.map(({ label, description }) => (
-              <div
-                key={label}
-                className="flex items-center gap-4 border border-dashed border-white/14 bg-white/[0.02] px-4 py-4 text-white/45"
-              >
-                <span className="flex h-11 w-11 shrink-0 items-center justify-center bg-white/5 text-amarelo/45">
-                  <Sparkles size={19} />
-                </span>
-                <span className="min-w-0 flex-1 text-left">
-                  <span className="block font-display text-base font-bold leading-tight">{label}</span>
-                  <span className="mt-1 block text-xs leading-relaxed text-white/35">{description}</span>
-                </span>
-                <span className="rounded-full border border-white/10 px-2 py-1 font-display text-[10px] uppercase tracking-widest text-white/35">
-                  em breve
-                </span>
-              </div>
-            ))}
-
             {links.map(({ label, description, href, Icon }) => (
               <a
                 key={label}
