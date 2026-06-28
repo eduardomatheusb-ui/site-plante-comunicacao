@@ -111,16 +111,6 @@ function Hero() {
           Preencha seus dados, complete a frase e participe desta ação especial da Plante em parceria com o Geraes Open.
         </p>
 
-        <div className="mt-8 grid max-w-2xl gap-3 sm:grid-cols-2">
-          <div className="rounded-3xl border border-grafite/10 bg-white/70 p-5 shadow-sm backdrop-blur">
-            <p className="font-display text-sm font-bold uppercase tracking-[0.18em] text-grafite/45">Ativação</p>
-            <p className="mt-3 text-lg font-bold text-grafite">Plante no Geraes Open</p>
-          </div>
-          <div className="rounded-3xl bg-grafite p-5 text-white shadow-xl">
-            <p className="font-display text-sm font-bold uppercase tracking-[0.18em] text-white/38">Dinâmica</p>
-            <p className="mt-3 text-lg font-bold">Ideias, contatos e boas jogadas</p>
-          </div>
-        </div>
       </div>
     </section>
   )
@@ -370,23 +360,27 @@ export default function BoaJogadaPlantePage() {
       <Header />
       <Hero />
 
-      <section className="relative z-10 mx-auto grid w-full max-w-6xl gap-8 px-5 pb-12 md:grid-cols-[0.82fr_1fr] md:px-8 md:pb-20">
-        <div className="rounded-[2rem] border border-grafite/10 bg-white/70 p-6 shadow-sm backdrop-blur md:p-8">
-          <p className="font-display text-xs font-bold uppercase tracking-[0.22em] text-grafite/45">Plante no evento</p>
-          <h2 className="mt-4 font-display text-3xl font-bold leading-tight text-grafite">
-            Estratégia também entra em quadra.
-          </h2>
-          <p className="mt-5 text-base leading-relaxed text-grafite/68">
-            A Plante marca presença no Geraes Open com uma ativação pensada para conectar boas ideias, boas jogadas e novas oportunidades.
-          </p>
-          <div className="mt-6 rounded-3xl bg-[#ece446] p-5">
-            <p className="font-display text-sm font-bold uppercase tracking-[0.18em] text-grafite/55">Como participar</p>
-            <p className="mt-3 text-lg font-bold leading-snug text-grafite">
-              Publique sua foto marcando @agenciaplante, acesse o link recebido e complete sua boa jogada.
-            </p>
+      <section className="relative z-10 mx-auto flex w-full max-w-4xl flex-col gap-6 px-5 pb-12 md:px-8 md:pb-20">
+        <div className="rounded-[2rem] border border-grafite/10 bg-white/75 p-6 shadow-sm backdrop-blur md:p-8">
+          <p className="font-display text-xs font-bold uppercase tracking-[0.22em] text-grafite/45">Como funciona</p>
+          <div className="mt-4 grid gap-6 md:grid-cols-[0.9fr_1.1fr] md:items-start">
+            <div>
+              <h2 className="font-display text-3xl font-bold leading-tight text-grafite">
+                Estratégia também entra em quadra.
+              </h2>
+              <p className="mt-5 text-base leading-relaxed text-grafite/68">
+                A Plante marca presença no Geraes Open com uma ação pensada para conectar boas ideias, boas jogadas e novas oportunidades.
+              </p>
+            </div>
+            <div className="rounded-3xl bg-[#ece446] p-5">
+              <p className="font-display text-sm font-bold uppercase tracking-[0.18em] text-grafite/55">Para participar</p>
+              <p className="mt-3 text-lg font-bold leading-snug text-grafite">
+                Publique sua foto marcando @agenciaplante, acesse o link recebido e complete sua boa jogada no formulário abaixo.
+              </p>
+            </div>
           </div>
           <p className="mt-5 text-xs leading-relaxed text-grafite/45">
-            Política curta da campanha: os dados informados serão usados pela Plante Comunicação para registrar sua participação, conduzir esta ação e realizar contatos relacionados à comunicação, marketing e redes sociais, conforme autorização acima.
+            Política curta da campanha: os dados informados serão usados pela Plante Comunicação para registrar sua participação, conduzir esta ação e realizar contatos relacionados à comunicação, marketing e redes sociais, conforme autorização abaixo.
           </p>
         </div>
 
