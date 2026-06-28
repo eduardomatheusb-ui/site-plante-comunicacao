@@ -57,9 +57,9 @@ const pageMeta = {
       'Participe da ação Boa Jogada Plante durante o Geraes Open, complete uma frase criativa e concorra a um brinde especial.',
   },
   '/operacao/boa-jogada-plante': {
-    title: 'Operacao Boa Jogada Plante | Geraes Open',
+    title: 'Operação Boa Jogada Plante | Geraes Open',
     description:
-      'Pagina operacional para gerar links rastreaveis da acao Boa Jogada Plante no Geraes Open.',
+      'Página operacional para gerar links rastreáveis da ação Boa Jogada Plante no Geraes Open.',
   },
 }
 

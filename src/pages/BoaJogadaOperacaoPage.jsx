@@ -28,17 +28,17 @@ function buildLink({ username, mentionType, directStatus, token }) {
 }
 
 function buildMessage(link) {
-  return `Oi! Que boa jogada ver voce no Geraes Open.
+  return `Oi! Que boa jogada ver você no Geraes Open.
 
-Recebemos sua marcacao na acao especial da Plante em parceria com o evento.
+Recebemos sua marcação na ação especial da Plante em parceria com o evento.
 
-Para participar, e so preencher este formulario:
+Para participar, é só preencher este formulário:
 
 ${link}
 
-Depois disso, voce ja entra na nossa acao especial.
+Depois disso, você já entra na nossa ação especial.
 
-Plante Comunicacao`
+Plante Comunicação`
 }
 
 export default function BoaJogadaOperacaoPage() {
@@ -67,7 +67,7 @@ export default function BoaJogadaOperacaoPage() {
           <LogoMark size={44} />
           <div>
             <p className="font-display text-sm font-bold uppercase tracking-[0.18em] text-grafite/45">
-              Operacao Geraes Open
+              Operação Geraes Open
             </p>
             <h1 className="font-display text-3xl font-bold">Boa Jogada Plante</h1>
           </div>
@@ -75,7 +75,7 @@ export default function BoaJogadaOperacaoPage() {
 
         <section className="mt-8 rounded-[2rem] border border-grafite/10 bg-white p-5 shadow-xl md:p-8">
           <p className="text-sm leading-relaxed text-grafite/60">
-            Use esta pagina quando a marcacao precisar de fallback manual. Informe o Instagram da pessoa, gere o link e copie a mensagem pronta para enviar pelo Direct.
+            Use esta página quando a marcação precisar de fallback manual. Informe o Instagram da pessoa, gere o link e copie a mensagem pronta para enviar pelo Direct.
           </p>
 
           <div className="mt-6 grid gap-5 md:grid-cols-3">
@@ -100,7 +100,7 @@ export default function BoaJogadaOperacaoPage() {
                 <option value="story_mention">Story</option>
                 <option value="feed_mention">Feed</option>
                 <option value="reels_mention">Reels</option>
-                <option value="comment_mention">Comentario</option>
+                <option value="comment_mention">Comentário</option>
               </select>
             </label>
 
@@ -120,7 +120,7 @@ export default function BoaJogadaOperacaoPage() {
           </div>
 
           <div className="mt-6 rounded-3xl bg-[#f7f5e8] p-4">
-            <p className="text-xs font-bold uppercase tracking-[0.18em] text-grafite/45">Link unico</p>
+            <p className="text-xs font-bold uppercase tracking-[0.18em] text-grafite/45">Link único</p>
             <p className="mt-2 break-all text-sm font-semibold">{link}</p>
             <div className="mt-4 flex flex-wrap gap-3">
               <button type="button" onClick={() => copyText(link, 'link')} className="inline-flex items-center gap-2 rounded-full bg-grafite px-4 py-2 text-sm font-bold text-white">

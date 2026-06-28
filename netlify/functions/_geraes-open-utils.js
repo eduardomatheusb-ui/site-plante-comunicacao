@@ -44,17 +44,17 @@ export function createTrackingLink({ username = '', mentionType = 'manual', dire
 export function createDirectMessage(link, { withEmoji = false } = {}) {
   const tennis = withEmoji ? ' 🎾' : ''
 
-  return `Oi! Que boa jogada ver voce no Geraes Open${tennis}
+  return `Oi! Que boa jogada ver você no Geraes Open${tennis}
 
-Recebemos sua marcacao na acao especial da Plante em parceria com o evento.
+Recebemos sua marcação na ação especial da Plante em parceria com o evento.
 
-Para participar, e so preencher este formulario:
+Para participar, é só preencher este formulário:
 
 ${link}
 
-Depois disso, voce ja entra na nossa acao especial.
+Depois disso, você já entra na nossa ação especial.
 
-Plante Comunicacao`
+Plante Comunicação`
 }
 
 export function parseWebhookEvents(payload) {

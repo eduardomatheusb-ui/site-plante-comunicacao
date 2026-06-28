@@ -6,7 +6,7 @@ const storageKey = 'boaJogadaPlanteLeads'
 const formName = 'boa-jogada-plante'
 
 const lgpdConsentText =
-  'Autorizo a Plante Comunicacao a entrar em contato comigo pelo WhatsApp, e-mail ou Instagram sobre esta acao e sobre solucoes de comunicacao, marketing e redes sociais.'
+  'Autorizo a Plante Comunicação a entrar em contato comigo pelo WhatsApp, e-mail ou Instagram sobre esta ação e sobre soluções de comunicação, marketing e redes sociais.'
 
 const initialForm = {
   name: '',
@@ -25,10 +25,10 @@ const initialForm = {
 const interestOptions = [
   'Melhorar Instagram',
   'Criar campanhas',
-  'Fazer fotos e videos',
+  'Fazer fotos e vídeos',
   'Atrair mais clientes',
-  'Comunicacao completa',
-  'Ainda nao sei',
+  'Comunicação completa',
+  'Ainda não sei',
 ]
 
 function formatBrazilianWhatsapp(value) {
@@ -58,16 +58,16 @@ function Header() {
   return (
     <header className="relative z-10 mx-auto flex w-full max-w-6xl items-center justify-between px-5 py-5 md:px-8">
       <div className="flex items-center gap-3">
-        {/* Inserir futuramente o logo completo da Plante aqui, se preferirem substituir o simbolo. */}
+        {/* Inserir futuramente o logo completo da Plante aqui, se preferirem substituir o símbolo. */}
         <LogoMark size={42} />
         <div>
-          <p className="font-display text-sm font-bold leading-none text-grafite">Agencia Plante</p>
+          <p className="font-display text-sm font-bold leading-none text-grafite">Agência Plante</p>
           <p className="mt-1 text-xs font-medium text-grafite/55">Boa Jogada Plante</p>
         </div>
       </div>
 
       <div className="hidden items-center gap-3 rounded-full border border-grafite/10 bg-white/80 px-4 py-2 text-xs font-bold uppercase tracking-[0.14em] text-grafite/65 shadow-sm backdrop-blur md:flex">
-        {/* Logo do Geraes Open. Substituir o arquivo abaixo se a organizacao enviar versao oficial em alta. */}
+        {/* Logo do Geraes Open. Substituir o arquivo abaixo se a organização enviar versão oficial em alta. */}
         <img src="/brand/geraes-open-logo.jpg" alt="Geraes Open Brasil" className="h-9 w-9 rounded-full object-contain" />
         Geraes Open
       </div>
@@ -79,7 +79,7 @@ function PartnershipBadge() {
   return (
     <div className="inline-flex max-w-full items-center gap-3 rounded-3xl border border-grafite/10 bg-white/80 px-4 py-2 text-xs font-bold uppercase tracking-[0.1em] text-grafite/60 shadow-sm backdrop-blur sm:rounded-full">
       <Sparkles size={14} className="text-grafite" />
-      <span className="leading-snug">Acao especial da Plante em parceria com o Geraes Open</span>
+      <span className="leading-snug">Ação especial da Plante em parceria com o Geraes Open</span>
       <img src="/brand/geraes-open-logo.jpg" alt="Geraes Open Brasil" className="h-8 w-8 shrink-0 rounded-full object-contain" />
     </div>
   )
@@ -112,17 +112,17 @@ function Hero() {
         </p>
 
         <p className="mt-5 max-w-2xl text-base leading-relaxed text-grafite/68 md:text-lg">
-          Na quadra, nas redes ou nos negocios, boa jogada e aquela que combina estrategia, presenca e criatividade.
-          Preencha seus dados, complete a frase e participe desta acao especial da Plante em parceria com o Geraes Open.
+          Na quadra, nas redes ou nos negócios, boa jogada é aquela que combina estratégia, presença e criatividade.
+          Preencha seus dados, complete a frase e participe desta ação especial da Plante em parceria com o Geraes Open.
         </p>
 
         <div className="mt-8 grid max-w-2xl gap-3 sm:grid-cols-2">
           <div className="rounded-3xl border border-grafite/10 bg-white/70 p-5 shadow-sm backdrop-blur">
-            <p className="font-display text-sm font-bold uppercase tracking-[0.18em] text-grafite/45">Ativacao</p>
+            <p className="font-display text-sm font-bold uppercase tracking-[0.18em] text-grafite/45">Ativação</p>
             <p className="mt-3 text-lg font-bold text-grafite">Plante no Geraes Open</p>
           </div>
           <div className="rounded-3xl bg-grafite p-5 text-white shadow-xl">
-            <p className="font-display text-sm font-bold uppercase tracking-[0.18em] text-white/38">Dinamica</p>
+            <p className="font-display text-sm font-bold uppercase tracking-[0.18em] text-white/38">Dinâmica</p>
             <p className="mt-3 text-lg font-bold">Ideias, contatos e boas jogadas</p>
           </div>
         </div>
@@ -167,10 +167,10 @@ function ParticipationForm({ trackingData, onSuccess }) {
     if (!form.whatsapp.trim()) nextErrors.whatsapp = 'Informe seu WhatsApp.'
     if (!form.instagram.trim()) nextErrors.instagram = 'Informe seu Instagram.'
     if (!form.city.trim()) nextErrors.city = 'Informe sua cidade.'
-    if (!form.hasBusiness) nextErrors.hasBusiness = 'Selecione uma opcao.'
+    if (!form.hasBusiness) nextErrors.hasBusiness = 'Selecione uma opção.'
     if (!form.answer.trim()) nextErrors.answer = 'Complete a frase para participar.'
     if (!form.interest) nextErrors.interest = 'Selecione seu principal interesse.'
-    if (!form.consent) nextErrors.consent = 'Voce precisa aceitar a autorizacao para participar.'
+    if (!form.consent) nextErrors.consent = 'Você precisa aceitar a autorização para participar.'
     return nextErrors
   }
 
@@ -195,7 +195,7 @@ function ParticipationForm({ trackingData, onSuccess }) {
       ...form,
       action: 'Boa Jogada Plante',
       event: 'Geraes Open',
-      consent: form.consent ? 'Autorizado' : 'Nao autorizado',
+      consent: form.consent ? 'Autorizado' : 'Não autorizado',
       consentText: lgpdConsentText,
       createdAt: new Date().toISOString(),
       ...trackingData,
@@ -217,17 +217,17 @@ function ParticipationForm({ trackingData, onSuccess }) {
       localStorage.setItem(storageKey, JSON.stringify(updatedData))
 
       // Conectar futuramente com Google Sheets/API aqui.
-      console.log('Boa Jogada Plante - participacao registrada:', participation)
+      console.log('Boa Jogada Plante - participação registrada:', participation)
 
       setForm(initialForm)
       onSuccess()
     } catch {
       if (isLocalPreview) {
-        console.log('Boa Jogada Plante - participacao registrada em preview local:', participation)
+        console.log('Boa Jogada Plante - participação registrada em preview local:', participation)
         setForm(initialForm)
         onSuccess()
       } else {
-        setSubmitError('Nao foi possivel registrar agora. Tente novamente em instantes.')
+        setSubmitError('Não foi possível registrar agora. Tente novamente em instantes.')
       }
     } finally {
       setIsSubmitting(false)
@@ -246,7 +246,7 @@ function ParticipationForm({ trackingData, onSuccess }) {
       <input type="hidden" name="form-name" value={formName} />
       <p className="hidden">
         <label>
-          Nao preencha este campo:
+          Não preencha este campo:
           <input name="botField" value={form.botField} onChange={(event) => updateField('botField', event.target.value)} />
         </label>
       </p>
@@ -258,7 +258,7 @@ function ParticipationForm({ trackingData, onSuccess }) {
       <div className="mb-7">
         <p className="font-display text-xs font-bold uppercase tracking-[0.22em] text-grafite/45">Complete a frase</p>
         <h2 className="mt-3 font-display text-2xl font-bold leading-tight text-grafite md:text-3xl">
-          “Uma boa jogada nas redes sociais e...”
+          “Uma boa jogada nas redes sociais é...”
         </h2>
       </div>
 
@@ -287,26 +287,26 @@ function ParticipationForm({ trackingData, onSuccess }) {
           </Field>
         </div>
 
-        <Field label="Voce tem uma empresa, marca ou projeto? *" id="boa-jogada-has-business" error={errors.hasBusiness}>
+        <Field label="Você tem uma empresa, marca ou projeto? *" id="boa-jogada-has-business" error={errors.hasBusiness}>
           <select id="boa-jogada-has-business" name="hasBusiness" className={`${inputClass} cursor-pointer`} value={form.hasBusiness} onChange={(event) => updateField('hasBusiness', event.target.value)}>
             <option value="">Selecione</option>
             <option value="Sim">Sim</option>
-            <option value="Nao">Nao</option>
+            <option value="Não">Não</option>
             <option value="Estou criando uma ideia">Estou criando uma ideia</option>
           </select>
         </Field>
 
-        {form.hasBusiness && form.hasBusiness !== 'Nao' && (
+        {form.hasBusiness && form.hasBusiness !== 'Não' && (
           <Field label="Nome da empresa, marca ou projeto" id="boa-jogada-business-name">
-            <input id="boa-jogada-business-name" name="businessName" className={inputClass} value={form.businessName} onChange={(event) => updateField('businessName', event.target.value)} placeholder="Nome do negocio, marca ou projeto" autoComplete="organization" />
+            <input id="boa-jogada-business-name" name="businessName" className={inputClass} value={form.businessName} onChange={(event) => updateField('businessName', event.target.value)} placeholder="Nome do negócio, marca ou projeto" autoComplete="organization" />
           </Field>
         )}
 
         <Field label="Resposta criativa *" id="boa-jogada-answer" error={errors.answer}>
-          <textarea id="boa-jogada-answer" name="answer" className={`${inputClass} min-h-36 resize-none leading-relaxed`} value={form.answer} onChange={(event) => updateField('answer', event.target.value)} placeholder="Uma boa jogada nas redes sociais e..." />
+          <textarea id="boa-jogada-answer" name="answer" className={`${inputClass} min-h-36 resize-none leading-relaxed`} value={form.answer} onChange={(event) => updateField('answer', event.target.value)} placeholder="Uma boa jogada nas redes sociais é..." />
         </Field>
 
-        <Field label="O que voce mais quer melhorar? *" id="boa-jogada-interest" error={errors.interest}>
+        <Field label="O que você mais quer melhorar? *" id="boa-jogada-interest" error={errors.interest}>
           <select id="boa-jogada-interest" name="interest" className={`${inputClass} cursor-pointer`} value={form.interest} onChange={(event) => updateField('interest', event.target.value)}>
             <option value="">Selecione um interesse</option>
             {interestOptions.map((option) => (
@@ -344,13 +344,13 @@ function SuccessMessage({ onReset }) {
       </div>
       <h2 className="mt-6 font-display text-3xl font-bold leading-tight text-grafite">Boa jogada!</h2>
       <p className="mx-auto mt-4 max-w-md text-base leading-relaxed text-grafite/68">
-        Sua participacao foi registrada com sucesso. Agora e torcer pelo brinde especial da Plante.
+        Sua participação foi registrada com sucesso. Agora é torcer pelo brinde especial da Plante.
       </p>
       <p className="mt-6 text-xs font-bold uppercase tracking-[0.18em] text-grafite/40">
-        Acao realizada pela Plante durante o Geraes Open.
+        Ação realizada pela Plante durante o Geraes Open.
       </p>
       <button type="button" onClick={onReset} className="mt-8 rounded-full border border-grafite/12 px-5 py-3 font-display text-sm font-bold text-grafite transition hover:border-grafite hover:bg-grafite hover:text-white">
-        Registrar outra participacao
+        Registrar outra participação
       </button>
     </div>
   )
@@ -359,8 +359,8 @@ function SuccessMessage({ onReset }) {
 function Footer() {
   return (
     <footer className="relative z-10 mx-auto flex w-full max-w-6xl flex-col gap-3 px-5 py-8 text-sm text-grafite/55 md:flex-row md:items-center md:justify-between md:px-8">
-      <p>Agencia Plante + Geraes Open</p>
-      <p>Acao especial de relacionamento e criatividade.</p>
+      <p>Agência Plante + Geraes Open</p>
+      <p>Ação especial de relacionamento e criatividade.</p>
     </footer>
   )
 }
@@ -379,10 +379,10 @@ export default function BoaJogadaPlantePage() {
         <div className="rounded-[2rem] border border-grafite/10 bg-white/70 p-6 shadow-sm backdrop-blur md:p-8">
           <p className="font-display text-xs font-bold uppercase tracking-[0.22em] text-grafite/45">Plante no evento</p>
           <h2 className="mt-4 font-display text-3xl font-bold leading-tight text-grafite">
-            Estrategia tambem entra em quadra.
+            Estratégia também entra em quadra.
           </h2>
           <p className="mt-5 text-base leading-relaxed text-grafite/68">
-            A Plante marca presenca no Geraes Open com uma ativacao pensada para conectar boas ideias, boas jogadas e novas oportunidades.
+            A Plante marca presença no Geraes Open com uma ativação pensada para conectar boas ideias, boas jogadas e novas oportunidades.
           </p>
           <div className="mt-6 rounded-3xl bg-[#ece446] p-5">
             <p className="font-display text-sm font-bold uppercase tracking-[0.18em] text-grafite/55">Como participar</p>
@@ -391,7 +391,7 @@ export default function BoaJogadaPlantePage() {
             </p>
           </div>
           <p className="mt-5 text-xs leading-relaxed text-grafite/45">
-            Politica curta da campanha: os dados informados serao usados pela Plante Comunicacao para registrar sua participacao, conduzir esta acao e realizar contatos relacionados a comunicacao, marketing e redes sociais, conforme autorizacao acima.
+            Política curta da campanha: os dados informados serão usados pela Plante Comunicação para registrar sua participação, conduzir esta ação e realizar contatos relacionados à comunicação, marketing e redes sociais, conforme autorização acima.
           </p>
         </div>
 
