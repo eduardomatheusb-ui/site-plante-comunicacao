@@ -3,6 +3,7 @@ import { CheckCircle2, Send, Sparkles } from 'lucide-react'
 import LogoMark from '../components/LogoMark'
 
 const storageKey = 'boaJogadaPlanteLeads'
+const formName = 'boa-jogada-plante'
 
 const initialForm = {
   name: '',
@@ -11,6 +12,7 @@ const initialForm = {
   company: '',
   answer: '',
   consent: false,
+  botField: '',
 }
 
 function formatBrazilianWhatsapp(value) {
@@ -120,6 +122,8 @@ function Field({ label, id, error, children }) {
 function ParticipationForm({ onSuccess }) {
   const [form, setForm] = useState(initialForm)
   const [errors, setErrors] = useState({})
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitError, setSubmitError] = useState('')
 
   const inputClass =
     'w-full rounded-2xl border border-grafite/12 bg-white px-4 py-4 text-base text-grafite outline-none transition focus:border-grafite focus:ring-4 focus:ring-[#ece446]/45 placeholder:text-grafite/30'
@@ -127,6 +131,7 @@ function ParticipationForm({ onSuccess }) {
   const updateField = (field, value) => {
     setForm((prev) => ({ ...prev, [field]: value }))
     setErrors((prev) => ({ ...prev, [field]: '' }))
+    setSubmitError('')
   }
 
   const validate = () => {
@@ -138,7 +143,13 @@ function ParticipationForm({ onSuccess }) {
     return nextErrors
   }
 
-  const handleSubmit = (event) => {
+  const encodeForm = (data) =>
+    new URLSearchParams({
+      'form-name': formName,
+      ...data,
+    }).toString()
+
+  const handleSubmit = async (event) => {
     event.preventDefault()
     const nextErrors = validate()
     if (Object.keys(nextErrors).length) {
@@ -146,26 +157,70 @@ function ParticipationForm({ onSuccess }) {
       return
     }
 
+    setIsSubmitting(true)
+    setSubmitError('')
+
     const participation = {
       ...form,
       action: 'Boa Jogada Plante',
       event: 'Geraes Open',
+      consent: form.consent ? 'Autorizado' : 'Nao autorizado',
       createdAt: new Date().toISOString(),
     }
 
-    const currentData = JSON.parse(localStorage.getItem(storageKey) || '[]')
-    const updatedData = [...currentData, participation]
-    localStorage.setItem(storageKey, JSON.stringify(updatedData))
+    const isLocalPreview = ['localhost', '127.0.0.1'].includes(window.location.hostname)
 
-    // Conectar futuramente com Google Sheets/API aqui.
-    console.log('Boa Jogada Plante - participação registrada:', participation)
+    try {
+      const response = await fetch('/netlify-forms.html', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: encodeForm(participation),
+      })
 
-    setForm(initialForm)
-    onSuccess()
+      if (!response.ok && !isLocalPreview) throw new Error('Form submission failed')
+
+      const currentData = JSON.parse(localStorage.getItem(storageKey) || '[]')
+      const updatedData = [...currentData, participation]
+      localStorage.setItem(storageKey, JSON.stringify(updatedData))
+
+      // Conectar futuramente com Google Sheets/API aqui.
+      console.log('Boa Jogada Plante - participação registrada:', participation)
+
+      setForm(initialForm)
+      onSuccess()
+    } catch {
+      if (isLocalPreview) {
+        console.log('Boa Jogada Plante - participação registrada em preview local:', participation)
+        setForm(initialForm)
+        onSuccess()
+      } else {
+        setSubmitError('Não foi possível registrar agora. Tente novamente em instantes.')
+      }
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
-    <form onSubmit={handleSubmit} className="rounded-[2rem] border border-grafite/10 bg-white p-5 shadow-xl shadow-grafite/10 md:p-8">
+    <form
+      name={formName}
+      method="POST"
+      data-netlify="true"
+      netlify-honeypot="botField"
+      onSubmit={handleSubmit}
+      className="rounded-[2rem] border border-grafite/10 bg-white p-5 shadow-xl shadow-grafite/10 md:p-8"
+    >
+      <input type="hidden" name="form-name" value={formName} />
+      <p className="hidden">
+        <label>
+          Não preencha este campo:
+          <input
+            name="botField"
+            value={form.botField}
+            onChange={(event) => updateField('botField', event.target.value)}
+          />
+        </label>
+      </p>
       <div className="mb-7">
         <p className="font-display text-xs font-bold uppercase tracking-[0.22em] text-grafite/45">Complete a frase</p>
         <h2 className="mt-3 font-display text-2xl font-bold leading-tight text-grafite md:text-3xl">
@@ -177,6 +232,7 @@ function ParticipationForm({ onSuccess }) {
         <Field label="Nome completo *" id="boa-jogada-name" error={errors.name}>
           <input
             id="boa-jogada-name"
+            name="name"
             className={inputClass}
             value={form.name}
             onChange={(event) => updateField('name', event.target.value)}
@@ -189,6 +245,7 @@ function ParticipationForm({ onSuccess }) {
           <Field label="WhatsApp *" id="boa-jogada-whatsapp" error={errors.whatsapp}>
             <input
               id="boa-jogada-whatsapp"
+              name="whatsapp"
               className={inputClass}
               value={form.whatsapp}
               onChange={(event) => updateField('whatsapp', formatBrazilianWhatsapp(event.target.value))}
@@ -201,6 +258,7 @@ function ParticipationForm({ onSuccess }) {
           <Field label="Instagram" id="boa-jogada-instagram">
             <input
               id="boa-jogada-instagram"
+              name="instagram"
               className={inputClass}
               value={form.instagram}
               onChange={(event) => updateField('instagram', event.target.value)}
@@ -213,6 +271,7 @@ function ParticipationForm({ onSuccess }) {
         <Field label="Empresa ou área de atuação" id="boa-jogada-company">
           <input
             id="boa-jogada-company"
+            name="company"
             className={inputClass}
             value={form.company}
             onChange={(event) => updateField('company', event.target.value)}
@@ -224,6 +283,7 @@ function ParticipationForm({ onSuccess }) {
         <Field label="Resposta criativa *" id="boa-jogada-answer" error={errors.answer}>
           <textarea
             id="boa-jogada-answer"
+            name="answer"
             className={`${inputClass} min-h-36 resize-none leading-relaxed`}
             value={form.answer}
             onChange={(event) => updateField('answer', event.target.value)}
@@ -235,6 +295,7 @@ function ParticipationForm({ onSuccess }) {
           <label className="flex cursor-pointer items-start gap-3">
             <input
               type="checkbox"
+              name="consent"
               checked={form.consent}
               onChange={(event) => updateField('consent', event.target.checked)}
               className="mt-1 h-5 w-5 rounded border-grafite/20 accent-grafite"
@@ -248,11 +309,14 @@ function ParticipationForm({ onSuccess }) {
 
         <button
           type="submit"
+          disabled={isSubmitting}
           className="group inline-flex w-full items-center justify-center gap-3 rounded-full bg-grafite px-6 py-4 font-display text-sm font-bold uppercase tracking-[0.14em] text-white transition hover:bg-[#ece446] hover:text-grafite"
         >
-          Enviar minha boa jogada
+          {isSubmitting ? 'Enviando...' : 'Enviar minha boa jogada'}
           <Send size={18} className="transition group-hover:translate-x-1" />
         </button>
+
+        {submitError && <p className="text-center text-sm font-medium text-red-600">{submitError}</p>}
       </div>
     </form>
   )
