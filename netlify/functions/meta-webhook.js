@@ -11,10 +11,15 @@ const graphVersion = process.env.META_GRAPH_VERSION || 'v20.0'
 
 async function sendDirectIfAllowed({ instagramUserId, username, mentionType }) {
   const token = process.env.META_PAGE_ACCESS_TOKEN
-  if (!token || !instagramUserId) {
+  const senderId = process.env.META_IG_USER_ID
+  if (!token || !senderId || !instagramUserId) {
     return {
       status: 'pending',
-      error: !token ? 'META_PAGE_ACCESS_TOKEN is not configured' : 'instagramUserId not available',
+      error: !token
+        ? 'META_PAGE_ACCESS_TOKEN is not configured'
+        : !senderId
+          ? 'META_IG_USER_ID is not configured'
+          : 'instagramUserId not available',
     }
   }
 
@@ -25,7 +30,7 @@ async function sendDirectIfAllowed({ instagramUserId, username, mentionType }) {
   })
   const message = createDirectMessage(tracking.url)
 
-  const response = await fetch(`https://graph.facebook.com/${graphVersion}/me/messages`, {
+  const response = await fetch(`https://graph.instagram.com/${graphVersion}/${senderId}/messages`, {
     method: 'POST',
     headers: {
       Authorization: `Bearer ${token}`,

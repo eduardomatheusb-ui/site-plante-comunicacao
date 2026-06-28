@@ -13,7 +13,8 @@
 Obrigatorias para webhook Meta:
 
 - `META_VERIFY_TOKEN`: texto secreto usado na validacao do webhook.
-- `META_PAGE_ACCESS_TOKEN`: token oficial com permissao para Instagram Messaging API.
+- `META_PAGE_ACCESS_TOKEN`: token oficial gerado no fluxo Instagram API with Instagram Login.
+- `META_IG_USER_ID`: ID da conta profissional do Instagram usada como remetente.
 - `META_GRAPH_VERSION`: opcional. Padrao: `v20.0`.
 
 Recomendadas:
@@ -30,29 +31,29 @@ Funciona agora:
 - envio para Netlify Forms;
 - captura de parametros UTM, token, usuario, tipo de marcacao e status do Direct;
 - pagina operacional para gerar link unico e mensagem manual;
-- functions preparadas para webhook e Direct.
+- functions preparadas para webhook e Direct via `graph.instagram.com`.
 
 Depende de configuracao externa:
 
 - criacao/configuracao do app no Meta Developers;
 - aprovacoes/permissoes da Meta;
-- conexao do Instagram profissional da Plante a uma Pagina do Facebook;
 - configuracao das variaveis de ambiente no Netlify;
 - opcional: Supabase para logs estruturados.
 
 ## Configuracao Meta Developers
 
 1. Garantir que `@agenciaplante` seja conta profissional.
-2. Conectar a conta a uma Pagina do Facebook no Meta Business.
-3. Criar app em Meta Developers.
-4. Adicionar produto de Instagram/Messenger conforme disponibilidade da conta.
-5. Configurar webhook com:
+2. Criar app em Meta Developers.
+3. Selecionar o caso de uso da API do Instagram.
+4. Adicionar `@agenciaplante` como Testador do Instagram e aceitar o convite em Instagram > Apps e sites > Convites do testador.
+5. Gerar o token de acesso para `@agenciaplante`.
+6. Configurar webhook com:
    - Callback URL: `https://agenciaplante.com.br/.netlify/functions/meta-webhook`
    - Verify token: mesmo valor de `META_VERIFY_TOKEN`.
-6. Solicitar permissoes necessarias, especialmente:
-   - `instagram_manage_messages`
-   - `pages_manage_metadata`
-   - `pages_show_list`
+7. Garantir as permissoes:
+   - `instagram_business_basic`
+   - `instagram_business_manage_comments`
+   - `instagram_business_manage_messages`
 
 ## Fallback manual recomendado para o evento
 

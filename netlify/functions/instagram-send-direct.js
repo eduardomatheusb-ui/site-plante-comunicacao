@@ -4,15 +4,16 @@ const graphVersion = process.env.META_GRAPH_VERSION || 'v20.0'
 
 async function sendInstagramDirect({ recipientId, message }) {
   const token = process.env.META_PAGE_ACCESS_TOKEN
+  const senderId = process.env.META_IG_USER_ID
 
-  if (!token) {
+  if (!token || !senderId) {
     return {
       status: 'pending',
-      error: 'META_PAGE_ACCESS_TOKEN is not configured',
+      error: !token ? 'META_PAGE_ACCESS_TOKEN is not configured' : 'META_IG_USER_ID is not configured',
     }
   }
 
-  const response = await fetch(`https://graph.facebook.com/${graphVersion}/me/messages`, {
+  const response = await fetch(`https://graph.instagram.com/${graphVersion}/${senderId}/messages`, {
     method: 'POST',
     headers: {
       Authorization: `Bearer ${token}`,
