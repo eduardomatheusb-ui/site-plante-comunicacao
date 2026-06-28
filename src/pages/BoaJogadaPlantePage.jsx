@@ -26,6 +26,7 @@ const interestOptions = [
   'Criar campanhas',
   'Fazer fotos e vídeos',
   'Atrair mais clientes',
+  'Não tenho negócio',
   'Comunicação completa',
   'Ainda não sei',
 ]
