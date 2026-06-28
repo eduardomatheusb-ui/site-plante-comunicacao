@@ -11,6 +11,7 @@ import ConteudoPage from './pages/ConteudoPage'
 import ContatoPage from './pages/ContatoPage'
 import BioLinksPage from './pages/BioLinksPage'
 import BoaJogadaPlantePage from './pages/BoaJogadaPlantePage'
+import BoaJogadaOperacaoPage from './pages/BoaJogadaOperacaoPage'
 import { normalizePath } from './lib/navigation'
 import { applySeo } from './lib/seo'
 
@@ -55,6 +56,11 @@ const pageMeta = {
     description:
       'Participe da ação Boa Jogada Plante durante o Geraes Open, complete uma frase criativa e concorra a um brinde especial.',
   },
+  '/operacao/boa-jogada-plante': {
+    title: 'Operacao Boa Jogada Plante | Geraes Open',
+    description:
+      'Pagina operacional para gerar links rastreaveis da acao Boa Jogada Plante no Geraes Open.',
+  },
 }
 
 function resolveRoute(path) {
@@ -85,6 +91,7 @@ function resolveRoute(path) {
     '/contato': <ContatoPage />,
     '/links': <BioLinksPage />,
     '/boa-jogada-plante': <BoaJogadaPlantePage />,
+    '/operacao/boa-jogada-plante': <BoaJogadaOperacaoPage />,
   }
 
   return {
@@ -115,7 +122,7 @@ export default function App() {
     applySeo({ ...route.meta, path: route.path })
   }, [route])
 
-  const standaloneRoutes = ['/links', '/boa-jogada-plante']
+  const standaloneRoutes = ['/links', '/boa-jogada-plante', '/operacao/boa-jogada-plante']
   const isStandaloneRoute = standaloneRoutes.includes(route.path)
 
   return (
