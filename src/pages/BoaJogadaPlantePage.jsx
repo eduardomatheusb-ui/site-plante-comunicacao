@@ -1,6 +1,5 @@
 import { useMemo, useState } from 'react'
 import { CheckCircle2, Send, Sparkles } from 'lucide-react'
-import LogoMark from '../components/LogoMark'
 
 const storageKey = 'boaJogadaPlanteLeads'
 const formName = 'boa-jogada-plante'
@@ -56,20 +55,16 @@ function getTrackingData() {
 
 function Header() {
   return (
-    <header className="relative z-10 mx-auto flex w-full max-w-6xl items-center justify-between px-5 py-5 md:px-8">
-      <div className="flex items-center gap-3">
-        {/* Inserir futuramente o logo completo da Plante aqui, se preferirem substituir o símbolo. */}
-        <LogoMark size={42} />
-        <div>
-          <p className="font-display text-sm font-bold leading-none text-grafite">Agência Plante</p>
-          <p className="mt-1 text-xs font-medium text-grafite/55">Boa Jogada Plante</p>
-        </div>
-      </div>
+    <header className="relative z-10 mx-auto flex w-full max-w-6xl items-center justify-between gap-5 px-5 py-5 md:px-8">
+      <img
+        src="/brand/plante-logo-boa-jogada-dark.png"
+        alt="Plante Comunicação"
+        className="h-auto w-44 object-contain sm:w-52 md:w-60"
+      />
 
-      <div className="hidden items-center gap-3 rounded-full border border-grafite/10 bg-white/80 px-4 py-2 text-xs font-bold uppercase tracking-[0.14em] text-grafite/65 shadow-sm backdrop-blur md:flex">
-        {/* Logo do Geraes Open. Substituir o arquivo abaixo se a organização enviar versão oficial em alta. */}
-        <img src="/brand/geraes-open-logo.jpg" alt="Geraes Open Brasil" className="h-9 w-9 rounded-full object-contain" />
-        Geraes Open
+      <div className="flex items-center gap-4 rounded-full border border-grafite/10 bg-white/85 px-4 py-3 text-xs font-bold uppercase tracking-[0.14em] text-grafite/65 shadow-sm backdrop-blur">
+        <img src="/brand/geraes-open-logo.jpg" alt="Geraes Open Brasil" className="h-14 w-14 shrink-0 rounded-full object-contain sm:h-16 sm:w-16" />
+        <span className="hidden sm:inline">Geraes Open</span>
       </div>
     </header>
   )
@@ -77,10 +72,10 @@ function Header() {
 
 function PartnershipBadge() {
   return (
-    <div className="inline-flex max-w-full items-center gap-3 rounded-3xl border border-grafite/10 bg-white/80 px-4 py-2 text-xs font-bold uppercase tracking-[0.1em] text-grafite/60 shadow-sm backdrop-blur sm:rounded-full">
+    <div className="inline-flex max-w-full items-center gap-4 rounded-3xl border border-grafite/10 bg-white/80 px-4 py-3 text-xs font-bold uppercase tracking-[0.1em] text-grafite/60 shadow-sm backdrop-blur sm:rounded-full">
       <Sparkles size={14} className="text-grafite" />
       <span className="leading-snug">Ação especial da Plante em parceria com o Geraes Open</span>
-      <img src="/brand/geraes-open-logo.jpg" alt="Geraes Open Brasil" className="h-8 w-8 shrink-0 rounded-full object-contain" />
+      <img src="/brand/geraes-open-logo.jpg" alt="Geraes Open Brasil" className="h-12 w-12 shrink-0 rounded-full object-contain sm:h-14 sm:w-14" />
     </div>
   )
 }
