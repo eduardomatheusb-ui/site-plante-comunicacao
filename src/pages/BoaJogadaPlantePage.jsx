@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { CheckCircle2, Send, Sparkles, Trophy } from 'lucide-react'
+import { CheckCircle2, Send, Sparkles } from 'lucide-react'
 import LogoMark from '../components/LogoMark'
 
 const storageKey = 'boaJogadaPlanteLeads'
@@ -33,9 +33,13 @@ function Header() {
         </div>
       </div>
 
-      <div className="hidden items-center gap-2 rounded-full border border-grafite/10 bg-white/70 px-4 py-2 text-xs font-bold uppercase tracking-[0.18em] text-grafite/65 shadow-sm backdrop-blur md:flex">
-        {/* Inserir futuramente o logo do Geraes Open aqui. */}
-        <span className="h-2 w-2 rounded-full bg-[#ece446]" />
+      <div className="hidden items-center gap-3 rounded-full border border-grafite/10 bg-white/80 px-4 py-2 text-xs font-bold uppercase tracking-[0.14em] text-grafite/65 shadow-sm backdrop-blur md:flex">
+        {/* Logo do Geraes Open. Substituir o arquivo abaixo se a organização enviar versão oficial em alta. */}
+        <img
+          src="/brand/geraes-open-logo.jpg"
+          alt="Geraes Open Brasil"
+          className="h-9 w-9 rounded-full object-contain"
+        />
         Geraes Open
       </div>
     </header>
@@ -44,9 +48,14 @@ function Header() {
 
 function PartnershipBadge() {
   return (
-    <div className="inline-flex items-center gap-2 rounded-full border border-grafite/10 bg-white/75 px-4 py-2 text-xs font-bold uppercase tracking-[0.16em] text-grafite/60 shadow-sm backdrop-blur">
+    <div className="inline-flex max-w-full items-center gap-3 rounded-3xl border border-grafite/10 bg-white/80 px-4 py-2 text-xs font-bold uppercase tracking-[0.1em] text-grafite/60 shadow-sm backdrop-blur sm:rounded-full">
       <Sparkles size={14} className="text-grafite" />
-      Ação especial da Plante em parceria com o Geraes Open
+      <span className="leading-snug">Ação especial da Plante em parceria com o Geraes Open</span>
+      <img
+        src="/brand/geraes-open-logo.jpg"
+        alt="Geraes Open Brasil"
+        className="h-8 w-8 shrink-0 rounded-full object-contain"
+      />
     </div>
   )
 }
@@ -65,7 +74,7 @@ function TennisCourtGraphic() {
 
 function Hero() {
   return (
-    <section className="relative mx-auto grid w-full max-w-6xl gap-10 px-5 pb-8 pt-8 md:grid-cols-[1fr_0.82fr] md:px-8 md:pb-16 md:pt-10">
+    <section className="relative mx-auto w-full max-w-6xl px-5 pb-8 pt-8 md:px-8 md:pb-16 md:pt-10">
       <div className="relative z-10">
         <PartnershipBadge />
 
@@ -89,33 +98,6 @@ function Hero() {
           <div className="rounded-3xl bg-grafite p-5 text-white shadow-xl">
             <p className="font-display text-sm font-bold uppercase tracking-[0.18em] text-white/38">Dinâmica</p>
             <p className="mt-3 text-lg font-bold">Ideias, contatos e boas jogadas</p>
-          </div>
-        </div>
-      </div>
-
-      <div className="relative z-10 flex items-center justify-center md:justify-end">
-        <div className="relative aspect-square w-full max-w-sm rounded-[2rem] bg-grafite p-6 text-white shadow-2xl md:max-w-md">
-          <div className="absolute inset-5 rounded-[1.5rem] border border-white/12" />
-          <div className="absolute left-1/2 top-5 h-[calc(100%-2.5rem)] w-px -translate-x-1/2 bg-white/12" />
-          <div className="absolute left-5 top-1/2 h-px w-[calc(100%-2.5rem)] -translate-y-1/2 bg-white/12" />
-          <div className="relative z-10 flex h-full flex-col justify-between">
-            <div className="flex items-center justify-between">
-              <span className="rounded-full bg-[#ece446] px-3 py-1 font-display text-[10px] font-bold uppercase tracking-widest text-grafite">
-                Parceria no Geraes Open
-              </span>
-              <Trophy size={24} className="text-[#ece446]" />
-            </div>
-            <div>
-              <p className="font-display text-4xl font-bold leading-none text-[#ece446]">Plante +</p>
-              <p className="mt-2 font-display text-4xl font-bold leading-none">Geraes Open</p>
-              <p className="mt-5 max-w-xs text-sm leading-relaxed text-white/60">
-                Uma ativação para conectar boas ideias, boas jogadas e novas oportunidades.
-              </p>
-            </div>
-            <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-white/35">
-              <span className="h-2 w-2 rounded-full bg-[#ece446]" />
-              Evento de tênis
-            </div>
           </div>
         </div>
       </div>
