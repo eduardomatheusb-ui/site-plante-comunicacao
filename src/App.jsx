@@ -10,6 +10,7 @@ import IdeiasEmMovimentoPage from './pages/IdeiasEmMovimentoPage'
 import ConteudoPage from './pages/ConteudoPage'
 import ContatoPage from './pages/ContatoPage'
 import BioLinksPage from './pages/BioLinksPage'
+import BoaJogadaPlantePage from './pages/BoaJogadaPlantePage'
 import { normalizePath } from './lib/navigation'
 import { applySeo } from './lib/seo'
 
@@ -49,6 +50,11 @@ const pageMeta = {
     description:
       'Acesse os principais links da Plante Comunicação: site, WhatsApp, projetos, conteúdos e Instagram.',
   },
+  '/boa-jogada-plante': {
+    title: 'Boa Jogada Plante | Geraes Open',
+    description:
+      'Participe da ação Boa Jogada Plante durante o Geraes Open, complete uma frase criativa e concorra a um brinde especial.',
+  },
 }
 
 function resolveRoute(path) {
@@ -78,6 +84,7 @@ function resolveRoute(path) {
     '/ideias-em-movimento': <IdeiasEmMovimentoPage />,
     '/contato': <ContatoPage />,
     '/links': <BioLinksPage />,
+    '/boa-jogada-plante': <BoaJogadaPlantePage />,
   }
 
   return {
@@ -108,11 +115,14 @@ export default function App() {
     applySeo({ ...route.meta, path: route.path })
   }, [route])
 
+  const standaloneRoutes = ['/links', '/boa-jogada-plante']
+  const isStandaloneRoute = standaloneRoutes.includes(route.path)
+
   return (
     <div className="min-h-screen bg-petrol">
-      {route.path !== '/links' && <Header currentPath={route.path} />}
+      {!isStandaloneRoute && <Header currentPath={route.path} />}
       <main>{route.page}</main>
-      {route.path !== '/links' && <Footer />}
+      {!isStandaloneRoute && <Footer />}
     </div>
   )
 }
