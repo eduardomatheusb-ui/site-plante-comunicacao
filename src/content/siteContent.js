@@ -550,6 +550,41 @@ export const ideas = [
       'Mas ser reconhecido, lembrado e compreendido é ainda mais.',
     ],
   },
+  {
+    slug: 'plante-cobertura-geraes-open',
+    title: 'Plante Comunicação assina cobertura da 3ª edição do Geraes Open',
+    category: 'Cobertura',
+    date: '29 junho 2026',
+    readingTime: '5 min',
+    image: '/brand/ideas/geraes-open-cobertura.jpg',
+    imageClass: 'object-contain bg-grafite',
+    cardImageClass: 'object-cover object-center',
+    summary:
+      'A cobertura da 3ª edição do Geraes Open mostra como esporte, conteúdo e relacionamento se conectam dentro e fora da quadra.',
+    highlight:
+      'No Geraes Open, a Plante entra em quadra para comunicar com presença, estratégia e boas conexões.',
+    body: [
+      'A Plante Comunicação está em quadra na cobertura da 3ª edição do Geraes Open, um dos principais campeonatos de tênis do estado de Minas Gerais.',
+      'Com foco em alta competitividade, relacionamento e networking, o torneio reúne centenas de tenistas e movimenta o calendário esportivo mineiro, conectando atletas, público, marcas e parceiros em torno de uma experiência que vai além das partidas.',
+      'Nesta edição, a Plante acompanha o campeonato de perto, traduzindo a atmosfera do Geraes Open em conteúdo, posicionamento digital e boas histórias.',
+      { type: 'heading', text: 'Um campeonato que movimenta Minas Gerais' },
+      'O Geraes Open se destaca por reunir atletas em um ambiente competitivo, organizado e voltado também para conexões. O formato de disputa, com dois sets e super tie-break, contribui para jogos mais dinâmicos, estratégicos e intensos.',
+      'Essa combinação entre esporte, competitividade e relacionamento faz do torneio uma oportunidade importante para marcas que desejam estar próximas de um público qualificado, participativo e conectado.',
+      { type: 'heading', text: 'Comunicação que acompanha o ritmo do jogo' },
+      'Em um campeonato como o Geraes Open, nem tudo acontece apenas dentro da quadra. O público que acompanha, os atletas que participam, os parceiros que apoiam e os registros que circulam nas redes também fazem parte da experiência.',
+      'Por isso, a cobertura realizada pela Plante foi pensada para valorizar o evento como um todo: o esporte, os bastidores, a convivência, a energia do torneio e a força das conexões criadas ao longo da competição.',
+      'A estratégia une registro audiovisual, produção de conteúdo, posicionamento digital e relacionamento com o público. O objetivo é fazer com que o Geraes Open seja visto, lembrado e compartilhado também por quem acompanha o campeonato pelas redes sociais.',
+      { type: 'heading', text: 'Conteúdo, presença e relacionamento' },
+      'A cobertura de um evento esportivo precisa ir além da divulgação pontual. Ela deve construir memória, reforçar posicionamento e manter o público conectado ao que está acontecendo ao longo de toda a competição.',
+      'No Geraes Open, a Plante atua para transformar partidas, bastidores e interações em conteúdos relevantes, com linguagem leve, visual atrativo e comunicação alinhada ao clima do campeonato.',
+      'Essa presença fortalece o evento, amplia a visibilidade dos parceiros e cria novas oportunidades de relacionamento com quem vive o torneio de perto.',
+      { type: 'heading', text: 'Boa jogada também é comunicação' },
+      'A parceria entre Plante Comunicação e Geraes Open mostra como o marketing esportivo pode ser trabalhado de forma simples, estratégica e próxima das pessoas.',
+      'Assim como no tênis, comunicar bem exige leitura de cenário, ritmo, consistência e boas escolhas. Cada ponto importa. Cada detalhe constrói a experiência.',
+      'No Geraes Open, a Plante entra em quadra para fazer isso: comunicar com presença, estratégia e boas conexões.',
+      { type: 'strong', text: 'Plante Comunicação e Geraes Open: uma parceria dentro e fora da quadra.' },
+    ],
+  },
 ]
 
 export const meta = {

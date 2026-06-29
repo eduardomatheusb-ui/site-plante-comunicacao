@@ -33,11 +33,29 @@ export default function ConteudoPage({ slug }) {
           </p>
 
           <div className="mt-10 space-y-6 text-lg leading-relaxed text-grafite/68">
-            {(idea.body || []).map((paragraph) => (
-              <p key={paragraph} className="whitespace-pre-line">
-                {paragraph}
-              </p>
-            ))}
+            {(idea.body || []).map((block, index) => {
+              if (typeof block === 'object' && block.type === 'heading') {
+                return (
+                  <h2 key={`${block.text}-${index}`} className="pt-8 font-display text-3xl font-bold leading-tight text-grafite md:text-4xl">
+                    {block.text}
+                  </h2>
+                )
+              }
+
+              if (typeof block === 'object' && block.type === 'strong') {
+                return (
+                  <p key={`${block.text}-${index}`} className="whitespace-pre-line font-display text-2xl font-bold leading-tight text-grafite">
+                    {block.text}
+                  </p>
+                )
+              }
+
+              return (
+                <p key={`${block}-${index}`} className="whitespace-pre-line">
+                  {block}
+                </p>
+              )
+            })}
           </div>
         </div>
       </article>

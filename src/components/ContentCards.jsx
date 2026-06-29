@@ -5,6 +5,7 @@ import { handleInternalClick } from '../lib/navigation'
 
 export default function ContentCards({ limit }) {
   const order = [
+    'plante-cobertura-geraes-open',
     'o-que-vem-antes-de-um-bom-post',
     'marca-nao-e-so-logo',
     'comunicacao-institucional-tambem-precisa-de-criatividade',
