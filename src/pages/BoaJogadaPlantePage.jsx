@@ -31,6 +31,17 @@ const interestOptions = [
   'Ainda não sei',
 ]
 
+const polaroidPhotos = [
+  { src: '/brand/boa-jogada/polaroid-01.jpg', alt: 'Credencial Sou da Plante no Geraes Open', rotate: '-rotate-2' },
+  { src: '/brand/boa-jogada/polaroid-02.jpg', alt: 'Bastidor da ativacao Plante', rotate: 'rotate-1' },
+  { src: '/brand/boa-jogada/polaroid-03.jpg', alt: 'Partida de tenis no Geraes Open', rotate: '-rotate-1' },
+  { src: '/brand/boa-jogada/polaroid-04.jpg', alt: 'Entrevista no Geraes Open', rotate: 'rotate-2' },
+  { src: '/brand/boa-jogada/polaroid-05.jpg', alt: 'Painel do Geraes Open com marca Plante', rotate: '-rotate-2' },
+  { src: '/brand/boa-jogada/polaroid-06.jpg', alt: 'Registro de conteudo no evento', rotate: 'rotate-1' },
+  { src: '/brand/boa-jogada/polaroid-07.jpg', alt: 'Apresentacao no Geraes Open', rotate: '-rotate-1' },
+  { src: '/brand/boa-jogada/polaroid-08.jpg', alt: 'Tenista em quadra no Geraes Open', rotate: 'rotate-2' },
+]
+
 function formatBrazilianWhatsapp(value) {
   const digits = value.replace(/\D/g, '').slice(0, 11)
 
@@ -117,6 +128,30 @@ function Hero() {
   )
 }
 
+
+function PolaroidGallery() {
+  return (
+    <section className="relative z-10 mx-auto w-full max-w-6xl px-5 pb-10 md:px-8 md:pb-14">
+      <div className="mb-5 flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
+        <div>
+          <p className="font-display text-xs font-bold uppercase tracking-[0.22em] text-grafite/45">No evento</p>
+          <h2 className="mt-2 font-display text-2xl font-bold leading-tight text-grafite md:text-3xl">Bastidores da Boa Jogada</h2>
+        </div>
+        <p className="max-w-md text-sm leading-relaxed text-grafite/55">Alguns registros da Plante no Geraes Open, entre quadra, conteudo e encontros.</p>
+      </div>
+
+      <div className="grid grid-cols-2 gap-3 sm:grid-cols-4 md:gap-5">
+        {polaroidPhotos.map((photo, index) => (
+          <figure key={photo.src} className={`group rounded-[1.4rem] bg-white p-2 pb-7 shadow-xl shadow-grafite/10 ring-1 ring-grafite/8 transition duration-300 hover:-translate-y-1 hover:rotate-0 ${photo.rotate}`}>
+            <div className="aspect-square overflow-hidden rounded-[1rem] bg-[#ece446]/30">
+              <img src={photo.src} alt={photo.alt} loading={index < 2 ? 'eager' : 'lazy'} className="h-full w-full object-cover transition duration-500 group-hover:scale-105" />
+            </div>
+          </figure>
+        ))}
+      </div>
+    </section>
+  )
+}
 function Field({ label, id, error, children }) {
   return (
     <div>
@@ -360,6 +395,7 @@ export default function BoaJogadaPlantePage() {
       <TennisCourtGraphic />
       <Header />
       <Hero />
+      <PolaroidGallery />
 
       <section className="relative z-10 mx-auto flex w-full max-w-4xl flex-col gap-6 px-5 pb-12 md:px-8 md:pb-20">
         <div className="rounded-[2rem] border border-grafite/10 bg-white/75 p-6 shadow-sm backdrop-blur md:p-8">
