@@ -1,0 +1,17 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#F7F4E8"/>
+  <rect x="60" y="60" width="1080" height="510" rx="48" fill="#1A1A1A"/>
+  <circle cx="980" cy="150" r="72" stroke="#F7FF19" stroke-width="24"/>
+  <rect x="104" y="104" width="312" height="58" rx="29" fill="#F7FF19"/>
+  <text x="132" y="141" fill="#1A1A1A" font-family="Arial, sans-serif" font-size="22" font-weight="700" letter-spacing="4">GUIA GRATUITO</text>
+  <text x="104" y="286" fill="#F7FF19" font-family="Arial, sans-serif" font-size="82" font-weight="800">Antes de publicar</text>
+  <text x="104" y="372" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="44" font-weight="700">Uso responsável de imagens de</text>
+  <text x="104" y="426" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="44" font-weight="700">crianças e adolescentes</text>
+  <text x="104" y="508" fill="#CFCFCF" font-family="Arial, sans-serif" font-size="26">Plante Comunicação</text>
+  <g transform="translate(820 330)">
+    <rect x="0" y="0" width="210" height="150" rx="20" fill="#F7FF19"/>
+    <rect x="26" y="28" width="158" height="18" rx="9" fill="#1A1A1A" opacity="0.88"/>
+    <rect x="26" y="66" width="116" height="18" rx="9" fill="#1A1A1A" opacity="0.7"/>
+    <rect x="26" y="104" width="142" height="18" rx="9" fill="#1A1A1A" opacity="0.55"/>
+  </g>
+</svg>

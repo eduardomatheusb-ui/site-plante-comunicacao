@@ -82,6 +82,43 @@
   .tag {
     @apply inline-block px-3 py-1 text-xs font-display font-medium tracking-widest uppercase text-amarelo border border-amarelo/30 rounded-full;
   }
+
+  .form-input {
+    @apply w-full rounded-2xl border border-grafite/15 bg-white px-4 py-3.5 text-base text-grafite outline-none transition focus:border-grafite focus:ring-4 focus:ring-amarelo/35;
+  }
+
+  .prose-wrapper {
+    @apply text-lg leading-relaxed text-grafite/70;
+  }
+
+  .prose-wrapper h2 {
+    @apply mt-12 font-display text-3xl font-bold leading-tight text-grafite md:text-4xl;
+  }
+
+  .prose-wrapper p {
+    @apply mt-5;
+  }
+
+  .prose-wrapper ul,
+  .prose-wrapper ol {
+    @apply mt-5 space-y-2 pl-6;
+  }
+
+  .prose-wrapper ul {
+    @apply list-disc;
+  }
+
+  .prose-wrapper ol {
+    @apply list-decimal;
+  }
+
+  .prose-wrapper li {
+    @apply pl-1;
+  }
+
+  .prose-wrapper a {
+    @apply font-semibold text-grafite underline decoration-amarelo decoration-4 underline-offset-4;
+  }
 }
 
 @layer utilities {

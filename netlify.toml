@@ -6,6 +6,11 @@
   NODE_VERSION = "22"
 
 [[redirects]]
+  from = "/api/leads/guia-eca-digital"
+  to = "/.netlify/functions/guia-eca-lead"
+  status = 200
+
+[[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
