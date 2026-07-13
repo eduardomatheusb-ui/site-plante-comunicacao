@@ -5,6 +5,7 @@ import { handleInternalClick } from '../lib/navigation'
 
 export default function ContentCards({ limit }) {
   const order = [
+    'eca-digital-uso-imagens-criancas',
     'plante-cobertura-geraes-open',
     'o-que-vem-antes-de-um-bom-post',
     'marca-nao-e-so-logo',
@@ -18,11 +19,14 @@ export default function ContentCards({ limit }) {
 
   return (
     <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-      {visibleIdeas.map((idea, index) => (
-        <motion.a
+      {visibleIdeas.map((idea, index) => {
+        const href = idea.href || `/ideias-em-movimento/${idea.slug}`
+
+        return (
+          <motion.a
           key={idea.slug}
-          href={`/ideias-em-movimento/${idea.slug}`}
-          onClick={(event) => handleInternalClick(event, `/ideias-em-movimento/${idea.slug}`)}
+          href={href}
+          onClick={(event) => handleInternalClick(event, href)}
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.25 }}
@@ -52,7 +56,8 @@ export default function ContentCards({ limit }) {
             </p>
           </div>
         </motion.a>
-      ))}
+        )
+      })}
     </div>
   )
 }

@@ -394,6 +394,21 @@ export const ideaCategories = [
 
 export const ideas = [
   {
+    slug: 'eca-digital-uso-imagens-criancas',
+    href: '/blog/eca-digital-uso-imagens-criancas',
+    title: 'ECA Digital e uso de imagens de crianças: o que sua instituição precisa observar',
+    category: 'Institucional',
+    date: '13 julho 2026',
+    readingTime: '8 min',
+    image: '/brand/og-guia-eca-digital.svg',
+    cardImageClass: 'object-cover object-center',
+    summary:
+      'Um conteúdo da Plante sobre cuidado, consentimento e responsabilidade na comunicação com imagens de crianças e adolescentes.',
+    highlight:
+      'Comunicar com responsabilidade também é proteger histórias, contextos e pessoas.',
+    body: [],
+  },
+  {
     slug: 'o-que-vem-antes-de-um-bom-post',
     title: 'O que vem antes de um bom post',
     category: 'Estratégia',
