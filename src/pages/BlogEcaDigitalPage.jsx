@@ -284,6 +284,13 @@ export default function BlogEcaDigitalPage() {
             <span>Por Plante</span>
             <span>8 min de leitura</span>
           </div>
+          <div className="mt-12 overflow-hidden rounded-[1.7rem] bg-grafite shadow-[10px_10px_0_#ECE446]">
+            <img
+              src={GUIDE_CAMPAIGN.metadata.ogImage}
+              alt=""
+              className="h-auto w-full"
+            />
+          </div>
         </header>
 
         <div className="section-padding mx-auto grid max-w-7xl gap-12 pb-20 lg:grid-cols-[260px,minmax(0,820px)]">

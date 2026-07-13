@@ -400,7 +400,7 @@ export const ideas = [
     category: 'Institucional',
     date: '13 julho 2026',
     readingTime: '8 min',
-    image: '/brand/og-guia-eca-digital.svg',
+    image: '/brand/ideas/eca-digital-cover.svg',
     cardImageClass: 'object-cover object-center',
     summary:
       'Um conteúdo da Plante sobre cuidado, consentimento e responsabilidade na comunicação com imagens de crianças e adolescentes.',
