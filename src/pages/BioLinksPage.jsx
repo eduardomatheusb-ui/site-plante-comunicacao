@@ -1,4 +1,4 @@
-import { ArrowUpRight, Globe, Instagram, MessageCircle, Newspaper, Sparkles } from 'lucide-react'
+import { ArrowUpRight, FileText, Globe, Instagram, MessageCircle, Newspaper, Sparkles } from 'lucide-react'
 import LogoMark from '../components/LogoMark'
 import PlanteWordmark from '../components/PlanteWordmark'
 import { contact } from '../content/siteContent'
@@ -9,6 +9,12 @@ const links = [
     description: 'Conheça a Plante Comunicação',
     href: 'https://agenciaplante.com.br',
     Icon: Globe,
+  },
+  {
+    label: 'Guia gratuito',
+    description: 'Uso responsável de imagens de crianças e adolescentes',
+    href: 'https://agenciaplante.com.br/guia-eca-digital',
+    Icon: FileText,
   },
   {
     label: 'Falar pelo WhatsApp',
