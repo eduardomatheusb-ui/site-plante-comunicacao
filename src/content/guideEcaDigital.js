@@ -23,7 +23,7 @@ export const GUIDE_CAMPAIGN = {
       'ECA Digital e fotos de crianças: cuidados para escolas, clínicas e instituições | Plante',
     blogDescription:
       'Entenda como o ECA Digital, o ECA e a LGPD se relacionam com o uso de fotos e vídeos de crianças em redes sociais, eventos e campanhas.',
-    ogImage: '/brand/ideas/eca-digital-cover.svg',
+    ogImage: '/brand/ideas/eca-digital-cover.jpg',
   },
 }
 
