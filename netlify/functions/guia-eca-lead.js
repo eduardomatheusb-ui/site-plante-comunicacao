@@ -79,22 +79,42 @@ export async function handler(event) {
     return json(422, { ok: false, message: 'Confira os campos obrigatórios.' })
   }
 
-  const webhookUrl = process.env.LEADS_WEBHOOK_URL
-  if (!webhookUrl) {
+  const tremUrl = process.env.TREM_LEADS_URL || 'https://trem.agenciaplante.com.br/api/integrations/plante-site/leads'
+  const tremSecret = process.env.TREM_WEBHOOK_SECRET
+  if (!tremSecret) {
     return json(503, {
       ok: false,
-      message: 'Integração de leads não configurada. Use Netlify Forms ou configure LEADS_WEBHOOK_URL.',
+      message: 'Integração TREM não configurada (defina TREM_WEBHOOK_SECRET).',
     })
   }
 
   try {
-    const response = await fetch(webhookUrl, {
+    const response = await fetch(tremUrl, {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ source: 'guia-eca-digital', lead }),
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${tremSecret}`,
+      },
+      body: JSON.stringify({
+        name: lead.name,
+        organization: lead.organization,
+        segment: lead.segment,
+        email: lead.email,
+        whatsapp: lead.whatsapp,
+        consent: lead.consent,
+        consent_text: clean(data.consent_text),
+        landing_page: lead.landing_page || 'guia-eca-digital',
+        referrer: lead.referrer,
+        created_at: lead.created_at,
+        utm_source: lead.utm_source,
+        utm_medium: lead.utm_medium,
+        utm_campaign: lead.utm_campaign,
+        utm_content: lead.utm_content,
+        utm_term: lead.utm_term,
+      }),
     })
 
-    if (!response.ok) throw new Error('webhook_error')
+    if (!response.ok) throw new Error('trem_error')
     return json(200, { ok: true })
   } catch {
     return json(502, { ok: false, message: 'Não foi possível registrar o lead agora.' })

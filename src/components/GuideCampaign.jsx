@@ -215,6 +215,24 @@ export function LeadCaptureForm({ compact = false, formId = 'formulario-guia' })
         body: formData.toString(),
       })
       if (!response.ok) throw new Error('netlify_form_error')
+      // Também envia ao CRM do TREM (não bloqueia o usuário se demorar/falhar).
+      fetch('/api/leads/guia-eca-digital', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: values.name.trim(),
+          organization: values.organization.trim(),
+          segment: values.segment,
+          email: values.email.trim().toLowerCase(),
+          whatsapp: normalizeBrazilianPhone(values.whatsapp),
+          consent: values.consent,
+          consent_text: 'Concordo em receber este material e outros conteúdos da Plante sobre comunicação e marketing. Posso cancelar o recebimento a qualquer momento.',
+          landing_page: payload.landing_page,
+          referrer: payload.referrer,
+          created_at: payload.created_at,
+          ...utms,
+        }),
+      }).catch(() => {})
       trackEvent('lead_submit_success', { segment: values.segment })
       window.history.replaceState({}, '', GUIDE_CAMPAIGN.thankYouPath)
       window.dispatchEvent(new CustomEvent('plante:navigate', { detail: { path: GUIDE_CAMPAIGN.thankYouPath } }))
