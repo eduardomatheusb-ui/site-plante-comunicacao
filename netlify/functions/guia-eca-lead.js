@@ -36,6 +36,7 @@ function checkRateLimit(ip) {
   return entry.count <= 8
 }
 
+// Integração TREM: encaminha leads do Guia ECA ao CRM (lê TREM_WEBHOOK_SECRET do ambiente).
 export async function handler(event) {
   if (event.httpMethod !== 'POST') {
     return json(405, { ok: false, message: 'Método não permitido.' })
