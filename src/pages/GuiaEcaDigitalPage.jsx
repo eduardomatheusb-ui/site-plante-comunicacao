@@ -8,7 +8,6 @@ import {
   CampaignHeader,
   ContentSection,
   GuideBenefits,
-  GuideMockup,
   LeadCaptureForm,
   LegalNotice,
   WhatsAppCTA,
@@ -57,10 +56,6 @@ export default function GuiaEcaDigitalPage() {
         <LeadCaptureForm />
       </section>
 
-      <section className="section-padding mx-auto max-w-7xl pb-20">
-        <GuideMockup />
-      </section>
-
       <ContentSection eyebrow="Cuidado antes da publicação" title="Uma imagem pode revelar mais do que parece">
         <p>
           Além do rosto, uma publicação pode mostrar a escola, a rotina, a localização, uma condição de saúde, um documento ou outras informações que precisam ser protegidas.
@@ -96,21 +91,6 @@ export default function GuiaEcaDigitalPage() {
           <AudienceGrid items={guideAudiences} />
         </div>
       </section>
-
-      <ContentSection eyebrow="Autorização" title="Ter autorização é importante. Mas não encerra a análise.">
-        <p>
-          Mesmo quando existe autorização, ainda é preciso avaliar a finalidade da publicação, o contexto da imagem, as informações visíveis e os possíveis impactos para a criança ou o adolescente.
-        </p>
-        <p>
-          Uma imagem autorizada pode continuar inadequada quando mostra sofrimento, revela um diagnóstico, expõe uma rotina ou é utilizada em uma campanha diferente daquela que foi apresentada ao responsável.
-        </p>
-        <p>
-          O guia organiza essas questões de maneira simples para que elas possam fazer parte da rotina da sua equipe.
-        </p>
-        <p className="rounded-[1.5rem] bg-amarelo p-6 font-display text-2xl font-bold leading-tight text-grafite">
-          Antes de perguntar apenas se existe autorização, também é preciso avaliar se aquela publicação é adequada.
-        </p>
-      </ContentSection>
 
       <section className="bg-white py-20 text-grafite">
         <div className="section-padding mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.95fr,1.05fr] lg:items-center">
@@ -176,11 +156,13 @@ function RiskMap() {
   ]
 
   return (
-    <div className="mt-8 grid gap-3 sm:grid-cols-5">
+    <div className="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-5">
       {items.map(({ icon: Icon, label }) => (
-        <div key={label} className="rounded-2xl border border-grafite/10 bg-white p-4 text-center">
-          <Icon className="mx-auto text-grafite" size={24} aria-hidden="true" />
-          <p className="mt-3 text-xs font-bold uppercase tracking-[0.16em] text-grafite/55">{label}</p>
+        <div key={label} className="flex min-h-28 flex-col items-center justify-center rounded-2xl border border-grafite/10 bg-white px-3 py-4 text-center">
+          <Icon className="text-grafite" size={24} aria-hidden="true" />
+          <p className="mt-3 max-w-full break-words font-display text-[10px] font-bold uppercase leading-snug tracking-[0.12em] text-grafite/55">
+            {label}
+          </p>
         </div>
       ))}
     </div>
