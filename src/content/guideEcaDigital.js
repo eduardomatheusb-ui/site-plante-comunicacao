@@ -16,9 +16,9 @@ export const GUIDE_CAMPAIGN = {
     'https://wa.me/5531985245110?text=Ol%C3%A1%2C%20conheci%20a%20Plante%20pelo%20Guia%20de%20uso%20respons%C3%A1vel%20de%20imagens%20de%20crian%C3%A7as%20e%20adolescentes%20e%20gostaria%20de%20conversar%20sobre%20a%20comunica%C3%A7%C3%A3o%20da%20minha%20institui%C3%A7%C3%A3o.',
   contactEmail: contact.email,
   metadata: {
-    landingTitle: 'Guia gratuito: uso de imagens de crianças e adolescentes | Plante',
+    landingTitle: 'Boas histórias também merecem cuidado | Guia gratuito da Plante',
     landingDescription:
-      'Baixe gratuitamente o guia da Plante com orientações para escolas, clínicas e instituições que utilizam fotos e vídeos de crianças.',
+      'Baixe o guia gratuito da Plante e veja como usar imagens de crianças e adolescentes com mais segurança, clareza e responsabilidade.',
     blogTitle:
       'ECA Digital e fotos de crianças: cuidados para escolas, clínicas e instituições | Plante',
     blogDescription:

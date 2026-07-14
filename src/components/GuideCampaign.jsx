@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from 'react'
-import { ArrowRight, CheckCircle2, Download, ShieldCheck } from 'lucide-react'
+import { ArrowRight, CheckCircle2, Download } from 'lucide-react'
 import { GUIDE_CAMPAIGN, GUIDE_DOWNLOAD_URL, guideSegments } from '../content/guideEcaDigital'
 import { captureUtmParams, formatBrazilianPhone, normalizeBrazilianPhone, trackEvent, withPreservedUtms } from '../lib/campaignTracking'
 import { handleInternalClick } from '../lib/navigation'
@@ -28,27 +28,12 @@ export function CampaignHeader() {
 
 export function GuideMockup() {
   return (
-    <div className="relative overflow-hidden rounded-[2rem] border border-grafite/10 bg-white p-5 shadow-[18px_18px_0_#F7FF19]">
-      <div className="rounded-[1.5rem] bg-grafite p-7 text-white">
-        <div className="mb-16 flex items-center justify-between">
-          <span className="rounded-full bg-amarelo px-4 py-2 font-display text-xs font-bold uppercase tracking-[0.22em] text-grafite">
-            Guia gratuito
-          </span>
-          <ShieldCheck aria-hidden="true" className="text-amarelo" size={34} />
-        </div>
-        <p className="mb-5 max-w-xs font-display text-4xl font-bold leading-none md:text-5xl">
-          Antes de publicar
-        </p>
-        <p className="max-w-sm text-base leading-relaxed text-white/70">
-          Guia de uso responsável de imagens de crianças e adolescentes.
-        </p>
-        <div className="mt-12 grid grid-cols-3 gap-3" aria-hidden="true">
-          {[0, 1, 2, 3, 4, 5].map((item) => (
-            <div key={item} className="h-16 rounded-2xl border border-white/12 bg-white/5" />
-          ))}
-        </div>
-      </div>
-      <div aria-hidden="true" className="absolute -right-8 -top-8 h-28 w-28 rounded-full border-[18px] border-amarelo/70" />
+    <div className="relative overflow-hidden rounded-[1.7rem] border border-grafite/10 bg-white p-3 shadow-[12px_12px_0_#ECE446]">
+      <img
+        src="/brand/guide/eca-digital-guide-cover.jpg"
+        alt="Capa do Guia de uso responsável de imagens de crianças e adolescentes."
+        className="aspect-[0.707/1] w-full rounded-[1.25rem] object-cover"
+      />
     </div>
   )
 }
@@ -111,7 +96,7 @@ export function WhatsAppCTA({ children = 'Conversar com a Plante', className = '
 export function LegalNotice() {
   return (
     <p className="rounded-2xl border border-grafite/10 bg-white p-5 text-sm leading-relaxed text-grafite/55">
-      Este é um material de orientação geral e não substitui a análise jurídica de situações específicas.
+      Este material possui caráter orientativo e não substitui a análise jurídica de situações específicas.
     </p>
   )
 }
@@ -311,10 +296,10 @@ export function LeadCaptureForm({ compact = false, formId = 'formulario-guia' })
       {errors.consent && <p className="mt-2 text-sm text-red-700" aria-live="polite">{errors.consent}</p>}
 
       <button disabled={status === 'sending'} className="mt-6 w-full rounded-full bg-grafite px-6 py-4 font-display text-sm font-bold text-white transition hover:bg-amarelo hover:text-grafite disabled:opacity-60">
-        {status === 'sending' ? 'Enviando...' : 'Baixar o guia'}
+        {status === 'sending' ? 'Enviando...' : 'Acessar o guia'}
       </button>
       <p className="mt-4 text-xs leading-relaxed text-grafite/50">
-        Seus dados serão utilizados para o envio do material e para comunicações relacionadas aos serviços e conteúdos da Plante.
+        Seus dados serão utilizados para o envio do material e para comunicações da Plante. Você poderá cancelar o recebimento quando desejar.
       </p>
     </form>
   )
