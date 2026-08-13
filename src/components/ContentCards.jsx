@@ -5,6 +5,7 @@ import { handleInternalClick } from '../lib/navigation'
 
 export default function ContentCards({ limit }) {
   const order = [
+    'agencia-certificada-cenp-associada-abap',
     'eca-digital-uso-imagens-criancas',
     'plante-cobertura-geraes-open',
     'o-que-vem-antes-de-um-bom-post',
