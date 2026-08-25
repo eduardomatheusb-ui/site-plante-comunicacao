@@ -97,3 +97,23 @@ O Netlify usa:
 - pasta publicada: `dist`
 
 O deploy acontece automaticamente pelo GitHub/Netlify ou manualmente via CLI do Netlify.
+
+## Gerenciador de conteudo
+
+Foi preparada uma area administrativa em `/admin` usando Decap CMS. Ela permite cadastrar novos textos para a pagina **Ideias em Movimento** e editar dados basicos de contato/SEO do site.
+
+Para ativar o login no Netlify:
+
+1. Ative o Identity do site no painel da Netlify.
+2. Ative o Git Gateway nas configuracoes do Identity.
+3. Convide os e-mails da equipe que podera editar.
+4. Acesse `https://www.agenciaplante.com.br/admin`.
+
+Quando um conteudo for publicado pelo painel, ele cria um arquivo em `src/content/ideas`, envia para o GitHub e o Netlify publica a nova versao automaticamente.
+
+Pastas importantes:
+
+- `public/admin`: tela e configuracao do gerenciador.
+- `src/content/ideas`: novos artigos criados pelo painel.
+- `public/uploads`: imagens enviadas pelo painel.
+- `src/content/cms/site-settings.json`: contato e SEO editaveis.

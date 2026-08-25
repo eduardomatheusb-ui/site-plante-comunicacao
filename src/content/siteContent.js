@@ -1,4 +1,7 @@
-export const contact = {
+import { cmsIdeas } from './cmsIdeas'
+import siteSettings from './cms/site-settings.json'
+
+const defaultContact = {
   whatsappLabel: '(31) 9 8524-5110',
   whatsappHref:
     'https://wa.me/5531985245110?text=Ol%C3%A1%2C%20Plante.%20Vim%20pelo%20site%20e%20gostaria%20de%20conversar%20sobre%20comunica%C3%A7%C3%A3o%20para%20minha%20marca%20ou%20projeto.',
@@ -9,6 +12,8 @@ export const contact = {
   location: 'Minas Gerais, Brasil',
   address: 'Avenida Governador Valadares, 355 - Sl 301, Centro - Betim/MG',
 }
+
+export const contact = { ...defaultContact, ...(siteSettings.contact || {}) }
 
 export const navLinks = [
   { label: 'Plante', href: '/' },
@@ -392,7 +397,7 @@ export const ideaCategories = [
   },
 ]
 
-export const ideas = [
+export const defaultIdeas = [
   {
     slug: 'agencia-certificada-cenp-associada-abap',
     title: 'O que significa, na prática, ser uma agência certificada pelo CENP e associada à ABAP?',
@@ -672,8 +677,13 @@ export const ideas = [
   },
 ]
 
-export const meta = {
+export const ideas = [...cmsIdeas, ...defaultIdeas]
+
+const defaultMeta = {
   defaultTitle: 'Plante Comunicação | Agência mineira de publicidade e marketing',
   defaultDescription:
     'A Plante Comunicação é uma agência mineira de publicidade e marketing que une estratégia, criação, gestão de marketing, campanhas publicitárias, mídia, branding, websites, audiovisual e comunicação institucional para movimentar marcas, instituições e projetos.',
 }
+
+export const meta = { ...defaultMeta, ...(siteSettings.meta || {}) }
+

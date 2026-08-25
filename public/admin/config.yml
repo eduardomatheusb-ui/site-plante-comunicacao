@@ -1,0 +1,76 @@
+backend:
+  name: git-gateway
+  branch: master
+
+publish_mode: editorial_workflow
+media_folder: public/uploads
+public_folder: /uploads
+locale: pt
+
+collections:
+  - name: ideias
+    label: Ideias em Movimento
+    label_singular: Conteudo
+    folder: src/content/ideas
+    create: true
+    extension: json
+    format: json
+    slug: "{{slug}}"
+    summary: "{{title}}"
+    fields:
+      - { label: Publicado, name: published, widget: boolean, default: true }
+      - { label: Titulo, name: title, widget: string }
+      - { label: Endereco da pagina, name: slug, widget: string, hint: "Use letras minusculas, sem acentos, separadas por hifen. Exemplo: minha-nova-ideia" }
+      - label: Categoria
+        name: category
+        widget: select
+        options: [Estrategia, Criacao, Marcas, Institucional, Digital, Bastidores, Mercado, Cobertura]
+      - { label: Data, name: date, widget: datetime, format: "YYYY-MM-DD", date_format: "DD/MM/YYYY", time_format: false }
+      - { label: Tempo de leitura, name: readingTime, widget: string, default: "5 min" }
+      - { label: Resumo do card, name: summary, widget: text }
+      - { label: Frase de destaque, name: highlight, widget: text }
+      - { label: Imagem de capa, name: image, widget: image, required: false }
+      - label: Enquadramento da imagem no card
+        name: cardImageClass
+        widget: select
+        default: object-cover object-center
+        options:
+          - { label: Centro, value: object-cover object-center }
+          - { label: Topo, value: object-cover object-top }
+          - { label: Imagem inteira, value: object-contain bg-grafite }
+      - label: Enquadramento da imagem no artigo
+        name: imageClass
+        widget: select
+        default: object-cover object-center
+        options:
+          - { label: Centro, value: object-cover object-center }
+          - { label: Topo, value: object-cover object-top }
+          - { label: Imagem inteira, value: object-contain bg-grafite }
+      - { label: Texto completo, name: body, widget: markdown }
+
+  - name: configuracoes
+    label: Configuracoes do site
+    files:
+      - name: contato
+        label: Contato e SEO
+        file: src/content/cms/site-settings.json
+        format: json
+        fields:
+          - label: Contato
+            name: contact
+            widget: object
+            fields:
+              - { label: WhatsApp exibido, name: whatsappLabel, widget: string }
+              - { label: Link do WhatsApp, name: whatsappHref, widget: string }
+              - { label: E-mail, name: email, widget: string }
+              - { label: Instagram exibido, name: instagram, widget: string }
+              - { label: Link do Instagram, name: instagramHref, widget: string }
+              - { label: Dominio, name: domain, widget: string }
+              - { label: Localizacao, name: location, widget: string }
+              - { label: Endereco, name: address, widget: string, required: false }
+          - label: SEO geral
+            name: meta
+            widget: object
+            fields:
+              - { label: Titulo padrao, name: defaultTitle, widget: string }
+              - { label: Descricao padrao, name: defaultDescription, widget: text }
