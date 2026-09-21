@@ -47,9 +47,11 @@ export default function Home() {
         </div>
         <div className="section-padding mt-16">
           <img
-            src="/brand/showcase/plante-palestra-8-anos.jpg"
+            src="/brand/showcase/plante-palestra-8-anos-corte.jpg"
             alt="Fala no palco do evento de 8 anos da Plante Comunicação."
-            className="h-[300px] w-full object-cover object-[center_30%] md:h-[420px]"
+            width="1800"
+            height="970"
+            className="aspect-[1800/970] h-auto w-full object-cover"
           />
         </div>
       </section>
